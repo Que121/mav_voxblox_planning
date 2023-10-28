@@ -1,0 +1,354 @@
+[1.083s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_comm/mav_planning_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_planning_msgs
+[1.317s] -- The C compiler identification is GNU 9.4.0
+[1.563s] -- The CXX compiler identification is GNU 9.4.0
+[1.658s] -- Check for working C compiler: /usr/bin/cc
+[1.810s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.811s] -- Detecting C compiler ABI info
+[2.011s] -- Detecting C compiler ABI info - done
+[2.043s] -- Detecting C compile features
+[2.043s] -- Detecting C compile features - done
+[2.049s] -- Check for working CXX compiler: /usr/bin/c++
+[2.255s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.257s] -- Detecting CXX compiler ABI info
+[2.576s] -- Detecting CXX compiler ABI info - done
+[2.596s] -- Detecting CXX compile features
+[2.596s] -- Detecting CXX compile features - done
+[2.600s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_planning_msgs/devel
+[2.601s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.601s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.680s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.680s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.680s] -- Using Debian Python package layout
+[2.864s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.864s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[3.175s] -- Using CATKIN_ENABLE_TESTING: ON
+[3.177s] -- Call enable_testing()
+[3.181s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_planning_msgs/test_results
+[5.444s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[5.444s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[5.444s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[5.488s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[5.490s] -- Found Threads: TRUE  
+[5.551s] -- Using Python nosetests: /usr/bin/nosetests3
+[5.675s] -- catkin 0.8.10
+[5.675s] -- BUILD_SHARED_LIBS is on
+[5.900s] -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[6.245s] -- mav_planning_msgs: 9 messages, 3 services
+[6.527s] -- Configuring done
+[6.618s] -- Generating done
+[6.640s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_planning_msgs
+[6.727s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_comm/mav_planning_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_planning_msgs
+[6.728s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_planning_msgs -- -j16 -l16
+[6.820s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[6.820s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[6.838s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_Polygon2D[0m
+[6.838s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[6.846s] [  0%] Built target sensor_msgs_generate_messages_eus
+[6.849s] [  0%] Built target trajectory_msgs_generate_messages_eus
+[6.849s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory4D[0m
+[6.850s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHoles[0m
+[6.852s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment[0m
+[6.852s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory[0m
+[6.862s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[6.862s] [  0%] Built target geometry_msgs_generate_messages_eus
+[6.879s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_ChangeNameService[0m
+[6.884s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_Point2D[0m
+[6.894s] [  0%] Built target mav_msgs_generate_messages_eus
+[6.929s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PointCloudWithPose[0m
+[6.938s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[6.938s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_Polygon2D
+[6.941s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment4D[0m
+[6.947s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHoles
+[6.948s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHolesStamped[0m
+[6.951s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PlannerService[0m
+[6.961s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory4D
+[6.963s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment
+[6.967s] [  0%] Built target std_msgs_generate_messages_eus
+[6.967s] [35m[1mScanning dependencies of target _mav_planning_msgs_generate_messages_check_deps_PolygonService[0m
+[6.969s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory
+[6.970s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[6.984s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_ChangeNameService
+[6.997s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_Point2D
+[6.998s] [  0%] Built target mav_msgs_generate_messages_py
+[7.007s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[7.013s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[7.015s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[7.017s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[7.020s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[7.023s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[7.031s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PointCloudWithPose
+[7.031s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[7.031s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[7.037s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment4D
+[7.042s] [  0%] Built target std_msgs_generate_messages_py
+[7.042s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHolesStamped
+[7.043s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PlannerService
+[7.045s] [  0%] Built target geometry_msgs_generate_messages_py
+[7.045s] [  0%] Built target sensor_msgs_generate_messages_py
+[7.046s] [  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonService
+[7.050s] [  0%] Built target trajectory_msgs_generate_messages_py
+[7.051s] [  0%] Built target sensor_msgs_generate_messages_lisp
+[7.054s] [  0%] Built target trajectory_msgs_generate_messages_lisp
+[7.055s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[7.058s] [  0%] Built target mav_msgs_generate_messages_lisp
+[7.059s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[7.060s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[7.060s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[7.060s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[7.060s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[7.085s] [  0%] Built target sensor_msgs_generate_messages_cpp
+[7.085s] [  0%] Built target std_msgs_generate_messages_cpp
+[7.085s] [  0%] Built target std_msgs_generate_messages_lisp
+[7.085s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[7.085s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[7.086s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[7.086s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[7.086s] [  0%] Built target trajectory_msgs_generate_messages_cpp
+[7.086s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[7.094s] [  0%] Built target mav_msgs_generate_messages_nodejs
+[7.094s] [  0%] Built target std_msgs_generate_messages_nodejs
+[7.094s] [  0%] Built target trajectory_msgs_generate_messages_nodejs
+[7.095s] [  0%] Built target mav_msgs_generate_messages_cpp
+[7.095s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[7.095s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[7.105s] [  0%] Built target sensor_msgs_generate_messages_nodejs
+[7.105s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[7.105s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages_eus[0m
+[7.105s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages_py[0m
+[7.105s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages_cpp[0m
+[7.113s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages_lisp[0m
+[7.118s] [  3%] [34m[1mGenerating Python from MSG mav_planning_msgs/PointCloudWithPose[0m
+[7.118s] [  4%] [34m[1mGenerating Python from MSG mav_planning_msgs/Point2D[0m
+[7.118s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages_nodejs[0m
+[7.118s] [  6%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PointCloudWithPose.msg[0m
+[7.119s] [  6%] [34m[1mGenerating EusLisp code from mav_planning_msgs/Polygon2D.msg[0m
+[7.124s] [  9%] [34m[1mGenerating C++ code from mav_planning_msgs/Point2D.msg[0m
+[7.124s] [  9%] [34m[1mGenerating EusLisp code from mav_planning_msgs/Point2D.msg[0m
+[7.126s] [ 14%] [34m[1mGenerating C++ code from mav_planning_msgs/PointCloudWithPose.msg[0m
+[7.126s] [ 14%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolygonWithHoles.msg[0m
+[7.126s] [ 14%] [34m[1mGenerating Python from MSG mav_planning_msgs/Polygon2D[0m
+[7.131s] [ 15%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolygonWithHoles[0m
+[7.133s] [ 17%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolygonWithHolesStamped.msg[0m
+[7.140s] [ 19%] [34m[1mGenerating Lisp code from mav_planning_msgs/Point2D.msg[0m
+[7.149s] [ 20%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolygonWithHolesStamped[0m
+[7.151s] [ 22%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolynomialSegment[0m
+[7.152s] [ 23%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolynomialSegment.msg[0m
+[7.197s] [ 25%] [34m[1mGenerating Javascript code from mav_planning_msgs/Point2D.msg[0m
+[7.473s] [ 26%] [34m[1mGenerating Javascript code from mav_planning_msgs/PointCloudWithPose.msg[0m
+[7.475s] [ 28%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolynomialSegment4D.msg[0m
+[7.482s] [ 31%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolynomialTrajectory[0m
+[7.482s] [ 31%] [34m[1mGenerating Lisp code from mav_planning_msgs/PointCloudWithPose.msg[0m
+[7.490s] [ 33%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolynomialTrajectory.msg[0m
+[7.494s] [ 34%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolynomialSegment4D[0m
+[7.501s] [ 36%] [34m[1mGenerating C++ code from mav_planning_msgs/Polygon2D.msg[0m
+[7.509s] [ 38%] [34m[1mGenerating Lisp code from mav_planning_msgs/Polygon2D.msg[0m
+[7.522s] [ 39%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolynomialTrajectory4D.msg[0m
+[7.534s] [ 41%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolygonWithHoles.msg[0m
+[7.575s] [ 42%] [34m[1mGenerating Python from MSG mav_planning_msgs/PolynomialTrajectory4D[0m
+[7.599s] [ 44%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolygonWithHolesStamped.msg[0m
+[7.601s] [ 46%] [34m[1mGenerating Javascript code from mav_planning_msgs/Polygon2D.msg[0m
+[7.626s] [ 47%] [34m[1mGenerating Python code from SRV mav_planning_msgs/PlannerService[0m
+[7.631s] [ 49%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolygonWithHoles.msg[0m
+[7.696s] [ 50%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolynomialSegment.msg[0m
+[7.723s] [ 52%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolynomialTrajectory.msg[0m
+[7.743s] [ 53%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PlannerService.srv[0m
+[7.745s] [ 55%] [34m[1mGenerating Python code from SRV mav_planning_msgs/PolygonService[0m
+[7.754s] [ 57%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolygonWithHolesStamped.msg[0m
+[7.762s] [ 58%] [34m[1mGenerating C++ code from mav_planning_msgs/PolygonWithHoles.msg[0m
+[7.797s] [ 60%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolynomialSegment4D.msg[0m
+[7.803s] [ 61%] [34m[1mGenerating EusLisp code from mav_planning_msgs/PolygonService.srv[0m
+[7.812s] [ 63%] [34m[1mGenerating EusLisp code from mav_planning_msgs/ChangeNameService.srv[0m
+[7.814s] [ 65%] [34m[1mGenerating Python code from SRV mav_planning_msgs/ChangeNameService[0m
+[7.817s] [ 66%] [34m[1mGenerating Lisp code from mav_planning_msgs/PlannerService.srv[0m
+[7.842s] [ 68%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolynomialTrajectory4D.msg[0m
+[7.844s] [ 69%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolynomialSegment.msg[0m
+[7.990s] [ 71%] [34m[1mGenerating Lisp code from mav_planning_msgs/PolygonService.srv[0m
+[7.990s] [ 73%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolynomialTrajectory.msg[0m
+[8.000s] [ 74%] [34m[1mGenerating Lisp code from mav_planning_msgs/ChangeNameService.srv[0m
+[8.004s] [ 76%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolynomialSegment4D.msg[0m
+[8.013s] [ 77%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolynomialTrajectory4D.msg[0m
+[8.048s] [ 79%] [34m[1mGenerating C++ code from mav_planning_msgs/PolynomialSegment.msg[0m
+[8.059s] [ 82%] [34m[1mGenerating EusLisp manifest code for mav_planning_msgs[0m
+[8.059s] [ 82%] [34m[1mGenerating Javascript code from mav_planning_msgs/PlannerService.srv[0m
+[8.065s] [ 84%] [34m[1mGenerating C++ code from mav_planning_msgs/PolygonWithHolesStamped.msg[0m
+[8.075s] [ 85%] [34m[1mGenerating Javascript code from mav_planning_msgs/PolygonService.srv[0m
+[8.120s] [ 87%] [34m[1mGenerating C++ code from mav_planning_msgs/PolynomialTrajectory.msg[0m
+[8.121s] [ 88%] [34m[1mGenerating C++ code from mav_planning_msgs/PolynomialSegment4D.msg[0m
+[8.122s] [ 90%] [34m[1mGenerating Javascript code from mav_planning_msgs/ChangeNameService.srv[0m
+[8.150s] [ 92%] [34m[1mGenerating C++ code from mav_planning_msgs/PolynomialTrajectory4D.msg[0m
+[8.151s] [ 93%] [34m[1mGenerating C++ code from mav_planning_msgs/PlannerService.srv[0m
+[8.185s] [ 93%] Built target mav_planning_msgs_generate_messages_lisp
+[8.197s] [ 95%] [34m[1mGenerating C++ code from mav_planning_msgs/PolygonService.srv[0m
+[8.204s] [ 96%] [34m[1mGenerating C++ code from mav_planning_msgs/ChangeNameService.srv[0m
+[8.307s] [ 96%] Built target mav_planning_msgs_generate_messages_nodejs
+[8.424s] [ 98%] [34m[1mGenerating Python msg __init__.py for mav_planning_msgs[0m
+[8.450s] [100%] [34m[1mGenerating Python srv __init__.py for mav_planning_msgs[0m
+[8.609s] [100%] Built target mav_planning_msgs_generate_messages_cpp
+[8.937s] [100%] Built target mav_planning_msgs_generate_messages_py
+[9.198s] [100%] Built target mav_planning_msgs_generate_messages_eus
+[9.231s] [35m[1mScanning dependencies of target mav_planning_msgs_generate_messages[0m
+[9.252s] [100%] Built target mav_planning_msgs_generate_messages
+[9.418s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_planning_msgs -- -j16 -l16
+[9.523s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_planning_msgs --target tests -- -j16 -l16
+[9.634s] [35m[1mScanning dependencies of target tests[0m
+[9.642s] Built target tests
+[9.666s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_planning_msgs --target tests -- -j16 -l16
+[10.131s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_planning_msgs
+[10.151s] -- Install configuration: ""
+[10.151s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/Point2D.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PointCloudWithPose.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/Polygon2D.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHoles.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHolesStamped.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment.msg
+[10.152s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory.msg
+[10.153s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment4D.msg
+[10.153s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory4D.msg
+[10.153s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/PlannerService.srv
+[10.153s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/PolygonService.srv
+[10.153s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/ChangeNameService.srv
+[10.154s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs-msg-paths.cmake
+[10.154s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs
+[10.155s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialTrajectory4D.h
+[10.155s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonWithHoles.h
+[10.155s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameServiceResponse.h
+[10.155s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameService.h
+[10.156s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerService.h
+[10.156s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonWithHolesStamped.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialTrajectory.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PointCloudWithPose.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameServiceRequest.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/Polygon2D.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialSegment.h
+[10.157s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerServiceRequest.h
+[10.158s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonServiceRequest.h
+[10.158s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/Point2D.h
+[10.158s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonServiceResponse.h
+[10.159s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialSegment4D.h
+[10.159s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerServiceResponse.h
+[10.159s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonService.h
+[10.160s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs
+[10.162s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/manifest.l
+[10.162s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv
+[10.162s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/ChangeNameService.l
+[10.162s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/PlannerService.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/PolygonService.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PointCloudWithPose.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHoles.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/Point2D.l
+[10.163s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.l
+[10.164s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment.l
+[10.164s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.l
+[10.164s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/Polygon2D.l
+[10.164s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment4D.l
+[10.165s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs
+[10.165s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv
+[10.165s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package.lisp
+[10.165s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_PlannerService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/PlannerService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/mav_planning_msgs-srv.asd
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/PolygonService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_ChangeNameService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/ChangeNameService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_PolygonService.lisp
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg
+[10.166s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialTrajectory.lisp
+[10.167s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.lisp
+[10.167s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/Point2D.lisp
+[10.167s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolygonWithHoles.lisp
+[10.167s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package.lisp
+[10.167s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialSegment.lisp
+[10.168s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PointCloudWithPose.lisp
+[10.168s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_Polygon2D.lisp
+[10.168s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialSegment4D.lisp
+[10.168s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialSegment4D.lisp
+[10.168s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/Polygon2D.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolygonWithHolesStamped.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialTrajectory.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolygonWithHoles.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialTrajectory4D.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PointCloudWithPose.lisp
+[10.169s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.lisp
+[10.170s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_Point2D.lisp
+[10.170s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/mav_planning_msgs-msg.asd
+[10.170s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialSegment.lisp
+[10.170s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs
+[10.174s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv
+[10.175s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/PolygonService.js
+[10.176s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/_index.js
+[10.176s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/PlannerService.js
+[10.177s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/ChangeNameService.js
+[10.177s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/_index.js
+[10.177s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg
+[10.177s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialSegment4D.js
+[10.178s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.js
+[10.178s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/Polygon2D.js
+[10.178s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialTrajectory.js
+[10.178s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialSegment.js
+[10.178s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/_index.js
+[10.179s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PointCloudWithPose.js
+[10.179s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.js
+[10.179s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolygonWithHoles.js
+[10.179s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/Point2D.js
+[10.350s] Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs'...
+[10.350s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/__init__.py'...
+[10.350s] Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_Point2D.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PointCloudWithPose.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_Polygon2D.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHoles.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHolesStamped.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment4D.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory.py'...
+[10.351s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory4D.py'...
+[10.352s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg/__init__.py'...
+[10.352s] Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv'...
+[10.352s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv/_ChangeNameService.py'...
+[10.352s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv/_PlannerService.py'...
+[10.352s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv/_PolygonService.py'...
+[10.352s] Compiling '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv/__init__.py'...
+[10.368s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs
+[10.368s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_PlannerService.py
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/__init__.cpython-38.pyc
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_PolygonService.cpython-38.pyc
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_ChangeNameService.cpython-38.pyc
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_PlannerService.cpython-38.pyc
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_ChangeNameService.py
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_PolygonService.py
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__init__.py
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__pycache__
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__pycache__/__init__.cpython-38.pyc
+[10.369s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__init__.py
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PointCloudWithPose.py
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialSegment.cpython-38.pyc
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialTrajectory4D.cpython-38.pyc
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolygonWithHolesStamped.cpython-38.pyc
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/__init__.cpython-38.pyc
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_Point2D.cpython-38.pyc
+[10.370s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PointCloudWithPose.cpython-38.pyc
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_Polygon2D.cpython-38.pyc
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialSegment4D.cpython-38.pyc
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialTrajectory.cpython-38.pyc
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolygonWithHoles.cpython-38.pyc
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHolesStamped.py
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_Polygon2D.py
+[10.371s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory4D.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_Point2D.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__init__.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHoles.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment4D.py
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/pkgconfig/mav_planning_msgs.pc
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs-msg-extras.cmake
+[10.372s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig.cmake
+[10.373s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig-version.cmake
+[10.373s] -- Installing: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/package.xml
+[10.735s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_planning_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_planning_msgs

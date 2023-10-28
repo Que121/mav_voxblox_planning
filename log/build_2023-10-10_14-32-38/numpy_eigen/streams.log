@@ -1,0 +1,255 @@
+[0.759s] Invoking command in '/home/quinton/catkin_ws/src/build/numpy_eigen': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin:/home/quinton/catkin_ws/src/install/catkin_simple:/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/numpy_eigen -- -j16 -l16
+[0.884s] [ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/numpy_eigen_test_module.cpp.o[0m
+[0.884s] [ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_float.cpp.o[0m
+[0.884s] [ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_double.cpp.o[0m
+[0.886s] [ 28%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_int.cpp.o[0m
+[0.889s] [ 35%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/numpy_eigen_export_module.cpp.o[0m
+[0.910s] [ 42%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_float.cpp.o[0m
+[0.914s] [ 50%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_uchar.cpp.o[0m
+[0.928s] [ 57%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_int.cpp.o[0m
+[0.936s] [ 64%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_double.cpp.o[0m
+[0.940s] [ 71%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_long.cpp.o[0m
+[0.954s] [ 78%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_uchar.cpp.o[0m
+[0.954s] [ 85%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_long.cpp.o[0m
+[13.503s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.504s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.504s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[13.504s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.506s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.507s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.507s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.507s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.508s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.508s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.508s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.508s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.508s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.508s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.508s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.508s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[13.509s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.509s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.509s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.509s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.509s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.509s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.509s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.510s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.510s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.510s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.510s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.510s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.510s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[13.510s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.510s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[13.511s]       |          [01;35m[K^~~~~~~~[m[K
+[13.511s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.511s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.511s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.511s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_uchar.cpp:4[m[K:
+[13.511s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.511s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.511s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.600s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.601s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.601s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[13.601s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.601s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.601s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.602s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.602s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.602s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.602s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.603s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.603s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.603s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.603s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.603s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.603s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[13.604s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.604s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.604s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.604s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.604s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.604s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.604s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.604s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.605s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.605s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.607s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.607s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.607s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[13.608s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.608s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[13.608s]       |          [01;35m[K^~~~~~~~[m[K
+[13.608s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.608s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.609s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.610s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_int.cpp:4[m[K:
+[13.610s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.611s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.611s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.754s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.758s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.758s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[13.758s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.758s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.758s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.758s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.758s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.758s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.758s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.758s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.758s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.758s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.759s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.759s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.759s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[13.759s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.759s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.759s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.759s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.759s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.759s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.759s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.759s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.759s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.759s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.760s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.760s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.760s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[13.760s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.760s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[13.760s]       |          [01;35m[K^~~~~~~~[m[K
+[13.760s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.761s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.761s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.761s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_float.cpp:4[m[K:
+[13.761s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.761s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.761s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.900s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.900s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.901s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[13.901s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.901s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.901s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.901s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.901s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.901s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.901s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.902s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.902s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.902s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.902s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.902s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.902s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[13.902s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.902s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[13.903s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[13.903s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.903s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.903s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.903s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.903s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.903s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.904s]       |                     [01;36m[K^~~~~~~~[m[K
+[13.904s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[13.904s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.904s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[13.904s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[13.904s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[13.904s]       |          [01;35m[K^~~~~~~~[m[K
+[13.916s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[13.916s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[13.916s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[13.917s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/numpy_eigen_export_module.cpp:2[m[K:
+[13.917s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.917s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[13.917s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.078s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.087s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.087s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[14.087s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.087s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[14.087s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[14.087s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.088s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.088s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.088s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.088s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.088s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.088s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.088s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.088s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.088s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[14.088s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.089s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[14.089s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[14.089s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.089s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.089s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.089s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.089s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.089s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.090s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.090s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.090s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.090s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[14.090s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.090s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[14.090s]       |          [01;35m[K^~~~~~~~[m[K
+[14.090s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.091s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.091s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.091s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_long.cpp:4[m[K:
+[14.091s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.091s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.091s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.261s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.261s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.261s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<unsigned char>::canConvert(int)[m[K’:
+[14.262s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:63:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.262s]    63 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[14.262s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[14.265s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.265s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.265s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.265s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.265s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.266s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.266s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.266s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.266s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.266s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In static member function ‘[01m[Kstatic bool TypeToNumPy<char>::canConvert(int)[m[K’:
+[14.266s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:74:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.267s]    74 |     return type == NPY_UBYTE || type == NPY_BYTE || type == [01;35m[KNPY_CHAR[m[K;
+[14.267s]       |                                                             [01;35m[K^~~~~~~~[m[K
+[14.267s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.267s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.267s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.268s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.268s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.268s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.268s]       |                     [01;36m[K^~~~~~~~[m[K
+[14.268s] In file included from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:30[m[K,
+[14.268s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.268s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:[m[K In function ‘[01m[Kconst char* npyTypeToString(int)[m[K’:
+[14.268s] [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/type_traits.hpp:166:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KNPY_CHAR[m[K’ is deprecated: Use NPY_STRING [[01;35m[K-Wdeprecated-declarations[m[K]
+[14.268s]   166 |     case [01;35m[KNPY_CHAR[m[K:
+[14.269s]       |          [01;35m[K^~~~~~~~[m[K
+[14.269s] In file included from [01m[K/usr/include/python3.8/numpy/ndarrayobject.h:12[m[K,
+[14.269s]                  from [01m[K/usr/include/python3.8/numpy/arrayobject.h:4[m[K,
+[14.269s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/include/numpy_eigen/NumpyEigenConverter.hpp:28[m[K,
+[14.269s]                  from [01m[K/home/quinton/catkin_ws/src/numpy_eigen/src/autogen_module/import_double.cpp:4[m[K:
+[14.269s] [01m[K/usr/include/python3.8/numpy/ndarraytypes.h:84:21:[m[K [01;36m[Knote: [m[Kdeclared here
+[14.269s]    84 |                     [01;36m[KNPY_CHAR[m[K NPY_ATTR_DEPRECATE("Use NPY_STRING"),
+[14.269s]       |                     [01;36m[K^~~~~~~~[m[K
+[56.558s] [ 92%] [32m[1mLinking CXX shared library devel/lib/libnumpy_eigen_test.so[0m
+[57.137s] [100%] [32m[1mLinking CXX shared library devel/lib/libnumpy_eigen.so[0m
+[57.691s] [34m[1mCopying library files to python directory[0m
+[57.699s] '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/libnumpy_eigen_test.so' -> '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen_test.so'
+[57.739s] [100%] Built target numpy_eigen_test
+[58.422s] [34m[1mCopying library files to python directory[0m
+[58.426s] '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/libnumpy_eigen.so' -> '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen.so'
+[58.449s] [100%] Built target numpy_eigen

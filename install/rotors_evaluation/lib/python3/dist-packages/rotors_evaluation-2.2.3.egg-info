@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: rotors_evaluation
+Version: 2.2.3
+Summary: The dataset evaluation package for the RotorS simulator.
+Home-page: https://github.com/ethz-asl/rotors_simulator
+Author: Fadri Furrer <fadri.furrer@mavt.ethz.ch>, Mina Kamel <mina.kamel@mavt.ethz.ch>
+Author-email: UNKNOWN
+License: ASL 2.0
+Description: UNKNOWN
+Platform: UNKNOWN

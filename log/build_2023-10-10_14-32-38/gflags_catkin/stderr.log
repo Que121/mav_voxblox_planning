@@ -1,0 +1,3 @@
+make[2]: *** [CMakeFiles/gflags_src.dir/build.make:91: gflags_src-prefix/src/gflags_src-stamp/gflags_src-download] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/gflags_src.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

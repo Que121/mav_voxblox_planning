@@ -1,0 +1,8 @@
+prefix=/home/quinton/catkin_ws/src/install/voxblox_msgs
+
+Name: voxblox_msgs
+Description: Description of voxblox_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_generation message_runtime std_msgs

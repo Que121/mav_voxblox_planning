@@ -1,0 +1,6 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_msgs
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_msgs

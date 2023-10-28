@@ -1,0 +1,88 @@
+[0.706s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_control_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_control_interface -- -j16 -l16
+[0.903s] [  0%] Built target visualization_msgs_generate_messages_nodejs
+[0.905s] [  0%] Built target visualization_msgs_generate_messages_py
+[0.907s] [  0%] Built target sensor_msgs_generate_messages_cpp
+[0.929s] [  0%] Built target tf2_msgs_generate_messages_nodejs
+[0.929s] [  0%] Built target tf2_msgs_generate_messages_lisp
+[0.930s] [  0%] Built target visualization_msgs_generate_messages_lisp
+[0.933s] [  0%] Built target tf2_msgs_generate_messages_py
+[0.953s] [  0%] Built target tf2_msgs_generate_messages_cpp
+[0.963s] [  0%] Built target actionlib_generate_messages_py
+[0.981s] [  0%] Built target actionlib_generate_messages_nodejs
+[1.066s] [  0%] Built target sensor_msgs_generate_messages_py
+[1.066s] [  0%] Built target std_msgs_generate_messages_nodejs
+[1.066s] [  0%] Built target sensor_msgs_generate_messages_nodejs
+[1.071s] [  0%] Built target geometry_msgs_generate_messages_eus
+[1.071s] [  0%] Built target tf2_msgs_generate_messages_eus
+[1.087s] [  0%] Built target mav_msgs_generate_messages_nodejs
+[1.096s] [  0%] Built target actionlib_generate_messages_cpp
+[1.096s] [  0%] Built target roscpp_generate_messages_cpp
+[1.141s] [  0%] Built target visualization_msgs_generate_messages_cpp
+[1.169s] [  0%] Built target sensor_msgs_generate_messages_lisp
+[1.170s] [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[1.170s] [  0%] Built target std_msgs_generate_messages_cpp
+[1.172s] [  0%] Built target sensor_msgs_generate_messages_eus
+[1.175s] [  0%] Built target actionlib_msgs_generate_messages_py
+[1.183s] [  0%] Built target tf_generate_messages_eus
+[1.189s] [  0%] Built target std_msgs_generate_messages_py
+[1.190s] [  0%] Built target actionlib_msgs_generate_messages_eus
+[1.200s] [  0%] Built target rosgraph_msgs_generate_messages_lisp
+[1.204s] [  0%] Built target mav_msgs_generate_messages_lisp
+[1.249s] [  0%] Built target actionlib_generate_messages_lisp
+[1.282s] [  0%] Built target roscpp_generate_messages_lisp
+[1.283s] [  0%] Built target std_msgs_generate_messages_lisp
+[1.289s] [  0%] Built target std_srvs_generate_messages_nodejs
+[1.290s] [  0%] Built target std_srvs_generate_messages_cpp
+[1.293s] [  0%] Built target mav_msgs_generate_messages_py
+[1.299s] [  0%] Built target rosgraph_msgs_generate_messages_py
+[1.310s] [  0%] Built target nav_msgs_generate_messages_cpp
+[1.313s] [  0%] Built target visualization_msgs_generate_messages_eus
+[1.383s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[1.383s] [  0%] Built target roscpp_generate_messages_eus
+[1.389s] [  0%] Built target roscpp_generate_messages_nodejs
+[1.393s] [  0%] Built target rosgraph_msgs_generate_messages_cpp
+[1.393s] [  0%] Built target std_srvs_generate_messages_py
+[1.393s] [  0%] Built target tf_generate_messages_cpp
+[1.401s] [  0%] Built target actionlib_generate_messages_eus
+[1.401s] [  0%] Built target trajectory_msgs_generate_messages_py
+[1.408s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[1.408s] [  0%] Built target rosgraph_msgs_generate_messages_eus
+[1.434s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[1.475s] [  0%] Built target geometry_msgs_generate_messages_py
+[1.475s] [  0%] Built target trajectory_msgs_generate_messages_eus
+[1.476s] [  0%] Built target roscpp_generate_messages_py
+[1.476s] [  0%] Built target trajectory_msgs_generate_messages_nodejs
+[1.476s] [  0%] Built target trajectory_msgs_generate_messages_cpp
+[1.477s] [  0%] Built target mav_msgs_generate_messages_cpp
+[1.482s] [  0%] Built target nav_msgs_generate_messages_eus
+[1.482s] [  0%] Built target mav_msgs_generate_messages_eus
+[1.484s] [  0%] Built target tf_generate_messages_py
+[1.498s] [  0%] Built target actionlib_msgs_generate_messages_nodejs
+[1.498s] [  0%] Built target std_msgs_generate_messages_eus
+[1.498s] [  0%] Built target actionlib_msgs_generate_messages_lisp
+[1.507s] [  0%] Built target trajectory_msgs_generate_messages_lisp
+[1.521s] [  0%] Built target actionlib_msgs_generate_messages_cpp
+[1.528s] [  0%] Built target nav_msgs_generate_messages_lisp
+[1.533s] [  0%] Built target tf_generate_messages_lisp
+[1.533s] [  0%] Built target std_srvs_generate_messages_lisp
+[1.533s] [  0%] Built target nav_msgs_generate_messages_py
+[1.534s] [  0%] Built target nav_msgs_generate_messages_nodejs
+[1.534s] [  0%] Built target tf_generate_messages_nodejs
+[1.535s] [  0%] Built target std_srvs_generate_messages_eus
+[1.574s] [ 27%] [32mBuilding CXX object CMakeFiles/mav_control_interface.dir/src/mav_control_interface.cpp.o[0m
+[1.574s] [ 27%] [32mBuilding CXX object CMakeFiles/mav_control_interface.dir/src/mav_control_interface_impl.cpp.o[0m
+[1.574s] [ 27%] [32mBuilding CXX object CMakeFiles/mav_control_interface.dir/src/state_machine.cpp.o[0m
+[1.574s] [ 36%] [32mBuilding CXX object CMakeFiles/mav_control_interface.dir/src/mpc_queue.cpp.o[0m
+[15.827s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[15.831s] compilation terminated.
+[15.831s] make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:63: CMakeFiles/mav_control_interface.dir/src/mav_control_interface.cpp.o] Error 1
+[15.832s] make[2]: *** Waiting for unfinished jobs....
+[24.768s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[24.772s] compilation terminated.
+[24.772s] make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:76: CMakeFiles/mav_control_interface.dir/src/mav_control_interface_impl.cpp.o] Error 1
+[52.122s] [01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+[52.125s] compilation terminated.
+[52.125s] make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:141: CMakeFiles/mav_control_interface.dir/src/state_machine.cpp.o] Error 1
+[59.717s] make[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/mav_control_interface.dir/all] Error 2
+[59.734s] make: *** [Makefile:141: all] Error 2
+[59.794s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_control_interface' returned '2': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_control_interface -- -j16 -l16

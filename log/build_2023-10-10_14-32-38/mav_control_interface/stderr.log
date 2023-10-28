@@ -1,0 +1,12 @@
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:63: CMakeFiles/mav_control_interface.dir/src/mav_control_interface.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:76: CMakeFiles/mav_control_interface.dir/src/mav_control_interface_impl.cpp.o] Error 1
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:141: CMakeFiles/mav_control_interface.dir/src/state_machine.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/mav_control_interface.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

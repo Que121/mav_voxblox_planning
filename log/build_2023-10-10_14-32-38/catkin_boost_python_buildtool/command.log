@@ -1,0 +1,6 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool

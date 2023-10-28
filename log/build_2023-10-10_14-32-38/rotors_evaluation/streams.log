@@ -1,0 +1,31 @@
+[0.222s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation -- -j16 -l16
+[0.417s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation -- -j16 -l16
+[0.480s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation --target tests -- -j16 -l16
+[0.551s] Built target tests
+[0.576s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation --target tests -- -j16 -l16
+[0.625s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_evaluation
+[0.635s] -- Install configuration: ""
+[0.635s] + cd /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation
+[0.636s] + mkdir -p /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages
+[0.636s] + /usr/bin/env PYTHONPATH=/home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/src/build/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages CATKIN_BINARY_DIR=/home/quinton/catkin_ws/src/build/rotors_evaluation /usr/bin/python3 /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/setup.py build --build-base /home/quinton/catkin_ws/src/build/rotors_evaluation install --root=/ --install-layout=deb --prefix=/home/quinton/catkin_ws/src/install/rotors_evaluation --install-scripts=/home/quinton/catkin_ws/src/install/rotors_evaluation/bin
+[0.697s] running build
+[0.697s] running build_py
+[0.699s] running install
+[0.701s] running install_lib
+[0.702s] byte-compiling /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py to analyze_bag.cpython-38.pyc
+[0.706s] running install_egg_info
+[0.709s]   File "home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py", line 53
+[0.710s]     except Exception, e:
+[0.710s]                     ^
+[0.710s] SyntaxError: invalid syntax
+[0.710s] 
+[0.711s] Removing /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rotors_evaluation-2.2.3.egg-info
+[0.711s] Writing /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rotors_evaluation-2.2.3.egg-info
+[0.712s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/pkgconfig/rotors_evaluation.pc
+[0.712s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig.cmake
+[0.712s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig-version.cmake
+[0.712s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/package.xml
+[0.712s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/disturbance_eval.py
+[0.713s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/hovering_eval.py
+[0.713s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/waypoints_eval.py
+[1.276s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_evaluation

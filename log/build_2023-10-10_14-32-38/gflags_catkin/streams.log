@@ -1,0 +1,19 @@
+[0.719s] Invoking command in '/home/quinton/catkin_ws/src/build/gflags_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/gflags_catkin -- -j16 -l16
+[0.794s] [ 12%] [34m[1mPerforming download step (download, verify and extract) for 'gflags_src'[0m
+[0.794s] -- verifying file...
+[0.795s]        file='/home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip'
+[0.795s] -- MD5 hash of
+[0.795s]     /home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip
+[0.795s]   does not match expected value
+[0.795s]     expected: '2d988ef0b50939fb50ada965dafce96b'
+[0.796s]       actual: 'd41d8cd98f00b204e9800998ecf8427e'
+[0.796s] -- File already exists but hash mismatch. Removing...
+[0.796s] -- Downloading...
+[0.796s]    dst='/home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip'
+[0.796s]    timeout='none'
+[0.796s] -- Using src='https://github.com/gflags/gflags/archive/v2.2.1.zip'
+[130.323s] -- Retrying...
+[130.324s] -- Using src='https://github.com/gflags/gflags/archive/v2.2.1.zip'
+[136.777s] make[2]: *** [CMakeFiles/gflags_src.dir/build.make:91: gflags_src-prefix/src/gflags_src-stamp/gflags_src-download] Interrupt
+[136.782s] make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/gflags_src.dir/all] Interrupt
+[136.789s] make: *** [Makefile:141: all] Interrupt

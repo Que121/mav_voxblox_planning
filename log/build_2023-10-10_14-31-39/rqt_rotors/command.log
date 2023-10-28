@@ -1,0 +1,8 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rqt_rotors -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rqt_rotors
+Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rqt_rotors -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rqt_rotors
+Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rqt_rotors
+Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rqt_rotors

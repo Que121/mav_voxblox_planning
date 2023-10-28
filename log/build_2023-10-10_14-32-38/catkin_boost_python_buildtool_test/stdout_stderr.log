@@ -1,0 +1,18 @@
+[100%] Built target catkin_boost_python_test
+Built target tests
+-- Install configuration: ""
++ cd /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool_test
++ mkdir -p /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages
++ /usr/bin/env PYTHONPATH=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages:/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib/python3/dist-packages:/home/quinton/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages CATKIN_BINARY_DIR=/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test /usr/bin/python3 /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool_test/setup.py build --build-base /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test install --root=/ --install-layout=deb --prefix=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test --install-scripts=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/bin
+running build
+running build_py
+running install
+running install_lib
+running install_egg_info
+Removing /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_buildtool_test-0.0.1.egg-info
+Writing /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_buildtool_test-0.0.1.egg-info
+-- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so
+-- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/pkgconfig/catkin_boost_python_buildtool_test.pc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/package.xml

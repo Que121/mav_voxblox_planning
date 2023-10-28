@@ -1,0 +1,13 @@
+[0.919s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+[1.136s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+[1.201s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+[1.260s] Built target tests
+[1.292s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+[1.335s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple
+[1.347s] -- Install configuration: ""
+[1.348s] -- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig/catkin_simple.pc
+[1.349s] -- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simple-extras.cmake
+[1.349s] -- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simpleConfig.cmake
+[1.349s] -- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simpleConfig-version.cmake
+[1.349s] -- Up-to-date: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/package.xml
+[1.367s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple

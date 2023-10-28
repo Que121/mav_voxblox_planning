@@ -1,0 +1,53 @@
+[0.897s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake /home/quinton/catkin_ws/src/catkin_simple -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/catkin_simple
+[1.122s] -- The C compiler identification is GNU 9.4.0
+[1.311s] -- The CXX compiler identification is GNU 9.4.0
+[1.372s] -- Check for working C compiler: /usr/bin/cc
+[1.489s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.490s] -- Detecting C compiler ABI info
+[1.612s] -- Detecting C compiler ABI info - done
+[1.627s] -- Detecting C compile features
+[1.627s] -- Detecting C compile features - done
+[1.633s] -- Check for working CXX compiler: /usr/bin/c++
+[1.779s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.780s] -- Detecting CXX compiler ABI info
+[1.917s] -- Detecting CXX compiler ABI info - done
+[1.928s] -- Detecting CXX compile features
+[1.929s] -- Detecting CXX compile features - done
+[1.933s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/catkin_simple/devel
+[1.934s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.934s] -- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.968s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.968s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.968s] -- Using Debian Python package layout
+[2.028s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.028s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.193s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.193s] -- Call enable_testing()
+[2.196s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/catkin_simple/test_results
+[4.480s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.480s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.480s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[4.521s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.523s] -- Found Threads: TRUE  
+[4.568s] -- Using Python nosetests: /usr/bin/nosetests3
+[4.716s] -- catkin 0.8.10
+[4.717s] -- BUILD_SHARED_LIBS is on
+[4.938s] -- Found ompl: /usr/include;/usr/include/eigen3  
+[5.353s] -- Configuring done
+[5.373s] -- Generating done
+[5.374s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/catkin_simple
+[5.398s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/catkin_simple -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/catkin_simple
+[5.403s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+[5.735s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+[5.799s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+[5.901s] [35m[1mScanning dependencies of target tests[0m
+[5.938s] Built target tests
+[6.783s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+[6.982s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple
+[7.002s] -- Install configuration: ""
+[7.003s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig/catkin_simple.pc
+[7.003s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simple-extras.cmake
+[7.003s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simpleConfig.cmake
+[7.004s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/cmake/catkin_simpleConfig-version.cmake
+[7.004s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_simple/share/catkin_simple/package.xml
+[7.014s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple

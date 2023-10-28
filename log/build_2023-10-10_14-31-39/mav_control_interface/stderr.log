@@ -1,0 +1,22 @@
+CMake Warning at /opt/ros/noetic/share/cmake_modules/cmake/Modules/FindEigen.cmake:62 (message):
+  The FindEigen.cmake Module in the cmake_modules package is deprecated.
+
+  Please use the FindEigen3.cmake Module provided with Eigen.  Change
+  instances of find_package(Eigen) to find_package(Eigen3).  Check the
+  FindEigen3.cmake Module for the resulting CMake variable names.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:11 (find_package)
+
+
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:63: CMakeFiles/mav_control_interface.dir/src/mav_control_interface.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[Kc++:[m[K [01;31m[Kfatal error: [m[KKilled signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:141: CMakeFiles/mav_control_interface.dir/src/state_machine.cpp.o] Error 1
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:154: CMakeFiles/mav_control_interface.dir/src/mpc_queue.cpp.o] Interrupt
+make[2]: *** [CMakeFiles/mav_control_interface.dir/build.make:76: CMakeFiles/mav_control_interface.dir/src/mav_control_interface_impl.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:283: CMakeFiles/mav_control_interface.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

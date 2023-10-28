@@ -1,0 +1,48 @@
+/home/quinton/.cache/JetBrains/RemoteDev/dist/e8723a8baeef1_CLion-233.9802.5/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/quinton/catkin_ws/src/mav_voxblox_planning/mav_local_planner -B /home/quinton/catkin_ws/src/mav_voxblox_planning/mav_local_planner/cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:6 (find_package):
+  By not providing "Findcatkin_simple.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "catkin_simple", but CMake did not find one.
+
+  Could not find a package configuration file provided by "catkin_simple"
+  with any of the following names:
+
+    catkin_simpleConfig.cmake
+    catkin_simple-config.cmake
+
+  Add the installation prefix of "catkin_simple" to CMAKE_PREFIX_PATH or set
+  "catkin_simple_DIR" to a directory containing one of the above files.  If
+  "catkin_simple" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+-- Configuring incomplete, errors occurred!

@@ -1,0 +1,20 @@
+[ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/numpy_eigen_test_module.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_float.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_double.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_int.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/numpy_eigen_export_module.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_float.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_uchar.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_int.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_double.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_long.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/numpy_eigen.dir/src/autogen_module/import_uchar.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/numpy_eigen_test.dir/src/autogen_test_module/test_long.cpp.o[0m
+[ 92%] [32m[1mLinking CXX shared library devel/lib/libnumpy_eigen_test.so[0m
+[100%] [32m[1mLinking CXX shared library devel/lib/libnumpy_eigen.so[0m
+[34m[1mCopying library files to python directory[0m
+'/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/libnumpy_eigen_test.so' -> '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen_test.so'
+[100%] Built target numpy_eigen_test
+[34m[1mCopying library files to python directory[0m
+'/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/libnumpy_eigen.so' -> '/home/quinton/catkin_ws/src/build/numpy_eigen/devel/lib/python3/dist-packages/numpy_eigen/libnumpy_eigen.so'
+[100%] Built target numpy_eigen

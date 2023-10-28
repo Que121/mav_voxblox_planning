@@ -1,0 +1,5 @@
+make[2]: *** [CMakeFiles/leica_publisher.dir/build.make:63: CMakeFiles/leica_publisher.dir/src/leica_publisher.cpp.o] Interrupt
+make[2]: *** [CMakeFiles/hexacopter_publisher.dir/build.make:63: CMakeFiles/hexacopter_publisher.dir/src/hexacopter_publisher.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/leica_publisher.dir/all] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:976: CMakeFiles/hexacopter_publisher.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

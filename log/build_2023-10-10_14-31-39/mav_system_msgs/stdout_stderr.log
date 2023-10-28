@@ -1,0 +1,127 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_system_msgs/devel
+-- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_system_msgs/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- mav_system_msgs: 2 messages, 0 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_system_msgs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target _mav_system_msgs_generate_messages_check_deps_CpuInfo[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target _mav_system_msgs_generate_messages_check_deps_ProcessInfo[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target _mav_system_msgs_generate_messages_check_deps_CpuInfo
+[  0%] Built target _mav_system_msgs_generate_messages_check_deps_ProcessInfo
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages_cpp[0m
+[  8%] [34m[1mGenerating EusLisp manifest code for mav_system_msgs[0m
+[ 16%] [34m[1mGenerating EusLisp code from mav_system_msgs/CpuInfo.msg[0m
+[ 25%] [34m[1mGenerating EusLisp code from mav_system_msgs/ProcessInfo.msg[0m
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages_nodejs[0m
+[ 33%] [34m[1mGenerating C++ code from mav_system_msgs/ProcessInfo.msg[0m
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages_lisp[0m
+[ 41%] [34m[1mGenerating Python from MSG mav_system_msgs/ProcessInfo[0m
+[ 50%] [34m[1mGenerating C++ code from mav_system_msgs/CpuInfo.msg[0m
+[ 58%] [34m[1mGenerating Python from MSG mav_system_msgs/CpuInfo[0m
+[ 66%] [34m[1mGenerating Lisp code from mav_system_msgs/CpuInfo.msg[0m
+[ 75%] [34m[1mGenerating Javascript code from mav_system_msgs/CpuInfo.msg[0m
+[ 83%] [34m[1mGenerating Lisp code from mav_system_msgs/ProcessInfo.msg[0m
+[ 91%] [34m[1mGenerating Javascript code from mav_system_msgs/ProcessInfo.msg[0m
+[ 91%] Built target mav_system_msgs_generate_messages_lisp
+[ 91%] Built target mav_system_msgs_generate_messages_nodejs
+[ 91%] Built target mav_system_msgs_generate_messages_cpp
+[100%] [34m[1mGenerating Python msg __init__.py for mav_system_msgs[0m
+[100%] Built target mav_system_msgs_generate_messages_py
+[100%] Built target mav_system_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target mav_system_msgs_generate_messages[0m
+[100%] Built target mav_system_msgs_generate_messages
+[35m[1mScanning dependencies of target tests[0m
+Built target tests
+-- Install configuration: ""
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/CpuInfo.msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/ProcessInfo.msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs-msg-paths.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/include/mav_system_msgs
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/include/mav_system_msgs/ProcessInfo.h
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/include/mav_system_msgs/CpuInfo.h
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/roseus/ros/mav_system_msgs
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/roseus/ros/mav_system_msgs/manifest.l
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/roseus/ros/mav_system_msgs/msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/roseus/ros/mav_system_msgs/msg/CpuInfo.l
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/roseus/ros/mav_system_msgs/msg/ProcessInfo.l
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/_package.lisp
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/_package_ProcessInfo.lisp
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/mav_system_msgs-msg.asd
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/CpuInfo.lisp
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/_package_CpuInfo.lisp
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/ProcessInfo.lisp
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/_index.js
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg/ProcessInfo.js
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg/_index.js
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg/CpuInfo.js
+Listing '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs'...
+Compiling '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs/__init__.py'...
+Listing '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs/msg'...
+Compiling '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs/msg/_CpuInfo.py'...
+Compiling '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs/msg/_ProcessInfo.py'...
+Compiling '/home/quinton/catkin_ws/src/build/mav_system_msgs/devel/lib/python3/dist-packages/mav_system_msgs/msg/__init__.py'...
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/__pycache__
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/__pycache__/__init__.cpython-38.pyc
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/__init__.py
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__pycache__
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__pycache__/__init__.cpython-38.pyc
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__pycache__/_ProcessInfo.cpython-38.pyc
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__pycache__/_CpuInfo.cpython-38.pyc
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/_CpuInfo.py
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/_ProcessInfo.py
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__init__.py
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/lib/pkgconfig/mav_system_msgs.pc
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs-msg-extras.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgsConfig.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgsConfig-version.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/mav_system_msgs/share/mav_system_msgs/package.xml

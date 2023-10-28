@@ -1,0 +1,219 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_disturbance_observer/devel
+-- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_disturbance_observer/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- mav_disturbance_observer: 1 messages, 0 services
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.3.7
+CMake Warning at /opt/ros/noetic/share/cmake_modules/cmake/Modules/FindEigen.cmake:62 (message):
+  The FindEigen.cmake Module in the cmake_modules package is deprecated.
+
+  Please use the FindEigen3.cmake Module provided with Eigen.  Change
+  instances of find_package(Eigen) to find_package(Eigen3).  Check the
+  FindEigen3.cmake Module for the resulting CMake variable names.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:10 (find_package)
+
+
+-- Found Eigen: /usr/include/eigen3  
+-- Eigen found (include: /usr/include/eigen3)
+-- Marking SHARED_LIBRARY "KFDisturbanceObserverLibrary" of package "mav_disturbance_observer" for installation
+-- Marking HEADER FILES in "include" folder of package "mav_disturbance_observer" for installation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_disturbance_observer
+[35m[1mScanning dependencies of target _mav_disturbance_observer_generate_messages_check_deps_ObserverState[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target _mav_disturbance_observer_generate_messages_check_deps_ObserverState
+[  0%] Built target mav_msgs_generate_messages_cpp
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[  0%] Built target mav_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[  0%] Built target mav_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[  0%] Built target tf_generate_messages_nodejs
+[35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+[  0%] Built target mav_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  0%] Built target mav_msgs_generate_messages_py
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_py
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[  0%] Built target tf2_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target mav_disturbance_observer_gencfg[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[ 10%] [34m[1mGenerating dynamic reconfigure files from cfg/KFDisturbanceObserver.cfg: /home/quinton/catkin_ws/src/build/mav_disturbance_observer/devel/include/mav_disturbance_observer/KFDisturbanceObserverConfig.h /home/quinton/catkin_ws/src/build/mav_disturbance_observer/devel/lib/python3/dist-packages/mav_disturbance_observer/cfg/KFDisturbanceObserverConfig.py[0m
+[ 10%] Built target geometry_msgs_generate_messages_eus
+[ 10%] Built target actionlib_generate_messages_cpp
+[ 10%] Built target std_msgs_generate_messages_py
+[ 10%] Built target std_msgs_generate_messages_nodejs
+[ 10%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[ 10%] Built target geometry_msgs_generate_messages_lisp
+[ 10%] Built target trajectory_msgs_generate_messages_cpp
+[ 10%] Built target actionlib_generate_messages_lisp
+Generating reconfiguration files for KFDisturbanceObserver in mav_disturbance_observer
+Wrote header file in /home/quinton/catkin_ws/src/build/mav_disturbance_observer/devel/include/mav_disturbance_observer/KFDisturbanceObserverConfig.h
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[ 10%] Built target tf2_msgs_generate_messages_py
+[35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[ 10%] Built target dynamic_reconfigure_gencfg
+[ 10%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[ 10%] Built target mav_disturbance_observer_gencfg
+[ 10%] Built target tf2_msgs_generate_messages_cpp
+[ 10%] Built target sensor_msgs_generate_messages_cpp
+[ 10%] Built target nav_msgs_generate_messages_nodejs
+[ 10%] Built target actionlib_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[ 10%] Built target rosgraph_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[ 10%] Built target rosgraph_msgs_generate_messages_py
+[ 10%] Built target geometry_msgs_generate_messages_nodejs
+[ 10%] Built target trajectory_msgs_generate_messages_nodejs
+[ 10%] Built target nav_msgs_generate_messages_cpp
+[ 10%] Built target geometry_msgs_generate_messages_cpp
+[ 10%] Built target nav_msgs_generate_messages_py
+[ 10%] Built target actionlib_msgs_generate_messages_py
+[ 10%] Built target geometry_msgs_generate_messages_py
+[ 10%] Built target nav_msgs_generate_messages_eus
+[ 10%] Built target nav_msgs_generate_messages_lisp
+[ 10%] Built target trajectory_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[ 10%] Built target actionlib_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[ 10%] Built target rosgraph_msgs_generate_messages_eus
+[ 10%] Built target rosgraph_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[ 10%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages_py[0m
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages_cpp[0m
+[ 10%] Built target trajectory_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages_eus[0m
+[ 20%] [34m[1mGenerating EusLisp code from mav_disturbance_observer/ObserverState.msg[0m
+[ 30%] [34m[1mGenerating Javascript code from mav_disturbance_observer/ObserverState.msg[0m
+[ 40%] [34m[1mGenerating Lisp code from mav_disturbance_observer/ObserverState.msg[0m
+[ 40%] Built target actionlib_msgs_generate_messages_nodejs
+[ 40%] Built target actionlib_msgs_generate_messages_lisp
+[ 50%] [34m[1mGenerating Python from MSG mav_disturbance_observer/ObserverState[0m
+[ 50%] Built target trajectory_msgs_generate_messages_py
+[ 60%] [34m[1mGenerating EusLisp manifest code for mav_disturbance_observer[0m
+[ 60%] Built target rosgraph_msgs_generate_messages_cpp
+[ 70%] [34m[1mGenerating C++ code from mav_disturbance_observer/ObserverState.msg[0m
+[ 70%] Built target actionlib_generate_messages_eus
+[ 70%] Built target mav_disturbance_observer_generate_messages_nodejs
+[ 70%] Built target mav_disturbance_observer_generate_messages_lisp
+[ 70%] Built target mav_disturbance_observer_generate_messages_cpp
+[ 80%] [34m[1mGenerating Python msg __init__.py for mav_disturbance_observer[0m
+[ 80%] Built target mav_disturbance_observer_generate_messages_py
+[ 80%] Built target mav_disturbance_observer_generate_messages_eus
+[35m[1mScanning dependencies of target mav_disturbance_observer_generate_messages[0m
+[ 80%] Built target mav_disturbance_observer_generate_messages
+[35m[1mScanning dependencies of target KFDisturbanceObserverLibrary[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/KFDisturbanceObserverLibrary.dir/src/KF_disturbance_observer.cpp.o[0m
+make[2]: *** [CMakeFiles/KFDisturbanceObserverLibrary.dir/build.make:63: CMakeFiles/KFDisturbanceObserverLibrary.dir/src/KF_disturbance_observer.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:545: CMakeFiles/KFDisturbanceObserverLibrary.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

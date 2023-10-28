@@ -1,0 +1,148 @@
+[0.704s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_control': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_control
+[0.920s] -- The C compiler identification is GNU 9.4.0
+[1.172s] -- The CXX compiler identification is GNU 9.4.0
+[1.259s] -- Check for working C compiler: /usr/bin/cc
+[1.404s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.405s] -- Detecting C compiler ABI info
+[1.603s] -- Detecting C compiler ABI info - done
+[1.624s] -- Detecting C compile features
+[1.624s] -- Detecting C compile features - done
+[1.629s] -- Check for working CXX compiler: /usr/bin/c++
+[1.802s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.806s] -- Detecting CXX compiler ABI info
+[2.235s] -- Detecting CXX compiler ABI info - done
+[2.251s] -- Detecting CXX compile features
+[2.257s] -- Detecting CXX compile features - done
+[2.266s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/rotors_control/devel
+[2.269s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.273s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.349s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.349s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.350s] -- Using Debian Python package layout
+[2.561s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.562s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.854s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.854s] -- Call enable_testing()
+[2.858s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/rotors_control/test_results
+[5.080s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[5.080s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[5.080s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[5.116s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[5.119s] -- Found Threads: TRUE  
+[5.187s] -- Using Python nosetests: /usr/bin/nosetests3
+[5.310s] -- catkin 0.8.10
+[5.310s] -- BUILD_SHARED_LIBS is on
+[5.533s] -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[5.794s] CMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+[5.794s]   catkin_package() DEPENDS on 'Eigen3' but neither 'Eigen3_INCLUDE_DIRS' nor
+[5.794s]   'Eigen3_LIBRARIES' is defined.
+[5.794s] Call Stack (most recent call first):
+[5.794s]   /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+[5.794s]   CMakeLists.txt:17 (catkin_package)
+[5.794s] 
+[5.794s] 
+[5.926s] -- Configuring done
+[5.962s] -- Generating done
+[5.967s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/rotors_control
+[5.984s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_control' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_control -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_control
+[5.991s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_control': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_control -- -j16 -l16
+[6.054s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[6.055s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[6.055s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[6.055s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[6.058s] [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[6.058s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[6.065s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[6.065s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[6.065s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[6.066s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[6.071s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[6.072s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[6.087s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[6.089s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[6.094s] [  0%] Built target sensor_msgs_generate_messages_nodejs
+[6.094s] [  0%] Built target trajectory_msgs_generate_messages_nodejs
+[6.098s] [  0%] Built target trajectory_msgs_generate_messages_lisp
+[6.098s] [  0%] Built target mav_msgs_generate_messages_py
+[6.103s] [  0%] Built target mav_msgs_generate_messages_lisp
+[6.106s] [  0%] Built target mav_msgs_generate_messages_nodejs
+[6.106s] [  0%] Built target std_msgs_generate_messages_cpp
+[6.107s] [  0%] Built target nav_msgs_generate_messages_eus
+[6.114s] [  0%] Built target rosgraph_msgs_generate_messages_lisp
+[6.116s] [  0%] Built target roscpp_generate_messages_cpp
+[6.117s] [  0%] Built target actionlib_msgs_generate_messages_eus
+[6.119s] [  0%] Built target std_msgs_generate_messages_nodejs
+[6.127s] [  0%] Built target std_msgs_generate_messages_py
+[6.129s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[6.135s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[6.137s] [  0%] Built target geometry_msgs_generate_messages_eus
+[6.147s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[6.148s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[6.152s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[6.158s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[6.159s] [  0%] Built target rosgraph_msgs_generate_messages_eus
+[6.162s] [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[6.182s] [  0%] Built target nav_msgs_generate_messages_lisp
+[6.183s] [  0%] Built target nav_msgs_generate_messages_py
+[6.183s] [  0%] Built target nav_msgs_generate_messages_cpp
+[6.183s] [  0%] Built target sensor_msgs_generate_messages_py
+[6.187s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[6.187s] [  0%] Built target geometry_msgs_generate_messages_py
+[6.195s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[6.199s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[6.208s] [  0%] Built target roscpp_generate_messages_lisp
+[6.211s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[6.211s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[6.214s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[6.214s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[6.227s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[6.227s] [  0%] Built target rosgraph_msgs_generate_messages_py
+[6.227s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[6.236s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[6.259s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[6.280s] [  0%] Built target trajectory_msgs_generate_messages_cpp
+[6.280s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[6.281s] [  0%] Built target actionlib_msgs_generate_messages_nodejs
+[6.291s] [  0%] Built target actionlib_msgs_generate_messages_lisp
+[6.292s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[6.292s] [  0%] Built target mav_msgs_generate_messages_cpp
+[6.310s] [  0%] Built target std_msgs_generate_messages_eus
+[6.311s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[6.311s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[6.311s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[6.311s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[6.311s] [  0%] Built target mav_msgs_generate_messages_eus
+[6.312s] [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[6.312s] [35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[6.323s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[6.323s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[6.323s] [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[6.326s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[6.330s] [  0%] Built target actionlib_msgs_generate_messages_cpp
+[6.330s] [  0%] Built target std_msgs_generate_messages_lisp
+[6.338s] [  0%] Built target actionlib_msgs_generate_messages_py
+[6.348s] [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[6.360s] [  0%] Built target rosgraph_msgs_generate_messages_cpp
+[6.360s] [  0%] Built target roscpp_generate_messages_nodejs
+[6.361s] [  0%] Built target roscpp_generate_messages_eus
+[6.361s] [  0%] Built target trajectory_msgs_generate_messages_py
+[6.361s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[6.368s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[6.369s] [  0%] Built target roscpp_generate_messages_py
+[6.369s] [  0%] Built target trajectory_msgs_generate_messages_eus
+[6.369s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[6.392s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[6.392s] [  0%] Built target sensor_msgs_generate_messages_eus
+[6.392s] [  0%] Built target sensor_msgs_generate_messages_lisp
+[6.399s] [  0%] Built target sensor_msgs_generate_messages_cpp
+[6.402s] [  0%] Built target nav_msgs_generate_messages_nodejs
+[6.415s] [35m[1mScanning dependencies of target roll_pitch_yawrate_thrust_controller[0m
+[6.427s] [35m[1mScanning dependencies of target lee_position_controller[0m
+[6.561s] [ 12%] [32mBuilding CXX object CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o[0m
+[6.576s] [ 25%] [32mBuilding CXX object CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o[0m
+[30.581s] make[2]: *** [CMakeFiles/lee_position_controller.dir/build.make:63: CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o] Interrupt
+[30.659s] make[1]: *** [CMakeFiles/Makefile2:1566: CMakeFiles/lee_position_controller.dir/all] Interrupt
+[30.680s] make[2]: *** [CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/build.make:63: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o] Interrupt
+[30.681s] make[1]: *** [CMakeFiles/Makefile2:397: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all] Interrupt
+[30.690s] make: *** [Makefile:141: all] Interrupt
+[30.708s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_control' returned '-2': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_control -- -j16 -l16

@@ -1,0 +1,110 @@
+[1.386s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_visualization': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_trajectory_generation/mav_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_visualization
+[2.090s] -- The C compiler identification is GNU 9.4.0
+[2.167s] -- The CXX compiler identification is GNU 9.4.0
+[2.274s] -- Check for working C compiler: /usr/bin/cc
+[2.535s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.536s] -- Detecting C compiler ABI info
+[2.797s] -- Detecting C compiler ABI info - done
+[2.814s] -- Detecting C compile features
+[2.814s] -- Detecting C compile features - done
+[2.821s] -- Check for working CXX compiler: /usr/bin/c++
+[3.157s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[3.157s] -- Detecting CXX compiler ABI info
+[3.437s] -- Detecting CXX compiler ABI info - done
+[3.474s] -- Detecting CXX compile features
+[3.475s] -- Detecting CXX compile features - done
+[3.481s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_visualization/devel
+[3.483s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/eigen_catkin;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[3.483s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/eigen_catkin;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[3.525s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.525s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.525s] -- Using Debian Python package layout
+[3.673s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[3.674s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[3.913s] -- Using CATKIN_ENABLE_TESTING: ON
+[3.913s] -- Call enable_testing()
+[3.913s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_visualization/test_results
+[8.356s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[8.357s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[8.357s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[8.412s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[8.416s] -- Found Threads: TRUE  
+[8.494s] -- Using Python nosetests: /usr/bin/nosetests3
+[8.711s] -- catkin 0.8.10
+[8.711s] -- BUILD_SHARED_LIBS is on
+[9.763s] -- Marking SHARED_LIBRARY "mav_visualization" of package "mav_visualization" for installation
+[9.764s] -- Marking EXECUTABLE "hexacopter_publisher" of package "mav_visualization" for installation
+[9.764s] -- Marking EXECUTABLE "leica_publisher" of package "mav_visualization" for installation
+[9.764s] -- Marking HEADER FILES in "include" folder of package "mav_visualization" for installation
+[9.764s] -- Marking SHARED CONTENT FOLDER "meshes" of package "mav_visualization" for installation
+[9.960s] -- Configuring done
+[10.002s] -- Generating done
+[10.010s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_visualization
+[10.036s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_visualization' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_trajectory_generation/mav_visualization -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_visualization
+[10.040s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_visualization': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_visualization -- -j16 -l16
+[10.108s] [35m[1mScanning dependencies of target visualization_msgs_generate_messages_lisp[0m
+[10.108s] [35m[1mScanning dependencies of target visualization_msgs_generate_messages_eus[0m
+[10.108s] [35m[1mScanning dependencies of target visualization_msgs_generate_messages_nodejs[0m
+[10.108s] [35m[1mScanning dependencies of target visualization_msgs_generate_messages_py[0m
+[10.119s] [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[10.120s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[10.133s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[10.142s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[10.148s] [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[10.150s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[10.157s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[10.159s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[10.160s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[10.175s] [  0%] Built target visualization_msgs_generate_messages_py
+[10.176s] [  0%] Built target visualization_msgs_generate_messages_nodejs
+[10.185s] [  0%] Built target visualization_msgs_generate_messages_eus
+[10.193s] [  0%] Built target roscpp_generate_messages_lisp
+[10.194s] [  0%] Built target visualization_msgs_generate_messages_lisp
+[10.204s] [  0%] Built target roscpp_generate_messages_cpp
+[10.204s] [  0%] Built target rosgraph_msgs_generate_messages_py
+[10.204s] [  0%] Built target std_msgs_generate_messages_lisp
+[10.211s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[10.213s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[10.216s] [  0%] Built target rosgraph_msgs_generate_messages_eus
+[10.222s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[10.229s] [  0%] Built target geometry_msgs_generate_messages_py
+[10.237s] [  0%] Built target std_msgs_generate_messages_cpp
+[10.237s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[10.244s] [  0%] Built target std_msgs_generate_messages_eus
+[10.244s] [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[10.251s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[10.251s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[10.260s] [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[10.260s] [35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[10.265s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[10.270s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[10.275s] [  0%] Built target roscpp_generate_messages_nodejs
+[10.281s] [  0%] Built target rosgraph_msgs_generate_messages_cpp
+[10.282s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[10.288s] [  0%] Built target geometry_msgs_generate_messages_eus
+[10.288s] [  0%] Built target std_msgs_generate_messages_nodejs
+[10.290s] [35m[1mScanning dependencies of target visualization_msgs_generate_messages_cpp[0m
+[10.293s] [  0%] Built target roscpp_generate_messages_eus
+[10.294s] [  0%] Built target roscpp_generate_messages_py
+[10.309s] [  0%] Built target rosgraph_msgs_generate_messages_lisp
+[10.310s] [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[10.311s] [  0%] Built target std_msgs_generate_messages_py
+[10.315s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[10.327s] [  0%] Built target visualization_msgs_generate_messages_cpp
+[10.332s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[10.365s] [35m[1mScanning dependencies of target mav_visualization[0m
+[10.443s] [ 25%] [32mBuilding CXX object CMakeFiles/mav_visualization.dir/src/marker_group.cpp.o[0m
+[10.444s] [ 25%] [32mBuilding CXX object CMakeFiles/mav_visualization.dir/src/hexacopter_marker.cpp.o[0m
+[10.449s] [ 37%] [32mBuilding CXX object CMakeFiles/mav_visualization.dir/src/leica_marker.cpp.o[0m
+[19.933s] [ 50%] [32m[1mLinking CXX shared library devel/lib/libmav_visualization.so[0m
+[20.755s] [ 50%] Built target mav_visualization
+[20.884s] [35m[1mScanning dependencies of target leica_publisher[0m
+[20.884s] [35m[1mScanning dependencies of target hexacopter_publisher[0m
+[21.296s] [ 62%] [32mBuilding CXX object CMakeFiles/hexacopter_publisher.dir/src/hexacopter_publisher.cpp.o[0m
+[21.300s] [ 75%] [32mBuilding CXX object CMakeFiles/leica_publisher.dir/src/leica_publisher.cpp.o[0m
+[23.767s] make[2]: *** [CMakeFiles/leica_publisher.dir/build.make:63: CMakeFiles/leica_publisher.dir/src/leica_publisher.cpp.o] Interrupt
+[23.769s] make[2]: *** [CMakeFiles/hexacopter_publisher.dir/build.make:63: CMakeFiles/hexacopter_publisher.dir/src/hexacopter_publisher.cpp.o] Interrupt
+[23.769s] make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/leica_publisher.dir/all] Interrupt
+[23.783s] make[1]: *** [CMakeFiles/Makefile2:976: CMakeFiles/hexacopter_publisher.dir/all] Interrupt
+[23.783s] make: *** [Makefile:141: all] Interrupt
+[23.806s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_visualization' returned '-2': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/eigen_catkin/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_visualization -- -j16 -l16

@@ -1,0 +1,50 @@
+[0.534s] Invoking command in '/home/quinton/catkin_ws/src/build/gflags_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/gflags_catkin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/gflags_catkin
+[0.734s] -- The C compiler identification is GNU 9.4.0
+[0.922s] -- The CXX compiler identification is GNU 9.4.0
+[0.973s] -- Check for working C compiler: /usr/bin/cc
+[1.089s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.089s] -- Detecting C compiler ABI info
+[1.226s] -- Detecting C compiler ABI info - done
+[1.241s] -- Detecting C compile features
+[1.243s] -- Detecting C compile features - done
+[1.246s] -- Check for working CXX compiler: /usr/bin/c++
+[1.361s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.362s] -- Detecting CXX compiler ABI info
+[1.481s] -- Detecting CXX compiler ABI info - done
+[1.503s] -- Detecting CXX compile features
+[1.503s] -- Detecting CXX compile features - done
+[1.504s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/gflags_catkin/devel
+[1.504s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.504s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.520s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.520s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.520s] -- Using Debian Python package layout
+[1.576s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.576s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[1.735s] -- Using CATKIN_ENABLE_TESTING: ON
+[1.735s] -- Call enable_testing()
+[1.735s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/gflags_catkin/test_results
+[3.548s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[3.549s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[3.550s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[3.603s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.609s] -- Found Threads: TRUE  
+[3.650s] -- Using Python nosetests: /usr/bin/nosetests3
+[3.806s] -- catkin 0.8.10
+[3.809s] -- BUILD_SHARED_LIBS is on
+[4.342s] -- Configuring done
+[4.366s] -- Generating done
+[4.368s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/gflags_catkin
+[4.397s] Invoked command in '/home/quinton/catkin_ws/src/build/gflags_catkin' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/gflags_catkin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/gflags_catkin
+[4.404s] Invoking command in '/home/quinton/catkin_ws/src/build/gflags_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/gflags_catkin -- -j16 -l16
+[6.493s] [35m[1mScanning dependencies of target gflags_src[0m
+[6.493s] [ 12%] [34m[1mCreating directories for 'gflags_src'[0m
+[6.493s] [ 25%] [34m[1mPerforming download step (download, verify and extract) for 'gflags_src'[0m
+[6.493s] -- Downloading...
+[6.493s]    dst='/home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip'
+[6.493s]    timeout='none'
+[6.494s] -- Using src='https://github.com/gflags/gflags/archive/v2.2.1.zip'
+[34.031s] make[2]: *** [CMakeFiles/gflags_src.dir/build.make:91: gflags_src-prefix/src/gflags_src-stamp/gflags_src-download] Interrupt
+[34.043s] make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/gflags_src.dir/all] Interrupt
+[34.043s] make: *** [Makefile:141: all] Interrupt
+[34.064s] Invoked command in '/home/quinton/catkin_ws/src/build/gflags_catkin' returned '-2': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/gflags_catkin -- -j16 -l16

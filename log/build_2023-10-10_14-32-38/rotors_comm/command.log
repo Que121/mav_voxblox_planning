@@ -1,0 +1,6 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_comm
+Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_comm

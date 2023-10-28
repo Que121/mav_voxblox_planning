@@ -1,0 +1,25 @@
+Built target tests
+-- Install configuration: ""
++ cd /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation
++ mkdir -p /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages
++ /usr/bin/env PYTHONPATH=/home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/src/build/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages CATKIN_BINARY_DIR=/home/quinton/catkin_ws/src/build/rotors_evaluation /usr/bin/python3 /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/setup.py build --build-base /home/quinton/catkin_ws/src/build/rotors_evaluation install --root=/ --install-layout=deb --prefix=/home/quinton/catkin_ws/src/install/rotors_evaluation --install-scripts=/home/quinton/catkin_ws/src/install/rotors_evaluation/bin
+running build
+running build_py
+running install
+running install_lib
+byte-compiling /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py to analyze_bag.cpython-38.pyc
+running install_egg_info
+  File "home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py", line 53
+    except Exception, e:
+                    ^
+SyntaxError: invalid syntax
+
+Removing /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rotors_evaluation-2.2.3.egg-info
+Writing /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rotors_evaluation-2.2.3.egg-info
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/pkgconfig/rotors_evaluation.pc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig-version.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/package.xml
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/disturbance_eval.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/hovering_eval.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/waypoints_eval.py

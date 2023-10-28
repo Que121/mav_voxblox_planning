@@ -1,0 +1,8 @@
+prefix=/home/quinton/catkin_ws/src/install/rqt_rotors
+
+Name: rqt_rotors
+Description: Description of rqt_rotors
+Version: 2.2.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

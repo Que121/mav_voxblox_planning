@@ -1,0 +1,11 @@
+[0.746s] Invoking command in '/home/quinton/catkin_ws/src/build/nlopt': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/nlopt -- -j16 -l16
+[0.835s] [ 10%] [34m[1mPerforming download step for 'nlopt_src'[0m
+[0.837s] --2023-10-10 14:32:40--  https://github.com/ethz-asl/thirdparty_library_binaries/raw/master/nlopt-2.4.2.tar.gz
+[0.837s] Resolving github.com (github.com)... 20.205.243.166
+[131.762s] Connecting to github.com (github.com)|20.205.243.166|:443... failed: Connection timed out.
+[131.763s] Retrying.
+[131.763s] 
+[132.762s] --2023-10-10 14:34:52--  (try: 2)  https://github.com/ethz-asl/thirdparty_library_binaries/raw/master/nlopt-2.4.2.tar.gz
+[138.228s] Connecting to github.com (github.com)|20.205.243.166|:443... make[2]: *** [CMakeFiles/nlopt_src.dir/build.make:90: nlopt_src-prefix/src/nlopt_src-stamp/nlopt_src-download] Interrupt
+[138.234s] make[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/nlopt_src.dir/all] Interrupt
+[138.241s] make: *** [Makefile:141: all] Interrupt

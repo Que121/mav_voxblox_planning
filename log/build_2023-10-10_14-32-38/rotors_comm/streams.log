@@ -1,0 +1,99 @@
+[0.559s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm -- -j16 -l16
+[0.677s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[0.702s] [  0%] Built target octomap_msgs_generate_messages_cpp
+[0.703s] [  0%] Built target geometry_msgs_generate_messages_py
+[0.719s] [  0%] Built target std_msgs_generate_messages_cpp
+[0.720s] [  0%] Built target octomap_msgs_generate_messages_py
+[0.737s] [  0%] Built target _rotors_comm_generate_messages_check_deps_Octomap
+[0.742s] [  0%] Built target std_msgs_generate_messages_py
+[0.749s] [  0%] Built target octomap_msgs_generate_messages_nodejs
+[0.760s] [  0%] Built target octomap_msgs_generate_messages_lisp
+[0.772s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[0.772s] [  0%] Built target _rotors_comm_generate_messages_check_deps_WindSpeed
+[0.789s] [  0%] Built target std_msgs_generate_messages_nodejs
+[0.789s] [  0%] Built target _rotors_comm_generate_messages_check_deps_RecordRosbag
+[0.789s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[0.789s] [  0%] Built target std_msgs_generate_messages_lisp
+[0.799s] [  0%] Built target octomap_msgs_generate_messages_eus
+[0.828s] [  0%] Built target geometry_msgs_generate_messages_eus
+[0.829s] [ 38%] Built target rotors_comm_generate_messages_cpp
+[0.829s] [ 44%] Built target rotors_comm_generate_messages_py
+[0.829s] [ 61%] Built target rotors_comm_generate_messages_lisp
+[0.832s] [ 61%] Built target std_msgs_generate_messages_eus
+[0.832s] [ 77%] Built target rotors_comm_generate_messages_nodejs
+[0.856s] [100%] Built target rotors_comm_generate_messages_eus
+[0.877s] [100%] Built target rotors_comm_generate_messages
+[0.897s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm -- -j16 -l16
+[0.958s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm --target tests -- -j16 -l16
+[1.027s] Built target tests
+[1.625s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_comm --target tests -- -j16 -l16
+[2.022s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_comm': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_comm
+[2.727s] -- Install configuration: ""
+[2.727s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/srv/Octomap.srv
+[2.728s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/srv/RecordRosbag.srv
+[2.728s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/msg/WindSpeed.msg
+[2.728s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/cmake/rotors_comm-msg-paths.cmake
+[2.729s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm
+[2.732s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/OctomapResponse.h
+[2.734s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/RecordRosbagResponse.h
+[2.734s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/RecordRosbagRequest.h
+[2.734s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/WindSpeed.h
+[2.734s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/Octomap.h
+[2.734s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/RecordRosbag.h
+[2.735s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/include/rotors_comm/OctomapRequest.h
+[2.735s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm
+[2.735s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/manifest.l
+[2.735s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/srv
+[2.736s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/srv/Octomap.l
+[2.736s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/srv/RecordRosbag.l
+[2.736s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/msg
+[2.736s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/roseus/ros/rotors_comm/msg/WindSpeed.l
+[2.736s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm
+[2.737s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv
+[2.737s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/_package.lisp
+[2.737s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/_package_Octomap.lisp
+[2.737s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/rotors_comm-srv.asd
+[2.737s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/RecordRosbag.lisp
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/_package_RecordRosbag.lisp
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/srv/Octomap.lisp
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/msg
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/msg/_package.lisp
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/msg/_package_WindSpeed.lisp
+[2.738s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/msg/WindSpeed.lisp
+[2.739s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/common-lisp/ros/rotors_comm/msg/rotors_comm-msg.asd
+[2.739s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm
+[2.739s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/srv
+[2.739s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/srv/Octomap.js
+[2.739s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/srv/RecordRosbag.js
+[2.740s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/srv/_index.js
+[2.740s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/_index.js
+[2.740s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/msg
+[2.740s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/msg/WindSpeed.js
+[2.740s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/gennodejs/ros/rotors_comm/msg/_index.js
+[2.740s] Listing '/home/quinton/catkin_ws/src/build/rotors_comm/devel/lib/python3/dist-packages/rotors_comm'...
+[2.741s] Listing '/home/quinton/catkin_ws/src/build/rotors_comm/devel/lib/python3/dist-packages/rotors_comm/msg'...
+[2.741s] Listing '/home/quinton/catkin_ws/src/build/rotors_comm/devel/lib/python3/dist-packages/rotors_comm/srv'...
+[2.741s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm
+[2.741s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv
+[2.742s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/__pycache__
+[2.742s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/__pycache__/__init__.cpython-38.pyc
+[2.742s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/__pycache__/_RecordRosbag.cpython-38.pyc
+[2.742s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/__pycache__/_Octomap.cpython-38.pyc
+[2.743s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/_RecordRosbag.py
+[2.743s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/_Octomap.py
+[2.743s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/srv/__init__.py
+[2.743s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/__pycache__
+[2.743s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/__pycache__/__init__.cpython-38.pyc
+[2.744s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/__init__.py
+[2.744s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg
+[2.744s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg/__pycache__
+[2.744s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg/__pycache__/__init__.cpython-38.pyc
+[2.744s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg/__pycache__/_WindSpeed.cpython-38.pyc
+[2.745s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg/_WindSpeed.py
+[2.745s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/python3/dist-packages/rotors_comm/msg/__init__.py
+[2.745s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/lib/pkgconfig/rotors_comm.pc
+[2.745s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/cmake/rotors_comm-msg-extras.cmake
+[2.746s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/cmake/rotors_commConfig.cmake
+[2.746s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/cmake/rotors_commConfig-version.cmake
+[2.746s] -- Up-to-date: /home/quinton/catkin_ws/src/install/rotors_comm/share/rotors_comm/package.xml
+[2.747s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_comm' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_comm

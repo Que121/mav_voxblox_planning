@@ -1,0 +1,60 @@
+[0.484s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_control': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_control -- -j16 -l16
+[0.735s] [  0%] Built target sensor_msgs_generate_messages_nodejs
+[0.738s] [  0%] Built target mav_msgs_generate_messages_nodejs
+[0.742s] [  0%] Built target trajectory_msgs_generate_messages_lisp
+[0.763s] [  0%] Built target mav_msgs_generate_messages_py
+[0.771s] [  0%] Built target mav_msgs_generate_messages_lisp
+[0.771s] [  0%] Built target trajectory_msgs_generate_messages_nodejs
+[0.773s] [  0%] Built target roscpp_generate_messages_cpp
+[0.773s] [  0%] Built target std_msgs_generate_messages_py
+[0.780s] [  0%] Built target nav_msgs_generate_messages_eus
+[0.781s] [  0%] Built target std_msgs_generate_messages_cpp
+[0.810s] [  0%] Built target actionlib_msgs_generate_messages_eus
+[0.872s] [  0%] Built target rosgraph_msgs_generate_messages_lisp
+[0.882s] [  0%] Built target nav_msgs_generate_messages_lisp
+[0.884s] [  0%] Built target geometry_msgs_generate_messages_eus
+[0.889s] [  0%] Built target nav_msgs_generate_messages_cpp
+[0.889s] [  0%] Built target geometry_msgs_generate_messages_py
+[0.889s] [  0%] Built target std_msgs_generate_messages_nodejs
+[0.899s] [  0%] Built target rosgraph_msgs_generate_messages_eus
+[0.932s] [  0%] Built target sensor_msgs_generate_messages_py
+[0.932s] [  0%] Built target roscpp_generate_messages_lisp
+[0.932s] [  0%] Built target nav_msgs_generate_messages_py
+[0.963s] [  0%] Built target trajectory_msgs_generate_messages_cpp
+[0.967s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[0.985s] [  0%] Built target rosgraph_msgs_generate_messages_py
+[0.999s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[1.009s] [  0%] Built target actionlib_msgs_generate_messages_nodejs
+[1.009s] [  0%] Built target actionlib_msgs_generate_messages_lisp
+[1.031s] [  0%] Built target mav_msgs_generate_messages_eus
+[1.031s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[1.031s] [  0%] Built target std_msgs_generate_messages_eus
+[1.072s] [  0%] Built target mav_msgs_generate_messages_cpp
+[1.091s] [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[1.096s] [  0%] Built target std_msgs_generate_messages_lisp
+[1.101s] [  0%] Built target actionlib_msgs_generate_messages_py
+[1.107s] [  0%] Built target roscpp_generate_messages_nodejs
+[1.108s] [  0%] Built target roscpp_generate_messages_eus
+[1.112s] [  0%] Built target actionlib_msgs_generate_messages_cpp
+[1.117s] [  0%] Built target trajectory_msgs_generate_messages_eus
+[1.138s] [  0%] Built target roscpp_generate_messages_py
+[1.152s] [  0%] Built target trajectory_msgs_generate_messages_py
+[1.176s] [  0%] Built target nav_msgs_generate_messages_nodejs
+[1.181s] [  0%] Built target sensor_msgs_generate_messages_cpp
+[1.182s] [  0%] Built target rosgraph_msgs_generate_messages_cpp
+[1.194s] [  0%] Built target sensor_msgs_generate_messages_lisp
+[1.194s] [  0%] Built target sensor_msgs_generate_messages_eus
+[1.270s] [ 12%] [32mBuilding CXX object CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o[0m
+[1.273s] [ 25%] [32mBuilding CXX object CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o[0m
+[63.569s] [ 37%] [32m[1mLinking CXX shared library devel/lib/libroll_pitch_yawrate_thrust_controller.so[0m
+[63.820s] [ 37%] Built target roll_pitch_yawrate_thrust_controller
+[63.839s] [35m[1mScanning dependencies of target roll_pitch_yawrate_thrust_controller_node[0m
+[64.046s] [ 50%] [32mBuilding CXX object CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/src/nodes/roll_pitch_yawrate_thrust_controller_node.cpp.o[0m
+[64.422s] [ 62%] [32m[1mLinking CXX shared library devel/lib/liblee_position_controller.so[0m
+[64.855s] [ 62%] Built target lee_position_controller
+[64.869s] [35m[1mScanning dependencies of target lee_position_controller_node[0m
+[64.937s] [ 75%] [32mBuilding CXX object CMakeFiles/lee_position_controller_node.dir/src/nodes/lee_position_controller_node.cpp.o[0m
+[72.742s] [ 87%] [32m[1mLinking CXX executable devel/lib/rotors_control/roll_pitch_yawrate_thrust_controller_node[0m
+[73.093s] [ 87%] Built target roll_pitch_yawrate_thrust_controller_node
+[74.092s] [100%] [32m[1mLinking CXX executable devel/lib/rotors_control/lee_position_controller_node[0m
+[74.438s] [100%] Built target lee_position_controller_node

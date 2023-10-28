@@ -1,0 +1,186 @@
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target trajectory_msgs_generate_messages_eus
+[  0%] Built target mav_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHoles
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonWithHolesStamped
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialTrajectory4D
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PointCloudWithPose
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_Polygon2D
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PlannerService
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_ChangeNameService
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolynomialSegment4D
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_Point2D
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target mav_msgs_generate_messages_py
+[  0%] Built target _mav_planning_msgs_generate_messages_check_deps_PolygonService
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target trajectory_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target trajectory_msgs_generate_messages_lisp
+[  0%] Built target mav_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_cpp
+[  0%] Built target mav_msgs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[  0%] Built target mav_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[ 20%] Built target mav_planning_msgs_generate_messages_eus
+[ 39%] Built target mav_planning_msgs_generate_messages_lisp
+[ 61%] Built target mav_planning_msgs_generate_messages_py
+[ 80%] Built target mav_planning_msgs_generate_messages_cpp
+[100%] Built target mav_planning_msgs_generate_messages_nodejs
+[100%] Built target mav_planning_msgs_generate_messages
+Built target tests
+-- Install configuration: ""
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/Point2D.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PointCloudWithPose.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/Polygon2D.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHoles.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolygonWithHolesStamped.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialSegment4D.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/msg/PolynomialTrajectory4D.msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/PlannerService.srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/PolygonService.srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/srv/ChangeNameService.srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs-msg-paths.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialTrajectory4D.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonWithHoles.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameServiceResponse.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameService.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerService.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonWithHolesStamped.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialTrajectory.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PointCloudWithPose.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/ChangeNameServiceRequest.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/Polygon2D.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialSegment.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerServiceRequest.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonServiceRequest.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/Point2D.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonServiceResponse.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolynomialSegment4D.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PlannerServiceResponse.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/include/mav_planning_msgs/PolygonService.h
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/manifest.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/ChangeNameService.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/PlannerService.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/srv/PolygonService.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PointCloudWithPose.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHoles.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/Point2D.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/Polygon2D.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolynomialSegment4D.l
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_PlannerService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/PlannerService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/mav_planning_msgs-srv.asd
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/PolygonService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_ChangeNameService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/ChangeNameService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/srv/_package_PolygonService.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialTrajectory.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/Point2D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolygonWithHoles.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialSegment.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PointCloudWithPose.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_Polygon2D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialSegment4D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialSegment4D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/Polygon2D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolygonWithHolesStamped.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialTrajectory.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolygonWithHoles.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_PolynomialTrajectory4D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PointCloudWithPose.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/_package_Point2D.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/mav_planning_msgs-msg.asd
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/common-lisp/ros/mav_planning_msgs/msg/PolynomialSegment.lisp
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/PolygonService.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/_index.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/PlannerService.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/srv/ChangeNameService.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/_index.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialSegment4D.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialTrajectory4D.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/Polygon2D.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialTrajectory.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolynomialSegment.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/_index.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PointCloudWithPose.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/PolygonWithHoles.js
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/gennodejs/ros/mav_planning_msgs/msg/Point2D.js
+Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs'...
+Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/msg'...
+Listing '/home/quinton/catkin_ws/src/build/mav_planning_msgs/devel/lib/python3/dist-packages/mav_planning_msgs/srv'...
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_PlannerService.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/__init__.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_PolygonService.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_ChangeNameService.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__pycache__/_PlannerService.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_ChangeNameService.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/_PolygonService.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/srv/__init__.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__pycache__
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__pycache__/__init__.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/__init__.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PointCloudWithPose.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialSegment.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialTrajectory4D.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolygonWithHolesStamped.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/__init__.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_Point2D.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PointCloudWithPose.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_Polygon2D.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialSegment4D.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolynomialTrajectory.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__pycache__/_PolygonWithHoles.cpython-38.pyc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHolesStamped.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_Polygon2D.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory4D.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_Point2D.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialTrajectory.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/__init__.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolygonWithHoles.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/python3/dist-packages/mav_planning_msgs/msg/_PolynomialSegment4D.py
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/lib/pkgconfig/mav_planning_msgs.pc
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgs-msg-extras.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/cmake/mav_planning_msgsConfig-version.cmake
+-- Up-to-date: /home/quinton/catkin_ws/src/install/mav_planning_msgs/share/mav_planning_msgs/package.xml

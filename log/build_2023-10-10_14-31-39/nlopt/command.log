@@ -1,0 +1,4 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/nlopt': /usr/bin/cmake /home/quinton/catkin_ws/src/nlopt -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/nlopt
+Invoked command in '/home/quinton/catkin_ws/src/build/nlopt' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/nlopt -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/nlopt
+Invoking command in '/home/quinton/catkin_ws/src/build/nlopt': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/nlopt -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/nlopt' returned '-2': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/nlopt -- -j16 -l16

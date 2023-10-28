@@ -1,0 +1,8 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake /home/quinton/catkin_ws/src/mav_comm/mav_state_machine_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_state_machine_msgs
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/mav_comm/mav_state_machine_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_state_machine_msgs
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_state_machine_msgs
+Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_state_machine_msgs

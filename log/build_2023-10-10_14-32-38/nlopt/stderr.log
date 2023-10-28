@@ -1,0 +1,9 @@
+--2023-10-10 14:32:40--  https://github.com/ethz-asl/thirdparty_library_binaries/raw/master/nlopt-2.4.2.tar.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... failed: Connection timed out.
+Retrying.
+
+--2023-10-10 14:34:52--  (try: 2)  https://github.com/ethz-asl/thirdparty_library_binaries/raw/master/nlopt-2.4.2.tar.gz
+Connecting to github.com (github.com)|20.205.243.166|:443... make[2]: *** [CMakeFiles/nlopt_src.dir/build.make:90: nlopt_src-prefix/src/nlopt_src-stamp/nlopt_src-download] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/nlopt_src.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

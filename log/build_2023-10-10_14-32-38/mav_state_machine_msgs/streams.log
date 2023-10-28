@@ -1,0 +1,78 @@
+[0.475s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs -- -j16 -l16
+[0.570s] [  0%] Built target std_msgs_generate_messages_lisp
+[0.570s] [  0%] Built target std_msgs_generate_messages_eus
+[0.570s] [  0%] Built target std_msgs_generate_messages_cpp
+[0.570s] [  0%] Built target std_msgs_generate_messages_py
+[0.593s] [  0%] Built target std_msgs_generate_messages_nodejs
+[0.634s] [  0%] Built target _mav_state_machine_msgs_generate_messages_check_deps_RunTaskService
+[0.650s] [  0%] Built target _mav_state_machine_msgs_generate_messages_check_deps_StartStopTask
+[0.697s] [ 30%] Built target mav_state_machine_msgs_generate_messages_py
+[0.702s] [ 46%] Built target mav_state_machine_msgs_generate_messages_cpp
+[0.717s] [ 69%] Built target mav_state_machine_msgs_generate_messages_eus
+[0.723s] [ 84%] Built target mav_state_machine_msgs_generate_messages_lisp
+[0.733s] [100%] Built target mav_state_machine_msgs_generate_messages_nodejs
+[0.753s] [100%] Built target mav_state_machine_msgs_generate_messages
+[0.774s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs -- -j16 -l16
+[0.835s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs --target tests -- -j16 -l16
+[0.889s] Built target tests
+[0.913s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_state_machine_msgs --target tests -- -j16 -l16
+[1.773s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_state_machine_msgs
+[1.872s] -- Install configuration: ""
+[1.872s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/msg/StartStopTask.msg
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/srv/RunTaskService.srv
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/cmake/mav_state_machine_msgs-msg-paths.cmake
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/include/mav_state_machine_msgs
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/include/mav_state_machine_msgs/RunTaskServiceResponse.h
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/include/mav_state_machine_msgs/RunTaskService.h
+[1.873s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/include/mav_state_machine_msgs/StartStopTask.h
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/include/mav_state_machine_msgs/RunTaskServiceRequest.h
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs/manifest.l
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs/srv
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs/srv/RunTaskService.l
+[1.874s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs/msg
+[1.875s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/roseus/ros/mav_state_machine_msgs/msg/StartStopTask.l
+[1.875s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs
+[1.875s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv
+[1.876s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/RunTaskService.lisp
+[1.876s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/_package.lisp
+[1.876s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/_package_RunTaskService.lisp
+[1.876s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/mav_state_machine_msgs-srv.asd
+[1.876s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/msg
+[1.877s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/msg/_package.lisp
+[1.877s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/msg/mav_state_machine_msgs-msg.asd
+[1.877s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/msg/_package_StartStopTask.lisp
+[1.877s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/msg/StartStopTask.lisp
+[1.877s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/srv
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/srv/RunTaskService.js
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/srv/_index.js
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/_index.js
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/msg
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/msg/_index.js
+[1.878s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/msg/StartStopTask.js
+[1.879s] Listing '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs/devel/lib/python3/dist-packages/mav_state_machine_msgs'...
+[1.879s] Listing '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs/devel/lib/python3/dist-packages/mav_state_machine_msgs/msg'...
+[1.879s] Listing '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs/devel/lib/python3/dist-packages/mav_state_machine_msgs/srv'...
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv/__pycache__
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv/__pycache__/__init__.cpython-38.pyc
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv/__pycache__/_RunTaskService.cpython-38.pyc
+[1.879s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv/_RunTaskService.py
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/srv/__init__.py
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/__pycache__
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/__pycache__/__init__.cpython-38.pyc
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/__init__.py
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg
+[1.880s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg/__pycache__
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg/__pycache__/__init__.cpython-38.pyc
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg/__pycache__/_StartStopTask.cpython-38.pyc
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg/_StartStopTask.py
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/python3/dist-packages/mav_state_machine_msgs/msg/__init__.py
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/lib/pkgconfig/mav_state_machine_msgs.pc
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/cmake/mav_state_machine_msgs-msg-extras.cmake
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/cmake/mav_state_machine_msgsConfig.cmake
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/cmake/mav_state_machine_msgsConfig-version.cmake
+[1.881s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_state_machine_msgs/share/mav_state_machine_msgs/package.xml
+[2.620s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_state_machine_msgs' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_state_machine_msgs

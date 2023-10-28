@@ -1,0 +1,187 @@
+[0.539s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_control_rw/mav_lowlevel_attitude_controller -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_lowlevel_attitude_controller
+[0.875s] -- The C compiler identification is GNU 9.4.0
+[0.991s] -- The CXX compiler identification is GNU 9.4.0
+[1.084s] -- Check for working C compiler: /usr/bin/cc
+[1.236s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.239s] -- Detecting C compiler ABI info
+[1.456s] -- Detecting C compiler ABI info - done
+[1.474s] -- Detecting C compile features
+[1.475s] -- Detecting C compile features - done
+[1.480s] -- Check for working CXX compiler: /usr/bin/c++
+[1.680s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.681s] -- Detecting CXX compiler ABI info
+[2.059s] -- Detecting CXX compiler ABI info - done
+[2.096s] -- Detecting CXX compile features
+[2.097s] -- Detecting CXX compile features - done
+[2.101s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel
+[2.103s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.104s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.211s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.211s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.211s] -- Using Debian Python package layout
+[2.418s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.419s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.703s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.703s] -- Call enable_testing()
+[2.707s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/test_results
+[4.972s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.973s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.973s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[5.010s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[5.012s] -- Found Threads: TRUE  
+[5.069s] -- Using Python nosetests: /usr/bin/nosetests3
+[5.233s] -- catkin 0.8.10
+[5.233s] -- BUILD_SHARED_LIBS is on
+[5.569s] -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[5.918s] -- Marking SHARED_LIBRARY "pid_attitude_controller_lib" of package "mav_lowlevel_attitude_controller" for installation
+[5.919s] -- Marking EXECUTABLE "mav_pid_attitude_controller_node" of package "mav_lowlevel_attitude_controller" for installation
+[5.919s] -- Marking HEADER FILES in "include" folder of package "mav_lowlevel_attitude_controller" for installation
+[5.919s] -- Marking SHARED CONTENT FOLDER "launch" of package "mav_lowlevel_attitude_controller" for installation
+[6.194s] -- Configuring done
+[6.272s] -- Generating done
+[6.283s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller
+[7.285s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/mav_control_rw/mav_lowlevel_attitude_controller -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/mav_lowlevel_attitude_controller
+[7.288s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller -- -j16 -l16
+[8.046s] [35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[8.046s] [35m[1mScanning dependencies of target mav_lowlevel_attitude_controller_gencfg[0m
+[8.047s] [35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[8.047s] [35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[8.047s] [ 20%] [34m[1mGenerating dynamic reconfigure files from cfg/PIDAttitude.cfg: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/include/mav_lowlevel_attitude_controller/PIDAttitudeConfig.h /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/lib/python3/dist-packages/mav_lowlevel_attitude_controller/cfg/PIDAttitudeConfig.py[0m
+[8.047s] [ 20%] Built target tf_generate_messages_nodejs
+[8.047s] [35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[8.047s] [35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[8.047s] [ 20%] Built target tf2_msgs_generate_messages_nodejs
+[8.047s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[8.047s] [35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[8.047s] [ 20%] Built target tf2_msgs_generate_messages_lisp
+[8.047s] [ 20%] Built target actionlib_generate_messages_nodejs
+[8.047s] [ 20%] Built target actionlib_generate_messages_py
+[8.047s] [ 20%] Built target sensor_msgs_generate_messages_py
+[8.048s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[8.048s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[8.048s] [ 20%] Built target tf2_msgs_generate_messages_eus
+[8.048s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[8.048s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[8.048s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[8.048s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[8.048s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[8.048s] [ 20%] Built target sensor_msgs_generate_messages_nodejs
+[8.048s] [ 20%] Built target sensor_msgs_generate_messages_lisp
+[8.048s] [ 20%] Built target trajectory_msgs_generate_messages_lisp
+[8.048s] [ 20%] Built target sensor_msgs_generate_messages_eus
+[8.048s] [ 20%] Built target nav_msgs_generate_messages_cpp
+[8.049s] [ 20%] Built target trajectory_msgs_generate_messages_nodejs
+[8.049s] Generating reconfiguration files for PIDAttitude in mav_linear_mpc
+[8.049s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[8.049s] Wrote header file in /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/include/mav_lowlevel_attitude_controller/PIDAttitudeConfig.h
+[8.049s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[8.049s] [ 20%] Built target rosgraph_msgs_generate_messages_eus
+[8.049s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[8.049s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[8.049s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[8.049s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[8.049s] [ 20%] Built target geometry_msgs_generate_messages_py
+[8.049s] [ 20%] Built target geometry_msgs_generate_messages_eus
+[8.049s] [ 20%] Built target std_msgs_generate_messages_nodejs
+[8.050s] [ 20%] Built target geometry_msgs_generate_messages_cpp
+[8.050s] [ 20%] Built target geometry_msgs_generate_messages_lisp
+[8.050s] [ 20%] Built target std_msgs_generate_messages_py
+[8.050s] [35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[8.050s] [35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[8.050s] [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[8.050s] [ 20%] Built target mav_lowlevel_attitude_controller_gencfg
+[8.070s] [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
+[8.070s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[8.081s] [ 20%] Built target actionlib_generate_messages_lisp
+[8.095s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[8.096s] [ 20%] Built target roscpp_generate_messages_lisp
+[8.096s] [ 20%] Built target tf_generate_messages_cpp
+[8.110s] [ 20%] Built target dynamic_reconfigure_generate_messages_py
+[8.110s] [ 20%] Built target std_msgs_generate_messages_lisp
+[8.111s] [ 20%] Built target actionlib_msgs_generate_messages_eus
+[8.136s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[8.136s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[8.143s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[8.147s] [35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[8.150s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[8.151s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[8.158s] [ 20%] Built target std_msgs_generate_messages_cpp
+[8.161s] [35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[8.169s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[8.181s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[8.182s] [ 20%] Built target rosgraph_msgs_generate_messages_py
+[8.188s] [ 20%] Built target mav_msgs_generate_messages_lisp
+[8.203s] [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[8.208s] [ 20%] Built target rosgraph_msgs_generate_messages_lisp
+[8.236s] [ 20%] Built target mav_msgs_generate_messages_py
+[8.239s] [ 20%] Built target tf_generate_messages_eus
+[8.244s] [ 20%] Built target nav_msgs_generate_messages_eus
+[8.263s] [ 20%] Built target mav_msgs_generate_messages_nodejs
+[8.274s] [ 20%] Built target actionlib_generate_messages_cpp
+[8.277s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[8.277s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[8.277s] [ 20%] Built target roscpp_generate_messages_cpp
+[8.278s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[8.287s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[8.298s] [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[8.301s] [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[8.318s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[8.320s] [ 20%] Built target trajectory_msgs_generate_messages_cpp
+[8.321s] [ 20%] Built target nav_msgs_generate_messages_lisp
+[8.329s] [ 20%] Built target actionlib_msgs_generate_messages_cpp
+[8.335s] [ 20%] Built target roscpp_generate_messages_eus
+[8.337s] [ 20%] Built target roscpp_generate_messages_nodejs
+[8.343s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[8.343s] [ 20%] Built target rosgraph_msgs_generate_messages_nodejs
+[8.351s] [ 20%] Built target actionlib_msgs_generate_messages_py
+[8.353s] [35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[8.355s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[8.367s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[8.368s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[8.372s] [ 20%] Built target trajectory_msgs_generate_messages_eus
+[8.379s] [35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[8.381s] [ 20%] Built target roscpp_generate_messages_py
+[8.388s] [35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[8.390s] [ 20%] Built target std_msgs_generate_messages_eus
+[8.406s] [ 20%] Built target actionlib_msgs_generate_messages_lisp
+[8.431s] [ 20%] Built target actionlib_msgs_generate_messages_nodejs
+[8.439s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[8.443s] [ 20%] Built target actionlib_generate_messages_eus
+[8.443s] [35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[8.456s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[8.458s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[8.463s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[8.463s] [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
+[8.474s] [ 20%] Built target tf_generate_messages_lisp
+[8.474s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[8.475s] [35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[8.475s] [ 20%] Built target tf_generate_messages_py
+[8.475s] [ 20%] Built target trajectory_msgs_generate_messages_py
+[8.481s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[8.482s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[8.487s] [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
+[8.488s] [35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[8.489s] [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
+[8.493s] [35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+[8.493s] [35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
+[8.545s] [ 20%] Built target nav_msgs_generate_messages_py
+[8.553s] [ 20%] Built target rosgraph_msgs_generate_messages_cpp
+[8.564s] [ 20%] Built target mav_msgs_generate_messages_eus
+[8.564s] [ 20%] Built target mav_msgs_generate_messages_cpp
+[8.572s] [ 20%] Built target geometry_msgs_generate_messages_nodejs
+[8.572s] [ 20%] Built target dynamic_reconfigure_generate_messages_eus
+[8.576s] [ 20%] Built target dynamic_reconfigure_generate_messages_cpp
+[8.583s] [ 20%] Built target dynamic_reconfigure_generate_messages_lisp
+[8.583s] [ 20%] Built target tf2_msgs_generate_messages_cpp
+[8.595s] [ 20%] Built target tf2_msgs_generate_messages_py
+[8.596s] [ 20%] Built target dynamic_reconfigure_gencfg
+[8.604s] [ 20%] Built target dynamic_reconfigure_generate_messages_nodejs
+[8.605s] [ 20%] Built target nav_msgs_generate_messages_nodejs
+[8.623s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[8.655s] [ 20%] Built target sensor_msgs_generate_messages_cpp
+[8.671s] [35m[1mScanning dependencies of target pid_attitude_controller_lib[0m
+[8.783s] [ 40%] [32mBuilding CXX object CMakeFiles/pid_attitude_controller_lib.dir/src/PID_attitude_controller.cc.o[0m
+[30.509s] make[2]: *** [CMakeFiles/pid_attitude_controller_lib.dir/build.make:63: CMakeFiles/pid_attitude_controller_lib.dir/src/PID_attitude_controller.cc.o] Interrupt
+[30.514s] make[1]: *** [CMakeFiles/Makefile2:278: CMakeFiles/pid_attitude_controller_lib.dir/all] Interrupt
+[30.515s] make: *** [Makefile:141: all] Interrupt
+[30.546s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller' returned '-2': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller -- -j16 -l16

@@ -1,0 +1,70 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/devel
+-- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3") 
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Found numpy include path: '/usr/lib/python3/dist-packages/numpy/core/include'
+-- Found numpy/arrayobject.h in /usr/lib/python3/dist-packages/numpy/core/include. Keeping it as NUMPY_INCLUDE_DIR.
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: python 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test
+[35m[1mScanning dependencies of target catkin_boost_python_test[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/catkin_boost_python_test.dir/src/module.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library devel/lib/libcatkin_boost_python_test.so[0m
+[34m[1mCopying library files to python directory[0m
+'/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/devel/lib/libcatkin_boost_python_test.so' -> '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/devel/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so'
+[100%] Built target catkin_boost_python_test
+[35m[1mScanning dependencies of target tests[0m
+Built target tests
+-- Install configuration: ""
++ cd /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool_test
++ mkdir -p /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages
++ /usr/bin/env PYTHONPATH=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages:/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib/python3/dist-packages:/home/quinton/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages CATKIN_BINARY_DIR=/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test /usr/bin/python3 /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool_test/setup.py build --build-base /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test install --root=/ --install-layout=deb --prefix=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test --install-scripts=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/bin
+running build
+running build_py
+creating /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib
+creating /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib/catkin_boost_python_test
+copying python/catkin_boost_python_test/__init__.py -> /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib/catkin_boost_python_test
+running install
+running install_lib
+creating /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test
+copying /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool_test/lib/catkin_boost_python_test/__init__.py -> /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test
+byte-compiling /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test/__init__.py to __init__.cpython-38.pyc
+running install_egg_info
+Writing /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_buildtool_test-0.0.1.egg-info
+-- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/python3/dist-packages/catkin_boost_python_test/libcatkin_boost_python_test.so
+-- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/lib/pkgconfig/catkin_boost_python_buildtool_test.pc
+-- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/cmake/catkin_boost_python_buildtool_testConfig-version.cmake
+-- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool_test/share/catkin_boost_python_buildtool_test/package.xml

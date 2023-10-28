@@ -1,0 +1,14 @@
+CMake Warning at /opt/ros/noetic/share/cmake_modules/cmake/Modules/FindEigen.cmake:62 (message):
+  The FindEigen.cmake Module in the cmake_modules package is deprecated.
+
+  Please use the FindEigen3.cmake Module provided with Eigen.  Change
+  instances of find_package(Eigen) to find_package(Eigen3).  Check the
+  FindEigen3.cmake Module for the resulting CMake variable names.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:10 (find_package)
+
+
+make[2]: *** [CMakeFiles/KFDisturbanceObserverLibrary.dir/build.make:63: CMakeFiles/KFDisturbanceObserverLibrary.dir/src/KF_disturbance_observer.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:545: CMakeFiles/KFDisturbanceObserverLibrary.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

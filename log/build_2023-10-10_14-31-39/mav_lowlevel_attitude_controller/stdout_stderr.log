@@ -1,0 +1,183 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel
+-- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Marking SHARED_LIBRARY "pid_attitude_controller_lib" of package "mav_lowlevel_attitude_controller" for installation
+-- Marking EXECUTABLE "mav_pid_attitude_controller_node" of package "mav_lowlevel_attitude_controller" for installation
+-- Marking HEADER FILES in "include" folder of package "mav_lowlevel_attitude_controller" for installation
+-- Marking SHARED CONTENT FOLDER "launch" of package "mav_lowlevel_attitude_controller" for installation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller
+[35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target mav_lowlevel_attitude_controller_gencfg[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[ 20%] [34m[1mGenerating dynamic reconfigure files from cfg/PIDAttitude.cfg: /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/include/mav_lowlevel_attitude_controller/PIDAttitudeConfig.h /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/lib/python3/dist-packages/mav_lowlevel_attitude_controller/cfg/PIDAttitudeConfig.py[0m
+[ 20%] Built target tf_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[ 20%] Built target tf2_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[ 20%] Built target tf2_msgs_generate_messages_lisp
+[ 20%] Built target actionlib_generate_messages_nodejs
+[ 20%] Built target actionlib_generate_messages_py
+[ 20%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[ 20%] Built target tf2_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[ 20%] Built target sensor_msgs_generate_messages_nodejs
+[ 20%] Built target sensor_msgs_generate_messages_lisp
+[ 20%] Built target trajectory_msgs_generate_messages_lisp
+[ 20%] Built target sensor_msgs_generate_messages_eus
+[ 20%] Built target nav_msgs_generate_messages_cpp
+[ 20%] Built target trajectory_msgs_generate_messages_nodejs
+Generating reconfiguration files for PIDAttitude in mav_linear_mpc
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+Wrote header file in /home/quinton/catkin_ws/src/build/mav_lowlevel_attitude_controller/devel/include/mav_lowlevel_attitude_controller/PIDAttitudeConfig.h
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[ 20%] Built target rosgraph_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[ 20%] Built target geometry_msgs_generate_messages_py
+[ 20%] Built target geometry_msgs_generate_messages_eus
+[ 20%] Built target std_msgs_generate_messages_nodejs
+[ 20%] Built target geometry_msgs_generate_messages_cpp
+[ 20%] Built target geometry_msgs_generate_messages_lisp
+[ 20%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[ 20%] Built target mav_lowlevel_attitude_controller_gencfg
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[ 20%] Built target actionlib_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[ 20%] Built target roscpp_generate_messages_lisp
+[ 20%] Built target tf_generate_messages_cpp
+[ 20%] Built target dynamic_reconfigure_generate_messages_py
+[ 20%] Built target std_msgs_generate_messages_lisp
+[ 20%] Built target actionlib_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[ 20%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[ 20%] Built target rosgraph_msgs_generate_messages_py
+[ 20%] Built target mav_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[ 20%] Built target rosgraph_msgs_generate_messages_lisp
+[ 20%] Built target mav_msgs_generate_messages_py
+[ 20%] Built target tf_generate_messages_eus
+[ 20%] Built target nav_msgs_generate_messages_eus
+[ 20%] Built target mav_msgs_generate_messages_nodejs
+[ 20%] Built target actionlib_generate_messages_cpp
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[ 20%] Built target roscpp_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[ 20%] Built target trajectory_msgs_generate_messages_cpp
+[ 20%] Built target nav_msgs_generate_messages_lisp
+[ 20%] Built target actionlib_msgs_generate_messages_cpp
+[ 20%] Built target roscpp_generate_messages_eus
+[ 20%] Built target roscpp_generate_messages_nodejs
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[ 20%] Built target rosgraph_msgs_generate_messages_nodejs
+[ 20%] Built target actionlib_msgs_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[ 20%] Built target trajectory_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[ 20%] Built target roscpp_generate_messages_py
+[35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[ 20%] Built target std_msgs_generate_messages_eus
+[ 20%] Built target actionlib_msgs_generate_messages_lisp
+[ 20%] Built target actionlib_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[ 20%] Built target actionlib_generate_messages_eus
+[35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
+[ 20%] Built target tf_generate_messages_lisp
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[ 20%] Built target tf_generate_messages_py
+[ 20%] Built target trajectory_msgs_generate_messages_py
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
+[ 20%] Built target nav_msgs_generate_messages_py
+[ 20%] Built target rosgraph_msgs_generate_messages_cpp
+[ 20%] Built target mav_msgs_generate_messages_eus
+[ 20%] Built target mav_msgs_generate_messages_cpp
+[ 20%] Built target geometry_msgs_generate_messages_nodejs
+[ 20%] Built target dynamic_reconfigure_generate_messages_eus
+[ 20%] Built target dynamic_reconfigure_generate_messages_cpp
+[ 20%] Built target dynamic_reconfigure_generate_messages_lisp
+[ 20%] Built target tf2_msgs_generate_messages_cpp
+[ 20%] Built target tf2_msgs_generate_messages_py
+[ 20%] Built target dynamic_reconfigure_gencfg
+[ 20%] Built target dynamic_reconfigure_generate_messages_nodejs
+[ 20%] Built target nav_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[ 20%] Built target sensor_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target pid_attitude_controller_lib[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/pid_attitude_controller_lib.dir/src/PID_attitude_controller.cc.o[0m
+make[2]: *** [CMakeFiles/pid_attitude_controller_lib.dir/build.make:63: CMakeFiles/pid_attitude_controller_lib.dir/src/PID_attitude_controller.cc.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:278: CMakeFiles/pid_attitude_controller_lib.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

@@ -1,0 +1,52 @@
+[0.629s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool
+[0.843s] -- The C compiler identification is GNU 9.4.0
+[1.025s] -- The CXX compiler identification is GNU 9.4.0
+[1.093s] -- Check for working C compiler: /usr/bin/cc
+[1.212s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.213s] -- Detecting C compiler ABI info
+[1.333s] -- Detecting C compiler ABI info - done
+[1.348s] -- Detecting C compile features
+[1.349s] -- Detecting C compile features - done
+[1.353s] -- Check for working CXX compiler: /usr/bin/c++
+[1.497s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.498s] -- Detecting CXX compiler ABI info
+[1.639s] -- Detecting CXX compiler ABI info - done
+[1.652s] -- Detecting CXX compile features
+[1.653s] -- Detecting CXX compile features - done
+[1.655s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool/devel
+[1.656s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.656s] -- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.691s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.691s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.691s] -- Using Debian Python package layout
+[1.749s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.750s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[1.906s] -- Using CATKIN_ENABLE_TESTING: ON
+[1.906s] -- Call enable_testing()
+[1.910s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool/test_results
+[4.127s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.127s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.128s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[4.170s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.172s] -- Found Threads: TRUE  
+[4.227s] -- Using Python nosetests: /usr/bin/nosetests3
+[4.381s] -- catkin 0.8.10
+[4.381s] -- BUILD_SHARED_LIBS is on
+[4.843s] -- Configuring done
+[4.861s] -- Generating done
+[4.864s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool
+[4.880s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/catkin_boost_python_buildtool/catkin_boost_python_buildtool -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool
+[4.887s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool -- -j16 -l16
+[4.934s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool -- -j16 -l16
+[4.966s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool --target tests -- -j16 -l16
+[5.036s] [35m[1mScanning dependencies of target tests[0m
+[5.046s] Built target tests
+[5.060s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool --target tests -- -j16 -l16
+[5.093s] Invoking command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool
+[5.106s] -- Install configuration: ""
+[5.107s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/lib/pkgconfig/catkin_boost_python_buildtool.pc
+[5.108s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/cmake/add_python_export_library.cmake
+[5.109s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig.cmake
+[5.109s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/cmake/catkin_boost_python_buildtoolConfig-version.cmake
+[5.109s] -- Installing: /home/quinton/catkin_ws/src/install/catkin_boost_python_buildtool/share/catkin_boost_python_buildtool/package.xml
+[5.113s] Invoked command in '/home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_boost_python_buildtool

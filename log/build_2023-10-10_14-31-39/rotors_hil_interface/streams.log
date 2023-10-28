@@ -1,0 +1,52 @@
+[0.409s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_hil_interface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_hil_interface
+[1.252s] -- The C compiler identification is GNU 9.4.0
+[1.252s] -- The CXX compiler identification is GNU 9.4.0
+[1.252s] -- Check for working C compiler: /usr/bin/cc
+[1.252s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.253s] -- Detecting C compiler ABI info
+[1.332s] -- Detecting C compiler ABI info - done
+[1.374s] -- Detecting C compile features
+[1.375s] -- Detecting C compile features - done
+[1.380s] -- Check for working CXX compiler: /usr/bin/c++
+[1.695s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.697s] -- Detecting CXX compiler ABI info
+[2.189s] -- Detecting CXX compiler ABI info - done
+[2.208s] -- Detecting CXX compile features
+[2.209s] -- Detecting CXX compile features - done
+[2.984s] -- Mavlink not found. Skipping HIL_INTERFACE package.
+[2.994s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/rotors_hil_interface/devel
+[3.000s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[3.002s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[3.036s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.036s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.036s] -- Using Debian Python package layout
+[3.126s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[3.126s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[3.304s] -- Using CATKIN_ENABLE_TESTING: ON
+[3.304s] -- Call enable_testing()
+[3.307s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/rotors_hil_interface/test_results
+[6.171s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[6.171s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[6.171s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[6.207s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[6.210s] -- Found Threads: TRUE  
+[6.334s] -- Using Python nosetests: /usr/bin/nosetests3
+[6.716s] -- catkin 0.8.10
+[6.716s] -- BUILD_SHARED_LIBS is on
+[7.861s] -- Configuring done
+[7.906s] -- Generating done
+[7.918s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/rotors_hil_interface
+[8.548s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_hil_interface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_hil_interface
+[8.550s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_hil_interface -- -j16 -l16
+[8.614s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_hil_interface -- -j16 -l16
+[8.655s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_hil_interface --target tests -- -j16 -l16
+[8.779s] [35m[1mScanning dependencies of target tests[0m
+[8.780s] Built target tests
+[8.790s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_hil_interface --target tests -- -j16 -l16
+[8.917s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_hil_interface
+[9.200s] -- Install configuration: ""
+[9.200s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_hil_interface/lib/pkgconfig/rotors_hil_interface.pc
+[9.200s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_hil_interface/share/rotors_hil_interface/cmake/rotors_hil_interfaceConfig.cmake
+[9.200s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_hil_interface/share/rotors_hil_interface/cmake/rotors_hil_interfaceConfig-version.cmake
+[9.200s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_hil_interface/share/rotors_hil_interface/package.xml
+[9.200s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_hil_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_hil_interface

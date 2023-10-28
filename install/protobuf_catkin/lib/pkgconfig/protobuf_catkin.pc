@@ -1,0 +1,8 @@
+prefix=/home/quinton/catkin_ws/src/install/protobuf_catkin
+
+Name: protobuf_catkin
+Description: Description of protobuf_catkin
+Version: 3.0.0
+Cflags: -I/usr/include
+Libs: -L${prefix}/lib /usr/lib/x86_64-linux-gnu/libprotobuf.so -lpthread
+Requires: 

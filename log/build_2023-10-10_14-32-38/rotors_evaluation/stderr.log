@@ -1,0 +1,5 @@
+  File "home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py", line 53
+    except Exception, e:
+                    ^
+SyntaxError: invalid syntax
+

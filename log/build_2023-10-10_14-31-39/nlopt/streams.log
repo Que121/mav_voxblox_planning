@@ -1,0 +1,49 @@
+[0.718s] Invoking command in '/home/quinton/catkin_ws/src/build/nlopt': /usr/bin/cmake /home/quinton/catkin_ws/src/nlopt -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/nlopt
+[0.934s] -- The C compiler identification is GNU 9.4.0
+[1.123s] -- The CXX compiler identification is GNU 9.4.0
+[1.187s] -- Check for working C compiler: /usr/bin/cc
+[1.306s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.306s] -- Detecting C compiler ABI info
+[1.441s] -- Detecting C compiler ABI info - done
+[1.456s] -- Detecting C compile features
+[1.456s] -- Detecting C compile features - done
+[1.462s] -- Check for working CXX compiler: /usr/bin/c++
+[1.605s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.607s] -- Detecting CXX compiler ABI info
+[1.743s] -- Detecting CXX compiler ABI info - done
+[1.762s] -- Detecting CXX compile features
+[1.763s] -- Detecting CXX compile features - done
+[1.765s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/nlopt/devel
+[1.766s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.766s] -- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.794s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.794s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.794s] -- Using Debian Python package layout
+[1.853s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.853s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.024s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.024s] -- Call enable_testing()
+[2.027s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/nlopt/test_results
+[4.667s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.667s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.667s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[4.709s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.712s] -- Found Threads: TRUE  
+[4.778s] -- Using Python nosetests: /usr/bin/nosetests3
+[4.928s] -- catkin 0.8.10
+[4.928s] -- BUILD_SHARED_LIBS is on
+[5.350s] -- Configuring done
+[5.364s] -- Generating done
+[5.364s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/nlopt
+[5.562s] Invoked command in '/home/quinton/catkin_ws/src/build/nlopt' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/nlopt -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/nlopt
+[5.568s] Invoking command in '/home/quinton/catkin_ws/src/build/nlopt': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/nlopt -- -j16 -l16
+[5.643s] [35m[1mScanning dependencies of target nlopt_src[0m
+[5.699s] [ 10%] [34m[1mCreating directories for 'nlopt_src'[0m
+[5.970s] [ 20%] [34m[1mPerforming download step for 'nlopt_src'[0m
+[5.995s] --2023-10-10 14:31:47--  https://github.com/ethz-asl/thirdparty_library_binaries/raw/master/nlopt-2.4.2.tar.gz
+[6.026s] Resolving github.com (github.com)... 20.205.243.166
+[6.098s] Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+[41.614s] HTTP request sent, awaiting response... make[2]: *** [CMakeFiles/nlopt_src.dir/build.make:90: nlopt_src-prefix/src/nlopt_src-stamp/nlopt_src-download] Interrupt
+[41.615s] make[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/nlopt_src.dir/all] Interrupt
+[41.616s] make: *** [Makefile:141: all] Interrupt
+[41.632s] Invoked command in '/home/quinton/catkin_ws/src/build/nlopt' returned '-2': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/nlopt -- -j16 -l16

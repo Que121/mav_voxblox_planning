@@ -1,0 +1,136 @@
+[0.833s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs -- -j16 -l16
+[0.991s] [  0%] Built target _mav_msgs_generate_messages_check_deps_GpsWaypoint
+[0.992s] [  0%] Built target std_msgs_generate_messages_py
+[0.993s] [  0%] Built target std_msgs_generate_messages_eus
+[0.997s] [  0%] Built target _mav_msgs_generate_messages_check_deps_FilteredSensorData
+[0.997s] [  0%] Built target nav_msgs_generate_messages_eus
+[1.007s] [  0%] Built target _mav_msgs_generate_messages_check_deps_Actuators
+[1.010s] [  0%] Built target geometry_msgs_generate_messages_eus
+[1.013s] [  0%] Built target geometry_msgs_generate_messages_py
+[1.015s] [  0%] Built target _mav_msgs_generate_messages_check_deps_TorqueThrust
+[1.023s] [  0%] Built target nav_msgs_generate_messages_py
+[1.025s] [  0%] Built target _mav_msgs_generate_messages_check_deps_AttitudeThrust
+[1.025s] [  0%] Built target _mav_msgs_generate_messages_check_deps_RateThrust
+[1.035s] [  0%] Built target _mav_msgs_generate_messages_check_deps_Status
+[1.035s] [  0%] Built target nav_msgs_generate_messages_nodejs
+[1.036s] [  0%] Built target _mav_msgs_generate_messages_check_deps_RollPitchYawrateThrust
+[1.046s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[1.060s] [  0%] Built target std_msgs_generate_messages_nodejs
+[1.060s] [  0%] Built target std_msgs_generate_messages_cpp
+[1.075s] [  0%] Built target nav_msgs_generate_messages_lisp
+[1.103s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[1.104s] [  0%] Built target nav_msgs_generate_messages_cpp
+[1.104s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[1.105s] [  0%] Built target std_msgs_generate_messages_lisp
+[1.107s] [ 21%] Built target mav_msgs_generate_messages_py
+[1.109s] [ 42%] Built target mav_msgs_generate_messages_eus
+[1.119s] [ 61%] Built target mav_msgs_generate_messages_cpp
+[1.119s] [ 80%] Built target mav_msgs_generate_messages_nodejs
+[1.128s] [100%] Built target mav_msgs_generate_messages_lisp
+[1.148s] [100%] Built target mav_msgs_generate_messages
+[1.157s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs -- -j16 -l16
+[1.230s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs --target tests -- -j16 -l16
+[1.292s] Built target tests
+[1.906s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/mav_msgs --target tests -- -j16 -l16
+[2.287s] Invoking command in '/home/quinton/catkin_ws/src/build/mav_msgs': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_msgs
+[2.309s] -- Install configuration: ""
+[2.309s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/Actuators.msg
+[2.309s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/AttitudeThrust.msg
+[2.309s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/RateThrust.msg
+[2.309s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/RollPitchYawrateThrust.msg
+[2.310s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/TorqueThrust.msg
+[2.310s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/Status.msg
+[2.310s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/FilteredSensorData.msg
+[2.310s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/msg/GpsWaypoint.msg
+[2.311s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/cmake/mav_msgs-msg-paths.cmake
+[2.311s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs
+[2.311s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/AttitudeThrust.h
+[2.311s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/RateThrust.h
+[2.311s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/Status.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/TorqueThrust.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/RollPitchYawrateThrust.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/FilteredSensorData.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/Actuators.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/GpsWaypoint.h
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/manifest.l
+[2.312s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg
+[2.313s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/Status.l
+[2.313s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/Actuators.l
+[2.313s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/RateThrust.l
+[2.313s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/FilteredSensorData.l
+[2.313s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l
+[2.314s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/GpsWaypoint.l
+[2.314s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/RollPitchYawrateThrust.l
+[2.314s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/roseus/ros/mav_msgs/msg/TorqueThrust.l
+[2.314s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs
+[2.314s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg
+[2.315s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/TorqueThrust.lisp
+[2.315s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package.lisp
+[2.315s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/FilteredSensorData.lisp
+[2.315s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_FilteredSensorData.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/GpsWaypoint.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_TorqueThrust.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_GpsWaypoint.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_RateThrust.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/Actuators.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_Actuators.lisp
+[2.316s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/mav_msgs-msg.asd
+[2.317s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/RollPitchYawrateThrust.lisp
+[2.317s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/RateThrust.lisp
+[2.317s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_AttitudeThrust.lisp
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_Status.lisp
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/Status.lisp
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/common-lisp/ros/mav_msgs/msg/_package_RollPitchYawrateThrust.lisp
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs
+[2.318s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/_index.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/GpsWaypoint.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/_index.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/AttitudeThrust.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/FilteredSensorData.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/RateThrust.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/Status.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/Actuators.js
+[2.319s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/RollPitchYawrateThrust.js
+[2.320s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/gennodejs/ros/mav_msgs/msg/TorqueThrust.js
+[2.339s] Listing '/home/quinton/catkin_ws/src/build/mav_msgs/devel/lib/python3/dist-packages/mav_msgs'...
+[2.339s] Listing '/home/quinton/catkin_ws/src/build/mav_msgs/devel/lib/python3/dist-packages/mav_msgs/msg'...
+[2.354s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/__pycache__
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/__pycache__/__init__.cpython-38.pyc
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/__init__.py
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_AttitudeThrust.py
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_Status.py
+[2.355s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_Actuators.py
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_GpsWaypoint.py
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_Status.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/__init__.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_Actuators.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_FilteredSensorData.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_RateThrust.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_AttitudeThrust.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_RollPitchYawrateThrust.cpython-38.pyc
+[2.356s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_GpsWaypoint.cpython-38.pyc
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__pycache__/_TorqueThrust.cpython-38.pyc
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_RateThrust.py
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_TorqueThrust.py
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_FilteredSensorData.py
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/_RollPitchYawrateThrust.py
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages/mav_msgs/msg/__init__.py
+[2.357s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig/mav_msgs.pc
+[2.361s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/cmake/mav_msgs-msg-extras.cmake
+[2.361s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/cmake/export_flags.cmake
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig.cmake
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig-version.cmake
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/share/mav_msgs/package.xml
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/default_values.h
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/eigen_mav_msgs.h
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/common.h
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/conversions.h
+[2.362s] -- Up-to-date: /home/quinton/catkin_ws/src/install/mav_msgs/include/mav_msgs/default_topics.h
+[3.034s] Invoked command in '/home/quinton/catkin_ws/src/build/mav_msgs' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/mav_msgs

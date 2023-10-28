@@ -1,0 +1,55 @@
+[0.450s] Invoking command in '/home/quinton/catkin_ws/src/build/eigen_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/eigen_catkin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/eigen_catkin
+[0.618s] -- The C compiler identification is GNU 9.4.0
+[0.827s] -- The CXX compiler identification is GNU 9.4.0
+[0.878s] -- Check for working C compiler: /usr/bin/cc
+[1.021s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.025s] -- Detecting C compiler ABI info
+[1.143s] -- Detecting C compiler ABI info - done
+[1.149s] -- Detecting C compile features
+[1.152s] -- Detecting C compile features - done
+[1.152s] -- Check for working CXX compiler: /usr/bin/c++
+[1.268s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.270s] -- Detecting CXX compiler ABI info
+[1.382s] -- Detecting CXX compiler ABI info - done
+[1.391s] -- Detecting CXX compile features
+[1.391s] -- Detecting CXX compile features - done
+[1.394s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/eigen_catkin/devel
+[1.394s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.394s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.419s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.419s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.419s] -- Using Debian Python package layout
+[1.480s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.481s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[1.639s] -- Using CATKIN_ENABLE_TESTING: ON
+[1.639s] -- Call enable_testing()
+[1.640s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/eigen_catkin/test_results
+[3.808s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[3.809s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[3.809s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[3.849s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.855s] -- Found Threads: TRUE  
+[3.891s] -- Using Python nosetests: /usr/bin/nosetests3
+[4.074s] -- catkin 0.8.10
+[4.075s] -- BUILD_SHARED_LIBS is on
+[4.527s] -- Suitable Eigen version found. Minimum version: 3.3.4 Found version: 3.3.7
+[4.527s] -- eigen_catkin is configured to USE system eigen
+[4.528s] -- Found and using system Eigen in /usr/include/eigen3
+[4.731s] -- Configuring done
+[4.754s] -- Generating done
+[4.758s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/eigen_catkin
+[4.789s] Invoked command in '/home/quinton/catkin_ws/src/build/eigen_catkin' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/eigen_catkin -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/eigen_catkin
+[4.797s] Invoking command in '/home/quinton/catkin_ws/src/build/eigen_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/eigen_catkin -- -j16 -l16
+[6.696s] Invoked command in '/home/quinton/catkin_ws/src/build/eigen_catkin' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/eigen_catkin -- -j16 -l16
+[6.722s] Invoking command in '/home/quinton/catkin_ws/src/build/eigen_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/eigen_catkin --target tests -- -j16 -l16
+[9.242s] [35m[1mScanning dependencies of target tests[0m
+[9.242s] Built target tests
+[9.262s] Invoked command in '/home/quinton/catkin_ws/src/build/eigen_catkin' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/eigen_catkin --target tests -- -j16 -l16
+[9.311s] Invoking command in '/home/quinton/catkin_ws/src/build/eigen_catkin': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/eigen_catkin
+[9.442s] -- Install configuration: ""
+[9.442s] -- Installing: /home/quinton/catkin_ws/src/install/eigen_catkin/lib/pkgconfig/eigen_catkin.pc
+[9.442s] -- Installing: /home/quinton/catkin_ws/src/install/eigen_catkin/share/eigen_catkin/cmake/eigen-extras.cmake
+[9.443s] -- Installing: /home/quinton/catkin_ws/src/install/eigen_catkin/share/eigen_catkin/cmake/eigen_catkinConfig.cmake
+[9.443s] -- Installing: /home/quinton/catkin_ws/src/install/eigen_catkin/share/eigen_catkin/cmake/eigen_catkinConfig-version.cmake
+[9.443s] -- Installing: /home/quinton/catkin_ws/src/install/eigen_catkin/share/eigen_catkin/package.xml
+[9.444s] Invoked command in '/home/quinton/catkin_ws/src/build/eigen_catkin' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/eigen_catkin

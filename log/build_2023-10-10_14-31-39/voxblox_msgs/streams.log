@@ -1,0 +1,214 @@
+[0.262s] Invoking command in '/home/quinton/catkin_ws/src/build/voxblox_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/voxblox/voxblox_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/voxblox_msgs
+[0.443s] -- The C compiler identification is GNU 9.4.0
+[0.650s] -- The CXX compiler identification is GNU 9.4.0
+[0.722s] -- Check for working C compiler: /usr/bin/cc
+[0.841s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.845s] -- Detecting C compiler ABI info
+[0.951s] -- Detecting C compiler ABI info - done
+[0.958s] -- Detecting C compile features
+[0.961s] -- Detecting C compile features - done
+[0.964s] -- Check for working CXX compiler: /usr/bin/c++
+[1.066s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.067s] -- Detecting CXX compiler ABI info
+[1.182s] -- Detecting CXX compiler ABI info - done
+[1.190s] -- Detecting CXX compile features
+[1.191s] -- Detecting CXX compile features - done
+[1.192s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/voxblox_msgs/devel
+[1.192s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.193s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/catkin_simple;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.216s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.217s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.218s] -- Using Debian Python package layout
+[1.273s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.274s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[1.424s] -- Using CATKIN_ENABLE_TESTING: ON
+[1.425s] -- Call enable_testing()
+[1.426s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/voxblox_msgs/test_results
+[3.484s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[3.485s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[3.485s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[3.514s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.520s] -- Found Threads: TRUE  
+[3.579s] -- Using Python nosetests: /usr/bin/nosetests3
+[3.692s] -- catkin 0.8.10
+[3.692s] -- BUILD_SHARED_LIBS is on
+[4.091s] -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[4.452s] -- voxblox_msgs: 5 messages, 1 services
+[4.718s] -- Configuring done
+[4.753s] -- Generating done
+[4.757s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/voxblox_msgs
+[4.790s] Invoked command in '/home/quinton/catkin_ws/src/build/voxblox_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/voxblox/voxblox_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/voxblox_msgs
+[4.794s] Invoking command in '/home/quinton/catkin_ws/src/build/voxblox_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/voxblox_msgs -- -j16 -l16
+[6.456s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_VoxelEvaluationDetails[0m
+[6.457s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[6.457s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[6.457s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[6.457s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_Block[0m
+[6.457s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_MeshBlock[0m
+[6.457s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[6.457s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_Mesh[0m
+[6.457s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_FilePath[0m
+[6.457s] [35m[1mScanning dependencies of target _voxblox_msgs_generate_messages_check_deps_Layer[0m
+[6.458s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[6.458s] [  0%] Built target std_msgs_generate_messages_py
+[6.458s] [  0%] Built target std_msgs_generate_messages_lisp
+[6.458s] [  0%] Built target std_msgs_generate_messages_eus
+[6.458s] [  0%] Built target std_msgs_generate_messages_cpp
+[6.459s] [  0%] Built target std_msgs_generate_messages_nodejs
+[6.459s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_MeshBlock
+[6.460s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_Block
+[6.460s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_Mesh
+[6.460s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_VoxelEvaluationDetails
+[6.461s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_Layer
+[6.461s] [  0%] Built target _voxblox_msgs_generate_messages_check_deps_FilePath
+[6.461s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages_lisp[0m
+[6.461s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages_eus[0m
+[6.463s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages_cpp[0m
+[6.463s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages_nodejs[0m
+[6.463s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages_py[0m
+[6.468s] [ 12%] [34m[1mGenerating Javascript code from voxblox_msgs/Layer.msg[0m
+[6.470s] [ 12%] [34m[1mGenerating C++ code from voxblox_msgs/Layer.msg[0m
+[6.470s] [ 12%] [34m[1mGenerating EusLisp code from voxblox_msgs/Block.msg[0m
+[6.470s] [ 18%] [34m[1mGenerating EusLisp code from voxblox_msgs/Layer.msg[0m
+[6.470s] [ 18%] [34m[1mGenerating Python from MSG voxblox_msgs/Mesh[0m
+[6.471s] [ 21%] [34m[1mGenerating Python from MSG voxblox_msgs/Block[0m
+[6.471s] [ 27%] [34m[1mGenerating C++ code from voxblox_msgs/Block.msg[0m
+[6.472s] [ 27%] [34m[1mGenerating Lisp code from voxblox_msgs/Block.msg[0m
+[6.472s] [ 27%] [34m[1mGenerating Lisp code from voxblox_msgs/Mesh.msg[0m
+[6.472s] [ 30%] [34m[1mGenerating Python from MSG voxblox_msgs/Layer[0m
+[6.473s] [ 33%] [34m[1mGenerating Lisp code from voxblox_msgs/Layer.msg[0m
+[6.473s] [ 42%] [34m[1mGenerating EusLisp code from voxblox_msgs/Mesh.msg[0m
+[6.473s] [ 42%] [34m[1mGenerating Javascript code from voxblox_msgs/Block.msg[0m
+[6.473s] [ 42%] [34m[1mGenerating C++ code from voxblox_msgs/Mesh.msg[0m
+[6.473s] [ 48%] [34m[1mGenerating Python from MSG voxblox_msgs/MeshBlock[0m
+[6.474s] [ 48%] [34m[1mGenerating Lisp code from voxblox_msgs/MeshBlock.msg[0m
+[6.474s] [ 51%] [34m[1mGenerating Lisp code from voxblox_msgs/VoxelEvaluationDetails.msg[0m
+[6.474s] [ 54%] [34m[1mGenerating Javascript code from voxblox_msgs/Mesh.msg[0m
+[6.474s] [ 57%] [34m[1mGenerating Lisp code from voxblox_msgs/FilePath.srv[0m
+[6.474s] [ 60%] [34m[1mGenerating Python from MSG voxblox_msgs/VoxelEvaluationDetails[0m
+[6.475s] [ 63%] [34m[1mGenerating Javascript code from voxblox_msgs/MeshBlock.msg[0m
+[6.475s] [ 66%] [34m[1mGenerating Python code from SRV voxblox_msgs/FilePath[0m
+[6.475s] [ 69%] [34m[1mGenerating EusLisp code from voxblox_msgs/MeshBlock.msg[0m
+[6.475s] [ 72%] [34m[1mGenerating C++ code from voxblox_msgs/VoxelEvaluationDetails.msg[0m
+[6.476s] [ 75%] [34m[1mGenerating C++ code from voxblox_msgs/MeshBlock.msg[0m
+[6.477s] [ 78%] [34m[1mGenerating C++ code from voxblox_msgs/FilePath.srv[0m
+[6.477s] [ 81%] [34m[1mGenerating EusLisp code from voxblox_msgs/FilePath.srv[0m
+[6.482s] [ 84%] [34m[1mGenerating EusLisp code from voxblox_msgs/VoxelEvaluationDetails.msg[0m
+[6.483s] [ 87%] [34m[1mGenerating EusLisp manifest code for voxblox_msgs[0m
+[6.483s] [ 87%] Built target voxblox_msgs_generate_messages_lisp
+[6.483s] [ 90%] [34m[1mGenerating Javascript code from voxblox_msgs/FilePath.srv[0m
+[6.483s] [ 93%] [34m[1mGenerating Javascript code from voxblox_msgs/VoxelEvaluationDetails.msg[0m
+[6.484s] [ 93%] Built target voxblox_msgs_generate_messages_nodejs
+[6.484s] [ 93%] Built target voxblox_msgs_generate_messages_cpp
+[6.484s] [ 96%] [34m[1mGenerating Python srv __init__.py for voxblox_msgs[0m
+[6.484s] [100%] [34m[1mGenerating Python msg __init__.py for voxblox_msgs[0m
+[6.484s] [100%] Built target voxblox_msgs_generate_messages_eus
+[6.484s] [100%] Built target voxblox_msgs_generate_messages_py
+[6.484s] [35m[1mScanning dependencies of target voxblox_msgs_generate_messages[0m
+[6.484s] [100%] Built target voxblox_msgs_generate_messages
+[6.499s] Invoked command in '/home/quinton/catkin_ws/src/build/voxblox_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/voxblox_msgs -- -j16 -l16
+[6.552s] Invoking command in '/home/quinton/catkin_ws/src/build/voxblox_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/voxblox_msgs --target tests -- -j16 -l16
+[9.043s] [35m[1mScanning dependencies of target tests[0m
+[9.044s] Built target tests
+[9.074s] Invoked command in '/home/quinton/catkin_ws/src/build/voxblox_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/voxblox_msgs --target tests -- -j16 -l16
+[9.140s] Invoking command in '/home/quinton/catkin_ws/src/build/voxblox_msgs': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/voxblox_msgs
+[9.320s] -- Install configuration: ""
+[9.320s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/msg/Block.msg
+[9.320s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/msg/Layer.msg
+[9.320s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/msg/Mesh.msg
+[9.320s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/msg/MeshBlock.msg
+[9.320s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/msg/VoxelEvaluationDetails.msg
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/srv/FilePath.srv
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/cmake/voxblox_msgs-msg-paths.cmake
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/FilePath.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/MeshBlock.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/Mesh.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/FilePathResponse.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/Layer.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/Block.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/FilePathRequest.h
+[9.321s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/include/voxblox_msgs/VoxelEvaluationDetails.h
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/manifest.l
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/srv
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/srv/FilePath.l
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg/Mesh.l
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg/VoxelEvaluationDetails.l
+[9.322s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg/Layer.l
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg/MeshBlock.l
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/roseus/ros/voxblox_msgs/msg/Block.l
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/srv
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/srv/_package_FilePath.lisp
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/srv/_package.lisp
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/srv/voxblox_msgs-srv.asd
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/srv/FilePath.lisp
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/voxblox_msgs-msg.asd
+[9.323s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package_MeshBlock.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/Layer.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/VoxelEvaluationDetails.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package_Block.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package_VoxelEvaluationDetails.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package_Mesh.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/Mesh.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/_package_Layer.lisp
+[9.324s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/Block.lisp
+[9.331s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/common-lisp/ros/voxblox_msgs/msg/MeshBlock.lisp
+[9.331s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/srv
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/srv/FilePath.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/srv/_index.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/_index.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/Mesh.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/Block.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/_index.js
+[9.332s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/MeshBlock.js
+[9.333s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/Layer.js
+[9.333s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/gennodejs/ros/voxblox_msgs/msg/VoxelEvaluationDetails.js
+[9.333s] Listing '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/__init__.py'...
+[9.333s] Listing '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/_Block.py'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/_Layer.py'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/_Mesh.py'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/_MeshBlock.py'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/_VoxelEvaluationDetails.py'...
+[9.333s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/msg/__init__.py'...
+[9.334s] Listing '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/srv'...
+[9.334s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/srv/_FilePath.py'...
+[9.334s] Compiling '/home/quinton/catkin_ws/src/build/voxblox_msgs/devel/lib/python3/dist-packages/voxblox_msgs/srv/__init__.py'...
+[9.334s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs
+[9.334s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv
+[9.334s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv/__pycache__
+[9.334s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv/__pycache__/__init__.cpython-38.pyc
+[9.334s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv/__pycache__/_FilePath.cpython-38.pyc
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv/_FilePath.py
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/srv/__init__.py
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/__pycache__
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/__pycache__/__init__.cpython-38.pyc
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/__init__.py
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/_Layer.py
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/_MeshBlock.py
+[9.335s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/_Block.py
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/__init__.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/_Layer.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/_Mesh.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/_Block.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/_MeshBlock.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__pycache__/_VoxelEvaluationDetails.cpython-38.pyc
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/_Mesh.py
+[9.336s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/_VoxelEvaluationDetails.py
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/python3/dist-packages/voxblox_msgs/msg/__init__.py
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/lib/pkgconfig/voxblox_msgs.pc
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/cmake/voxblox_msgs-msg-extras.cmake
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/cmake/voxblox_msgsConfig.cmake
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/cmake/voxblox_msgsConfig-version.cmake
+[9.337s] -- Installing: /home/quinton/catkin_ws/src/install/voxblox_msgs/share/voxblox_msgs/package.xml
+[9.338s] Invoked command in '/home/quinton/catkin_ws/src/build/voxblox_msgs' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/catkin_simple:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/catkin_simple/lib/pkgconfig:${PKG_CONFIG_PATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/catkin_simple/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/voxblox_msgs

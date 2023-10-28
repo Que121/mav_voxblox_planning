@@ -1,0 +1,52 @@
+[0.126s] Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rqt_rotors -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rqt_rotors
+[0.314s] -- The C compiler identification is GNU 9.4.0
+[0.500s] -- The CXX compiler identification is GNU 9.4.0
+[0.566s] -- Check for working C compiler: /usr/bin/cc
+[0.683s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.684s] -- Detecting C compiler ABI info
+[0.806s] -- Detecting C compiler ABI info - done
+[0.819s] -- Detecting C compile features
+[0.819s] -- Detecting C compile features - done
+[0.825s] -- Check for working CXX compiler: /usr/bin/c++
+[0.972s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.974s] -- Detecting CXX compiler ABI info
+[1.112s] -- Detecting CXX compiler ABI info - done
+[1.123s] -- Detecting CXX compile features
+[1.124s] -- Detecting CXX compile features - done
+[2.001s] -- mavros_msgs not found, skipping rqt_rotors package.
+[2.002s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/rqt_rotors/devel
+[2.003s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.003s] -- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.033s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.033s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.033s] -- Using Debian Python package layout
+[2.103s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.103s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.311s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.317s] -- Call enable_testing()
+[2.318s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/rqt_rotors/test_results
+[4.913s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.913s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.913s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[4.932s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.932s] -- Found Threads: TRUE  
+[5.053s] -- Using Python nosetests: /usr/bin/nosetests3
+[5.406s] -- catkin 0.8.10
+[5.407s] -- BUILD_SHARED_LIBS is on
+[6.365s] -- Configuring done
+[6.489s] -- Generating done
+[6.492s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/rqt_rotors
+[6.542s] Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rqt_rotors -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rqt_rotors
+[6.543s] Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors -- -j16 -l16
+[7.451s] Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors -- -j16 -l16
+[7.521s] Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors --target tests -- -j16 -l16
+[7.601s] [35m[1mScanning dependencies of target tests[0m
+[7.615s] Built target tests
+[7.648s] Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rqt_rotors --target tests -- -j16 -l16
+[7.697s] Invoking command in '/home/quinton/catkin_ws/src/build/rqt_rotors': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rqt_rotors
+[7.727s] -- Install configuration: ""
+[7.728s] -- Installing: /home/quinton/catkin_ws/src/install/rqt_rotors/lib/pkgconfig/rqt_rotors.pc
+[7.728s] -- Installing: /home/quinton/catkin_ws/src/install/rqt_rotors/share/rqt_rotors/cmake/rqt_rotorsConfig.cmake
+[7.729s] -- Installing: /home/quinton/catkin_ws/src/install/rqt_rotors/share/rqt_rotors/cmake/rqt_rotorsConfig-version.cmake
+[7.729s] -- Installing: /home/quinton/catkin_ws/src/install/rqt_rotors/share/rqt_rotors/package.xml
+[7.741s] Invoked command in '/home/quinton/catkin_ws/src/build/rqt_rotors' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rqt_rotors

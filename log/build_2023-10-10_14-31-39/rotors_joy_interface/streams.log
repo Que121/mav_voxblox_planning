@@ -1,0 +1,148 @@
+[0.391s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_joy_interface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_joy_interface
+[1.198s] -- The C compiler identification is GNU 9.4.0
+[1.199s] -- The CXX compiler identification is GNU 9.4.0
+[1.199s] -- Check for working C compiler: /usr/bin/cc
+[1.199s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.199s] -- Detecting C compiler ABI info
+[1.361s] -- Detecting C compiler ABI info - done
+[1.377s] -- Detecting C compile features
+[1.378s] -- Detecting C compile features - done
+[1.381s] -- Check for working CXX compiler: /usr/bin/c++
+[1.656s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.656s] -- Detecting CXX compiler ABI info
+[2.053s] -- Detecting CXX compiler ABI info - done
+[2.074s] -- Detecting CXX compile features
+[2.074s] -- Detecting CXX compile features - done
+[2.074s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/rotors_joy_interface/devel
+[2.074s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.074s] -- This workspace overlays: /home/quinton/catkin_ws/src/install/mav_msgs;/home/quinton/catkin_ws/devel;/opt/ros/noetic
+[2.141s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.142s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.142s] -- Using Debian Python package layout
+[2.321s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[2.322s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[2.599s] -- Using CATKIN_ENABLE_TESTING: ON
+[2.599s] -- Call enable_testing()
+[2.602s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/rotors_joy_interface/test_results
+[4.770s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[4.770s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[4.770s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[4.812s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.814s] -- Found Threads: TRUE  
+[4.857s] -- Using Python nosetests: /usr/bin/nosetests3
+[4.980s] -- catkin 0.8.10
+[4.980s] -- BUILD_SHARED_LIBS is on
+[5.290s] -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[5.644s] -- Configuring done
+[5.686s] -- Generating done
+[5.689s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/rotors_joy_interface
+[5.726s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_joy_interface -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_joy_interface
+[5.733s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_joy_interface -- -j16 -l16
+[5.854s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[5.854s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_nodejs[0m
+[5.854s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
+[5.854s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
+[5.854s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[5.854s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
+[5.854s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[5.854s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[5.855s] [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
+[5.855s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_py[0m
+[5.867s] [  0%] Built target mav_msgs_generate_messages_nodejs
+[5.868s] [  0%] Built target trajectory_msgs_generate_messages_nodejs
+[5.881s] [  0%] Built target trajectory_msgs_generate_messages_lisp
+[5.897s] [  0%] Built target trajectory_msgs_generate_messages_eus
+[5.897s] [  0%] Built target trajectory_msgs_generate_messages_py
+[5.897s] [  0%] Built target actionlib_msgs_generate_messages_nodejs
+[5.897s] [  0%] Built target trajectory_msgs_generate_messages_cpp
+[5.904s] [  0%] Built target nav_msgs_generate_messages_cpp
+[5.905s] [  0%] Built target sensor_msgs_generate_messages_nodejs
+[5.909s] [  0%] Built target mav_msgs_generate_messages_py
+[5.912s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[5.915s] [35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[5.922s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[5.922s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[5.922s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[5.922s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[5.924s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[5.928s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[5.928s] [35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[5.948s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[5.948s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[5.948s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[5.950s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[5.950s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[5.950s] [  0%] Built target actionlib_msgs_generate_messages_cpp
+[5.958s] [  0%] Built target sensor_msgs_generate_messages_lisp
+[5.961s] [  0%] Built target roscpp_generate_messages_eus
+[5.980s] [  0%] Built target nav_msgs_generate_messages_lisp
+[5.980s] [  0%] Built target nav_msgs_generate_messages_eus
+[5.980s] [  0%] Built target actionlib_msgs_generate_messages_lisp
+[5.981s] [  0%] Built target roscpp_generate_messages_py
+[5.981s] [  0%] Built target sensor_msgs_generate_messages_cpp
+[5.981s] [  0%] Built target rosgraph_msgs_generate_messages_cpp
+[5.992s] [  0%] Built target nav_msgs_generate_messages_py
+[5.992s] [  0%] Built target sensor_msgs_generate_messages_py
+[5.993s] [  0%] Built target rosgraph_msgs_generate_messages_eus
+[5.993s] [  0%] Built target rosgraph_msgs_generate_messages_py
+[5.995s] [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[5.996s] [  0%] Built target geometry_msgs_generate_messages_py
+[5.996s] [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[6.010s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[6.013s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[6.013s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[6.022s] [35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[6.037s] [  0%] Built target std_msgs_generate_messages_eus
+[6.038s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[6.039s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[6.040s] [  0%] Built target geometry_msgs_generate_messages_lisp
+[6.044s] [  0%] Built target geometry_msgs_generate_messages_cpp
+[6.050s] [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[6.052s] [  0%] Built target actionlib_msgs_generate_messages_eus
+[6.053s] [  0%] Built target roscpp_generate_messages_nodejs
+[6.059s] [35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[6.059s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_cpp[0m
+[6.061s] [  0%] Built target geometry_msgs_generate_messages_nodejs
+[6.061s] [  0%] Built target nav_msgs_generate_messages_nodejs
+[6.068s] [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[6.068s] [  0%] Built target rosgraph_msgs_generate_messages_lisp
+[6.068s] [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[6.071s] [  0%] Built target std_msgs_generate_messages_lisp
+[6.078s] [  0%] Built target roscpp_generate_messages_lisp
+[6.084s] [  0%] Built target mav_msgs_generate_messages_cpp
+[6.084s] [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[6.084s] [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[6.087s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_eus[0m
+[6.090s] [  0%] Built target actionlib_msgs_generate_messages_py
+[6.090s] [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[6.092s] [  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[6.095s] [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[6.095s] [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[6.101s] [35m[1mScanning dependencies of target mav_msgs_generate_messages_lisp[0m
+[6.101s] [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[6.108s] [  0%] Built target std_msgs_generate_messages_nodejs
+[6.115s] [  0%] Built target std_msgs_generate_messages_py
+[6.116s] [  0%] Built target mav_msgs_generate_messages_eus
+[6.125s] [  0%] Built target geometry_msgs_generate_messages_eus
+[6.125s] [  0%] Built target roscpp_generate_messages_cpp
+[6.142s] [  0%] Built target sensor_msgs_generate_messages_eus
+[6.142s] [  0%] Built target mav_msgs_generate_messages_lisp
+[6.148s] [  0%] Built target std_msgs_generate_messages_cpp
+[6.164s] [35m[1mScanning dependencies of target rotors_joy_interface[0m
+[6.204s] [ 50%] [32mBuilding CXX object CMakeFiles/rotors_joy_interface.dir/src/joy.cpp.o[0m
+[11.816s] [100%] [32m[1mLinking CXX executable devel/lib/rotors_joy_interface/rotors_joy_interface[0m
+[12.497s] [100%] Built target rotors_joy_interface
+[12.530s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_joy_interface -- -j16 -l16
+[12.619s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_joy_interface --target tests -- -j16 -l16
+[12.718s] [35m[1mScanning dependencies of target tests[0m
+[12.752s] Built target tests
+[12.777s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_joy_interface --target tests -- -j16 -l16
+[12.861s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_joy_interface
+[12.878s] -- Install configuration: ""
+[12.879s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_joy_interface/lib/pkgconfig/rotors_joy_interface.pc
+[12.879s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_joy_interface/share/rotors_joy_interface/cmake/rotors_joy_interfaceConfig.cmake
+[12.880s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_joy_interface/share/rotors_joy_interface/cmake/rotors_joy_interfaceConfig-version.cmake
+[12.880s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_joy_interface/share/rotors_joy_interface/package.xml
+[12.881s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_joy_interface/lib/rotors_joy_interface/rotors_joy_interface
+[12.882s] -- Set runtime path of "/home/quinton/catkin_ws/src/install/rotors_joy_interface/lib/rotors_joy_interface/rotors_joy_interface" to ""
+[12.887s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_joy_interface' returned '0': CMAKE_PREFIX_PATH=/home/quinton/catkin_ws/src/install/mav_msgs:${CMAKE_PREFIX_PATH} PKG_CONFIG_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/quinton/catkin_ws/src/install/mav_msgs/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/quinton/catkin_ws/src/install/mav_msgs/lib/python3/dist-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/quinton/catkin_ws/src/install/mav_msgs/share:${ROS_PACKAGE_PATH} /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_joy_interface

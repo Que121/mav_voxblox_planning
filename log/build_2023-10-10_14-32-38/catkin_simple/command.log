@@ -1,0 +1,6 @@
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/catkin_simple --target tests -- -j16 -l16
+Invoking command in '/home/quinton/catkin_ws/src/build/catkin_simple': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple
+Invoked command in '/home/quinton/catkin_ws/src/build/catkin_simple' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/catkin_simple

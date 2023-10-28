@@ -1,0 +1,83 @@
+[0.205s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_evaluation
+[0.399s] -- The C compiler identification is GNU 9.4.0
+[0.594s] -- The CXX compiler identification is GNU 9.4.0
+[0.650s] -- Check for working C compiler: /usr/bin/cc
+[0.768s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.769s] -- Detecting C compiler ABI info
+[0.890s] -- Detecting C compiler ABI info - done
+[0.901s] -- Detecting C compile features
+[0.901s] -- Detecting C compile features - done
+[0.908s] -- Check for working CXX compiler: /usr/bin/c++
+[1.054s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.056s] -- Detecting CXX compiler ABI info
+[1.196s] -- Detecting CXX compiler ABI info - done
+[1.213s] -- Detecting CXX compile features
+[1.214s] -- Detecting CXX compile features - done
+[1.217s] -- Using CATKIN_DEVEL_PREFIX: /home/quinton/catkin_ws/src/build/rotors_evaluation/devel
+[1.217s] -- Using CMAKE_PREFIX_PATH: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.217s] -- This workspace overlays: /home/quinton/catkin_ws/devel;/opt/ros/noetic
+[1.246s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.246s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.246s] -- Using Debian Python package layout
+[1.301s] -- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+[1.301s] -- Using empy: /usr/lib/python3/dist-packages/em.py
+[1.478s] -- Using CATKIN_ENABLE_TESTING: ON
+[1.478s] -- Call enable_testing()
+[1.480s] -- Using CATKIN_TEST_RESULTS_DIR: /home/quinton/catkin_ws/src/build/rotors_evaluation/test_results
+[3.726s] -- Forcing gtest/gmock from source, though one was otherwise available.
+[3.727s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[3.727s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[3.773s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.775s] -- Found Threads: TRUE  
+[3.829s] -- Using Python nosetests: /usr/bin/nosetests3
+[3.970s] -- catkin 0.8.10
+[3.970s] -- BUILD_SHARED_LIBS is on
+[4.935s] -- Installing devel-space wrapper /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/src/disturbance_eval.py to /home/quinton/catkin_ws/src/build/rotors_evaluation/devel/lib/rotors_evaluation
+[4.936s] -- Installing devel-space wrapper /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/src/hovering_eval.py to /home/quinton/catkin_ws/src/build/rotors_evaluation/devel/lib/rotors_evaluation
+[4.936s] -- Installing devel-space wrapper /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/src/waypoints_eval.py to /home/quinton/catkin_ws/src/build/rotors_evaluation/devel/lib/rotors_evaluation
+[4.939s] -- Configuring done
+[4.950s] -- Generating done
+[4.951s] -- Build files have been written to: /home/quinton/catkin_ws/src/build/rotors_evaluation
+[5.041s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/quinton/catkin_ws/src/install/rotors_evaluation
+[5.048s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation -- -j16 -l16
+[6.022s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation -- -j16 -l16
+[6.361s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation --target tests -- -j16 -l16
+[6.572s] [35m[1mScanning dependencies of target tests[0m
+[6.671s] Built target tests
+[7.528s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --build /home/quinton/catkin_ws/src/build/rotors_evaluation --target tests -- -j16 -l16
+[7.599s] Invoking command in '/home/quinton/catkin_ws/src/build/rotors_evaluation': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_evaluation
+[7.626s] -- Install configuration: ""
+[7.628s] + cd /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation
+[7.628s] + mkdir -p /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages
+[7.628s] + /usr/bin/env PYTHONPATH=/home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/src/build/rotors_evaluation/lib/python3/dist-packages:/home/quinton/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages CATKIN_BINARY_DIR=/home/quinton/catkin_ws/src/build/rotors_evaluation /usr/bin/python3 /home/quinton/catkin_ws/src/rotors_simulator/rotors_evaluation/setup.py build --build-base /home/quinton/catkin_ws/src/build/rotors_evaluation install --root=/ --install-layout=deb --prefix=/home/quinton/catkin_ws/src/install/rotors_evaluation --install-scripts=/home/quinton/catkin_ws/src/install/rotors_evaluation/bin
+[7.712s] running build
+[7.713s] running build_py
+[7.716s] creating /home/quinton/catkin_ws/src/build/rotors_evaluation/lib
+[7.717s] creating /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools
+[7.717s] copying src/rosbag_tools/analyze_bag.py -> /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools
+[7.719s] copying src/rosbag_tools/helpers.py -> /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools
+[7.719s] copying src/rosbag_tools/__init__.py -> /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools
+[7.720s] running install
+[7.729s] running install_lib
+[7.735s] creating /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools
+[7.735s] copying /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools/analyze_bag.py -> /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools
+[7.736s] copying /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools/helpers.py -> /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools
+[7.736s] copying /home/quinton/catkin_ws/src/build/rotors_evaluation/lib/rosbag_tools/__init__.py -> /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools
+[7.736s] byte-compiling /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py to analyze_bag.cpython-38.pyc
+[7.739s] byte-compiling /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/helpers.py to helpers.cpython-38.pyc
+[7.747s] byte-compiling /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/__init__.py to __init__.cpython-38.pyc
+[7.747s]   File "home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rosbag_tools/analyze_bag.py", line 53
+[7.747s]     except Exception, e:
+[7.748s]                     ^
+[7.748s] SyntaxError: invalid syntax
+[7.748s] 
+[7.748s] running install_egg_info
+[7.748s] Writing /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/python3/dist-packages/rotors_evaluation-2.2.3.egg-info
+[7.790s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/pkgconfig/rotors_evaluation.pc
+[7.792s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig.cmake
+[7.794s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/cmake/rotors_evaluationConfig-version.cmake
+[7.795s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/share/rotors_evaluation/package.xml
+[7.798s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/disturbance_eval.py
+[7.803s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/hovering_eval.py
+[7.803s] -- Installing: /home/quinton/catkin_ws/src/install/rotors_evaluation/lib/rotors_evaluation/waypoints_eval.py
+[7.816s] Invoked command in '/home/quinton/catkin_ws/src/build/rotors_evaluation' returned '0': /usr/bin/cmake --install /home/quinton/catkin_ws/src/build/rotors_evaluation

@@ -1,0 +1,18 @@
+[ 12%] [34m[1mPerforming download step (download, verify and extract) for 'gflags_src'[0m
+-- verifying file...
+       file='/home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip'
+-- MD5 hash of
+    /home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip
+  does not match expected value
+    expected: '2d988ef0b50939fb50ada965dafce96b'
+      actual: 'd41d8cd98f00b204e9800998ecf8427e'
+-- File already exists but hash mismatch. Removing...
+-- Downloading...
+   dst='/home/quinton/catkin_ws/src/build/gflags_catkin/gflags_src-prefix/src/v2.2.1.zip'
+   timeout='none'
+-- Using src='https://github.com/gflags/gflags/archive/v2.2.1.zip'
+-- Retrying...
+-- Using src='https://github.com/gflags/gflags/archive/v2.2.1.zip'
+make[2]: *** [CMakeFiles/gflags_src.dir/build.make:91: gflags_src-prefix/src/gflags_src-stamp/gflags_src-download] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:196: CMakeFiles/gflags_src.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

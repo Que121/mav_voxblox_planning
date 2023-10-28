@@ -1,0 +1,15 @@
+source;share/catkin_boost_python_buildtool/hook/cmake_prefix_path.ps1
+source;share/catkin_boost_python_buildtool/hook/cmake_prefix_path.dsv
+source;share/catkin_boost_python_buildtool/hook/cmake_prefix_path.sh
+source;share/catkin_boost_python_buildtool/hook/pkg_config.ps1
+source;share/catkin_boost_python_buildtool/hook/pkg_config.dsv
+source;share/catkin_boost_python_buildtool/hook/pkg_config.sh
+source;share/catkin_boost_python_buildtool/hook/ros_package_path.ps1
+source;share/catkin_boost_python_buildtool/hook/ros_package_path.dsv
+source;share/catkin_boost_python_buildtool/hook/ros_package_path.sh
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path.ps1
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path.dsv
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path.sh
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path_multiarch.ps1
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path_multiarch.dsv
+source;share/catkin_boost_python_buildtool/hook/pkg_config_path_multiarch.sh
