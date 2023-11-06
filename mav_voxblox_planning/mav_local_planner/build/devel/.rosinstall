@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/quinton/catkin_ws/src/mav_voxblox_planning/mav_local_planner/build/devel/setup.sh

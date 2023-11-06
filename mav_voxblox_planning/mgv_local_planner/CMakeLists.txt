@@ -1,8 +1,4 @@
 cmake_minimum_required(VERSION 2.8.3)
-if (POLICY CMP0048)
-  cmake_policy(SET CMP0048 NEW)
-endif (POLICY CMP0048)
-
 project(mgv_local_planner)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -17,16 +13,16 @@ add_definitions(-std=c++11 -Wall)
 # LIBRARIES #
 #############
 cs_add_library(${PROJECT_NAME}
-  src/mav_local_planner.cpp
+  src/mgv_local_planner.cpp
 )
 
 ############
 # BINARIES #
 ############
-cs_add_executable(mav_local_planner_node
-  src/mav_local_planner_node.cpp
+cs_add_executable(mgv_local_planner_node
+  src/mgv_local_planner_node.cpp
 )
-target_link_libraries(mav_local_planner_node ${PROJECT_NAME})
+target_link_libraries(mgv_local_planner_node ${PROJECT_NAME})
 
 ##########
 # EXPORT #

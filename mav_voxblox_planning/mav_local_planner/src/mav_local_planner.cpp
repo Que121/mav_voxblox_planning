@@ -632,7 +632,7 @@ namespace mav_planning
                                                          waypoints[1], path); // 规划两点之间的路径
       }
       else // 路径点数量大于2
-      { 
+      {
         success = loco_smoother_.getPathBetweenWaypoints(waypoints, path); // 规划多点之间的路径
       }
     }
