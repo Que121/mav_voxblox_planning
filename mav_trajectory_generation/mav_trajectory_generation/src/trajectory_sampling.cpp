@@ -121,7 +121,7 @@ bool sampleWholeTrajectory(const Trajectory& trajectory,
                            mav_msgs::EigenTrajectoryPoint::Vector* states) {
   const double min_time = trajectory.getMinTime();
   const double max_time = trajectory.getMaxTime();
-ma'v
+
   return sampleTrajectoryInRange(trajectory, min_time, max_time,
                                  sampling_interval, states);
 }
