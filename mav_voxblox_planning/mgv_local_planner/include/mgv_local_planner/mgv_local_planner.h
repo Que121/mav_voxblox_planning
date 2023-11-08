@@ -18,69 +18,132 @@
 #include <mav_planning_common/path_visualization.h>
 #include <mav_planning_common/physical_constraints.h>
 #include <mav_planning_common/semaphore_mgv.h>
-#include <mav_planning_common/yaw_policy.h>
+#include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
 
 namespace mgv_planning
 {
   class MgvLocalPlanner
   {
-  private:
-    void startPublishingCommands_mgv();
-    void commandPublishTimerCallback_mgv();
-
-    void planningTimerCallback_mgv(const ros::TimerEvent &event);
-    void planningStep_mgv();
-
-    bool planPathThroughWaypoints_mgv(
-        const mav_msgs::EigenTrajectoryPointVector &waypoints,
-        mav_msgs::EigenTrajectoryPointVector *path);
-
   public:
-    MgvLocalPlanner(const ros::NodeHandle &nh,
-                    const ros::NodeHandle &nh_private);
+    // 构造函数
+    MgvLocalPlanner(const ros::NodeHandle &nh, const ros::NodeHandle &nh_private);
 
-    // input
+    // 数据输入
     void odometryCallback_mgv(const nav_msgs::Odometry &msg);         // 机器人位置信息
     void waypointCallback_mgv(const geometry_msgs::PoseStamped &msg); // 单个路径点信息
 
+    // 停止path的pub, 并且清空现在所有的轨迹
+    void clearTrajectory_mgv();
+
+    // 和上面功能相同，但是still发回现在的机器人位置
+    void abort();
+
+    // 将path展示在rviz
+    void visualizePath();
+
+  private:
+    // 控制指令发布
+    void startPublishingCommands_mgv();
+    void commandPublishTimerCallback_mgv(const ros::TimerEvent &event);
+
+    // 路线规划控制器
+    void planningTimerCallback_mgv(const ros::TimerEvent &event);
+    void planningStep_mgv();
+
+    // 如果存在下一个目标点，可以执行
     bool nextWaypoint();
     void finishWaypointsOFmgv();
 
-    void clearTrajectoryOFmgv();
+    // 貌似是用在避障重规划路线里面的？
+    void replacePath_mgv(const mav_msgs::EigenTrajectoryPointVector &pathOFmgv);
 
-    void abort();
+    // 得到两点或多点的path 目前只用到两点
+    bool planPathThroughWaypoints_mgv(
+        const mav_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
+        mav_msgs::EigenTrajectoryPointVector *pathOFmgv);
 
+    // 获取地图信息 TBD
+    double getMapDistance(const Eigen::Vector3d &position) const {}
+    double getMapDistanceAndGradient(const Eigen::Vector3d &position,
+                                     Eigen::Vector3d *gradient) const {}
+
+    // 检测碰撞 TBD
+    bool isPathCollisionFree(
+        const mav_msgs::EigenTrajectoryPointVector &path) const {}
+
+    // 其他的内部成员？？？ TBD
+    void sendCurrentPose() {}
+
+    // 创建一个与ROS主系统通信的NodeHandle对象
     ros::NodeHandle nh_;
     ros::NodeHandle nh_private_;
 
-    ros::Subscriber waypoint_sub_; // sub路径点信息
-    ros::Subscriber odometry_sub_; // sub机器人位置信息
+    // ROS的输入和输出
+    ros::Subscriber waypoint_sub_;       // sub目标点
+    ros::Subscriber odometry_sub_;       // sub机器人位置信息
+    ros::Publisher command_pub_;         // pub控制命令
+    ros::Publisher path_marker_pub_;     // pub轨迹点
+    ros::Publisher full_trajectory_pub_; // pub完整轨迹到rive
 
-    ros::Publisher command_pub_;
+    // 服务客户端获取MGV接口来监听发送的命令
+    ros::ServiceClient position_hold_client_;
 
+    // ROS的异步处理：用于命令发布的回调队列和微调器
     ros::CallbackQueue command_publishing_queue_;
     ros::AsyncSpinner command_publishing_spinner_;
     ros::CallbackQueue planning_queue_;
     ros::AsyncSpinner planning_spinner_;
 
-    ros::Timer command_publishing_timer_;
-    ros::Timer planning_timer_;
+    // 路线规划控制器定时器
+    ros::Timer command_publishing_timer_mag_;
+    ros::Timer planning_timer_mgv_;
 
+    // 设置--是否打印plan开始的信息
     bool verbose_;
+
+    // 设置--frames
+    std::string global_frame_id_;
+    std::string local_frame_id_;
+
+    // 设置--
+    bool plan_to_startOFmgv_;
+    bool avoid_collisions_;
+    std::string smoother_name_;
+
+    // 定义--机器人位置
+    mav_msgs::EigenOdometry odometryOFmgv_;
+
+    // 定义--目标点
+    mav_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
+    int64_t current_waypointOFmgv_;
+
+    // 定义--轨迹path
+    mav_msgs::EigenTrajectoryPointVector path_queueOFmgv_;
+    size_t path_indexOFmgv_;
+
+    // 线程锁
+    std::recursive_mutex path_mutexOFmgv_;
+    std::recursive_mutex map_mutexOFmgv_;
+
+    // Map!  // 无Voxblox的包！！！
+    voxblox::EsdfServer esdf_server_;
+
     double command_publishing_dt_;
     double replan_dt_;
     double replan_lookahead_sec_;
 
-    std::string global_frame_id_;
-    std::string local_frame_id_;
-
+    // 规划器--yaw轴策略
+    YawPolicy yaw_policy_; // ？？
     RosSemaphore should_replan_;
 
-    mav_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
-    int64_t current_waypointOFmgv_;
+    // 规划器--本地loco规划
+    VoxbloxLocoPlanner loco_planner_;
 
-    mav_msgs::EigenOdometry odometryOFmgv_;
+    // 规划器--path平滑.三种方式
+    VelocityRampSmoother ramp_smoother_;
+    PolynomialSmoother poly_smoother_;
+    LocoSmoother loco_smoother_;
   };
 }
 

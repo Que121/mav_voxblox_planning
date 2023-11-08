@@ -45,7 +45,7 @@ namespace mav_planning
     // controller to clear the queue.
     void abort();
 
-    // Service callbacks.
+    // Service callbacks. // 暂时不需要
     bool startCallback(std_srvs::Empty::Request &request,
                        std_srvs::Empty::Response &response);
     bool pauseCallback(std_srvs::Empty::Request &request,
@@ -53,10 +53,10 @@ namespace mav_planning
     bool stopCallback(std_srvs::Empty::Request &request,
                       std_srvs::Empty::Response &response);
 
-    // Visualizations.
+    // Visualizations. 可以留
     void visualizePath();
 
-    // TODO -- TO IMPLEMENT:
+    // TODO -- TO IMPLEMENT: // 没写 空函数
     void polynomialTrajectoryCallback(
         const mav_planning_msgs::PolynomialTrajectory4D &msg) {}
 
@@ -87,12 +87,14 @@ namespace mav_planning
         const mav_msgs::EigenTrajectoryPointVector &waypoints,
         mav_msgs::EigenTrajectoryPointVector *path);
 
-    // Map access.
+    // Map access. // 可能会用
     double getMapDistance(const Eigen::Vector3d &position) const;
     double getMapDistanceAndGradient(const Eigen::Vector3d &position,
                                      Eigen::Vector3d *gradient) const;
 
+
     // Double-check that everything is safe w.r.t. current map.
+    // 检测碰撞
     bool isPathCollisionFree(
         const mav_msgs::EigenTrajectoryPointVector &path) const;
     bool isPathFeasible(const mav_msgs::EigenTrajectoryPointVector &path) const;
@@ -105,14 +107,15 @@ namespace mav_planning
 
     // ROS inputs and outputs.
     ros::Subscriber waypoint_sub_;
-    ros::Subscriber waypoint_list_sub_;
+    ros::Subscriber waypoint_list_sub_; // 真的有waypoint_list吗
     // Current state of the MAV.
     ros::Subscriber odometry_sub_;
 
     ros::Publisher command_pub_;
     ros::Publisher path_marker_pub_;
     ros::Publisher full_trajectory_pub_;
-
+    
+    // 暂时不需要
     // Service calls for controlling the local planner.
     // Start will start publishing commands, pause will stop temporarily and you
     // can call start to un-pause, and stop will stop and clear the current
@@ -123,6 +126,7 @@ namespace mav_planning
 
     // Service client for getting the MAV interface to listen to our sent
     // commands.
+    // 服务客户端获取MAV接口来监听发送的命令
     ros::ServiceClient position_hold_client_;
 
     // ROS async handling: callback queues and spinners for command publishing,
@@ -147,7 +151,7 @@ namespace mav_planning
     // Settings -- constraints.
     PhysicalConstraints constraints_;
 
-    // Settings -- controller interface.
+    // Settings -- controller interface. 不需要
     int mpc_prediction_horizon_; // Units: timesteps.
     // TODO(helenol): do I need these two to be separate? I guess so...
     double command_publishing_dt_;
@@ -180,8 +184,7 @@ namespace mav_planning
     int max_failures_;
     int num_failures_;
 
-    // Map!
-    voxblox::EsdfServer esdf_server_;
+    
 
     // Planners -- yaw policy
     YawPolicy yaw_policy_;
