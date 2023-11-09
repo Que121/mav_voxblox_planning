@@ -3,13 +3,14 @@
 
 #include "mgv_local_planner/mgv_local_planner.h"
 
-
 namespace mgv_planning
 {
   MgvLocalPlanner::MgvLocalPlanner(const ros::NodeHandle &nh,
                                    const ros::NodeHandle &nh_private)
       : nh_(nh),
         nh_private_(nh_private),
+        command_publishing_spinner_(1, &command_publishing_queue_),
+        planning_spinner_(1, &planning_queue_),
         verbose_(false),
         global_frame_id_("map"),
         local_frame_id_("odom"),
@@ -17,9 +18,7 @@ namespace mgv_planning
         smoother_name_("loco"), // 路径平滑器的算法
         avoid_collisions_(0),   // 0:不需要避障
         plan_to_startOFmgv_(1),
-        path_indexOFmgv_(0),
-        mpc_prediction_horizonOFmgv_(300)
-        
+        path_indexOFmgv_(0)
   {
     odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
                                   &MgvLocalPlanner::odometryCallback_mgv, this);
@@ -73,16 +72,16 @@ namespace mgv_planning
     if (should_replan_.wait_for(replan_dt_))
     {
       if (verbose_)
-      
-        ROS_INFO("[Mgv Local Plnner][Plan Step] ");
-      }
-      planningStep_mgv();
-    }
 
-  // 规划路;
-  //??????????????????;
+        ROS_INFO("[Mgv Local Plnner][Plan Step] ");
+    }
+    planningStep_mgv(); // 再次开始规划
+  }
+
   void MgvLocalPlanner::planningStep_mgv()
   {
+
+    // 无人机类型需要修改的哦
     if (current_waypointOFmgv_ < 0 ||
         static_cast<int>(waypointsOFmgv_.size()) <= current_waypointOFmgv_)
     {
@@ -97,9 +96,10 @@ namespace mgv_planning
       // If we're not though, we should probably double check the trajectory!
     }
 
-    mav_trajectory_generation::timing::MiniTimer timer;
+    mav_trajectory_generation::timing::MiniTimer timer; // 
 
     constexpr double kCloseToOdometry = 0.1;
+    
     // 不需要避障
     // avoid_collisions_ = 0;
     if (!avoid_collisions_)
@@ -107,7 +107,7 @@ namespace mgv_planning
       // 1.获取信息
       mav_msgs::EigenTrajectoryPointVector waypointsOFmgv;
       mav_msgs::EigenTrajectoryPoint current_waypointOFmgv;
-      //???????????????????????
+  
       current_waypointOFmgv.position_W = odometryOFmgv_.position_W; // odometry_ 目前无人机信息
       current_waypointOFmgv.orientation_W_B = odometryOFmgv_.orientation_W_B;
 
@@ -133,7 +133,7 @@ namespace mgv_planning
   }
 
   // 根据给定的路径点waypoints使用不同的路径平滑算法规划一条平滑的路径
-  bool MavLocalPlanner::planPathThroughWaypoints_mgv(
+  bool MgvLocalPlanner::planPathThroughWaypoints_mgv(
       const mav_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
       mav_msgs::EigenTrajectoryPointVector *pathOFmgv)
   {
@@ -150,7 +150,7 @@ namespace mgv_planning
     return success;
   }
 
-  void MavLocalPlanner::replacePath_mgv(
+  void MgvLocalPlanner::replacePath_mgv(
       const mav_msgs::EigenTrajectoryPointVector &pathOFmgv)
   {
     std::lock_guard<std::recursive_mutex> guard(path_mutexoOFmgv_);
@@ -167,7 +167,7 @@ namespace mgv_planning
     path_indexOFmgv_ = 0;
   }
 
-  void MavLocalPlanner::clearTrajectory_mgv()
+  void MgvLocalPlanner::clearTrajectory_mgv()
   {
     std::lock_guard<std::recursive_mutex> guard(path_mutexOFmgv_);
     command_publishing_timer_.stop();
@@ -175,7 +175,7 @@ namespace mgv_planning
     path_indexOFmgv_ = 0;
   }
 
-  void MavLocalPlanner::startPublishingCommands_mgv()
+  void MgvLocalPlanner::startPublishingCommands_mgv()
   {
     // Call the service call to takeover publishing commands.
     // 接管命令发布服务
@@ -193,14 +193,14 @@ namespace mgv_planning
     // 设定定时器并关联回调函数
     ros::TimerOptions timer_options(
         ros::Duration(command_publishing_dt_),
-        boost::bind(&MavLocalPlanner::commandPublishTimerCallback_mgv, this, _1),
+        boost::bind(&MgvLocalPlanner::commandPublishTimerCallback_mgv, this, _1),
         &command_publishing_queue_);
 
     // 创建定时器
     command_publishing_timer_ = nh_.createTimer(timer_options);
   }
 
-  void MavLocalPlanner::commandPublishTimerCallback_mgv(
+  void MgvLocalPlanner::commandPublishTimerCallback_mgv(
       const ros::TimerEvent &event)
   {
     constexpr size_t kQueueBuffer = 0; // 表示路径队列的缓冲区大小

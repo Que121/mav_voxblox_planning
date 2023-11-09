@@ -8,6 +8,8 @@
 
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
+
+// 无人机类型需要修改
 #include <mav_msgs/conversions.h>
 #include <mav_msgs/eigen_mav_msgs.h>
 #include <mav_path_smoothing/loco_smoother.h>
@@ -111,14 +113,14 @@ namespace mgv_planning
     bool avoid_collisions_;
     std::string smoother_name_;
 
-    // 定义--机器人位置
+    // 定义--机器人位置  // 无人机类型需要修改
     mav_msgs::EigenOdometry odometryOFmgv_;
 
-    // 定义--目标点
+    // 定义--目标点  // 无人机类型需要修改
     mav_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
     int64_t current_waypointOFmgv_;
 
-    // 定义--轨迹path
+    // 定义--轨迹path  // 无人机类型需要修改
     mav_msgs::EigenTrajectoryPointVector path_queueOFmgv_;
     size_t path_indexOFmgv_;
 
