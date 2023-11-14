@@ -3,7 +3,7 @@
 
 #include <mav_msgs/eigen_mav_msgs.h>
 
-#include "mav_planning_common/physical_constraints.h"
+#include "mav_planning_common/physical_constraints_mgv.h"
 
 namespace mgv_planning
 {

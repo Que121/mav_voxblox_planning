@@ -10,18 +10,25 @@
 #include <geometry_msgs/PoseStamped.h>
 
 // 无人机类型需要修改
+#include <geometry_msgs/PoseArray.h>
+#include <geometry_msgs/PoseStamped.h>
 #include <mgv_msgs/conversions.h>
 #include <mgv_msgs/eigen_mgv_msgs.h>
-#include <mgv_path_smoothing/loco_smoother.h>
-#include <mgv_path_smoothing/polynomial_smoother.h>
-#include <mgv_path_smoothing/velocity_ramp_smoother.h>
-#include <mgv_planning_common/color_utils.h>
-#include <mgv_planning_common/path_utils.h>
-#include <mgv_planning_common/path_visualization.h>
-#include <mgv_planning_common/physical_constraints.h>
-#include <mgv_planning_common/semaphore_mgv.h>
-#include <mgv_planning_common/yaw_policy_mgv.h>
-#include <mgv_planning_msgs/PolynomialTrajectory4D.h>
+#include <mav_path_smoothing/loco_smoother_mgv.h>
+#include <mav_path_smoothing/polynomial_smoother.h>
+#include <mav_path_smoothing/velocity_ramp_smoother.h>
+#include <mav_planning_common/color_utils.h>
+#include <mav_planning_common/path_utils.h>
+#include <mav_planning_common/path_visualization.h>
+#include <mav_planning_common/physical_constraints_mgv.h>
+#include <mav_planning_common/semaphore_mgv.h>
+#include <mav_planning_common/yaw_policy_mgv.h>
+#include <mav_planning_msgs/PolynomialTrajectory4D.h>
+#include <mav_visualization/helpers.h>
+#include <minkindr_conversions/kindr_msg.h>
+#include <voxblox_loco_planner/goal_point_selector.h>
+#include <voxblox_loco_planner/voxblox_loco_planner_mgv.h>
+#include <voxblox_ros/esdf_server.h>
 
 namespace mgv_planning
 {
@@ -32,7 +39,7 @@ namespace mgv_planning
     MgvLocalPlanner(const ros::NodeHandle &nh, const ros::NodeHandle &nh_private);
 
     // 数据输入
-    void odometryCallback_mgv(const ngv_msgs::Odometry &msg);         // 机器人位置信息
+    void odometryCallback_mgv(const nav_msgs::Odometry &msg);         // 机器人位置信息
     void waypointCallback_mgv(const geometry_msgs::PoseStamped &msg); // 单个路径点信息
 
     // 停止path的pub, 并且清空现在所有的轨迹
@@ -98,7 +105,7 @@ namespace mgv_planning
     ros::AsyncSpinner planning_spinner_;
 
     // 路线规划控制器定时器
-    ros::Timer command_publishing_timer_mag_;
+    ros::Timer command_publishing_timer_mgv_;
     ros::Timer planning_timer_mgv_;
 
     // 设置--是否打印plan开始的信息
@@ -110,7 +117,7 @@ namespace mgv_planning
 
     // 设置--
     bool plan_to_startOFmgv_;
-    bool avoid_collisions_;
+    bool avoid_collisions_mgv_;
     std::string smoother_name_;
 
     // 定义--机器人位置  // 无人机类型需要修改
@@ -128,6 +135,9 @@ namespace mgv_planning
     std::recursive_mutex path_mutexOFmgv_;
     std::recursive_mutex map_mutexOFmgv_;
 
+    // Settings -- constraints.
+    PhysicalConstraints constraints_;
+
     // Map!  // 无Voxblox的包！！！
     voxblox::EsdfServer esdf_server_;
 
@@ -143,9 +153,10 @@ namespace mgv_planning
     VoxbloxLocoPlanner loco_planner_;
 
     // 规划器--path平滑.三种方式
-    VelocityRampSmoother ramp_smoother_;
-    PolynomialSmoother poly_smoother_;
+    // VelocityRampSmoother ramp_smoother_;
+    // PolynomialSmoother poly_smoother_;
     LocoSmoother loco_smoother_;
+    
   };
 }
 
