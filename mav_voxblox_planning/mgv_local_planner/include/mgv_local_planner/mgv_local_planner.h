@@ -10,15 +10,15 @@
 #include <geometry_msgs/PoseStamped.h>
 
 // 无人机类型需要修改
-#include <mav_msgs/conversions.h>
-#include <mav_msgs/eigen_mav_msgs.h>
+#include <mgv_msgs/conversions.h>
+#include <mgv_msgs/eigen_mav_msgs.h>
 #include <mav_path_smoothing/loco_smoother.h>
 #include <mav_path_smoothing/polynomial_smoother.h>
 #include <mav_path_smoothing/velocity_ramp_smoother.h>
 #include <mav_planning_common/color_utils.h>
 #include <mav_planning_common/path_utils.h>
 #include <mav_planning_common/path_visualization.h>
-#include <mav_planning_common/physical_constraints.h>
+#include <mav_planning_common/physical_constraints_mgv.h  >
 #include <mav_planning_common/semaphore_mgv.h>
 #include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
@@ -110,7 +110,7 @@ namespace mgv_planning
 
     // 设置--
     bool plan_to_startOFmgv_;
-    bool avoid_collisions_;
+    bool avoid_collisions_mgv_;
     std::string smoother_name_;
 
     // 定义--机器人位置  // 无人机类型需要修改
