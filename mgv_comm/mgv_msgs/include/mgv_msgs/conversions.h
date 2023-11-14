@@ -39,7 +39,7 @@
 #include "mgv_msgs/TorqueThrust.h"
 #include "mgv_msgs/common.h"
 #include "mgv_msgs/default_values.h"
-#include "mgv_msgs/eigen_mav_msgs.h"
+#include "mgv_msgs/eigen_mgv_msgs.h"
 
 namespace mgv_msgs {
 

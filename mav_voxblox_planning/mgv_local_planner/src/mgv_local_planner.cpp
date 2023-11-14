@@ -1,10 +1,13 @@
 #include <mav_msgs/default_topics.h>
 #include <mav_trajectory_generation/trajectory_sampling.h>
+#include <mav_msgs/default_topics.h>
+#include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
 
 namespace mgv_planning
 {
+  // 构造函数
   // 构造函数
   MgvLocalPlanner::MgvLocalPlanner(const ros::NodeHandle &nh,
                                    const ros::NodeHandle &nh_private)
@@ -13,29 +16,37 @@ namespace mgv_planning
         command_publishing_spinner_(1, &command_publishing_queue_),
         planning_spinner_(1, &planning_queue_),
         verbose_(false), // 打印信息
+        verbose_(false), // 打印信息
         global_frame_id_("map"),
         local_frame_id_("odom"),
         replan_dt_(1.0),
+        smoother_name_("loco"),   // 路径平滑器的算法
+        avoid_collisions_mgv_(0), // 0:不需要避障
         smoother_name_("loco"),   // 路径平滑器的算法
         avoid_collisions_mgv_(0), // 0:不需要避障
         plan_to_startOFmgv_(1),
         path_indexOFmgv_(0)
   {
     odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
+    odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
                                   &MgvLocalPlanner::odometryCallback_mgv, this);
 
+    // 订阅单个航点信息
     // 订阅单个航点信息
     waypoint_sub_ =
         nh_.subscribe("waypoint", 1, &MgvLocalPlanner::waypointCallback_mgv, this);
 
     // 发布完整轨迹信息
+    // 发布完整轨迹信息
     command_pub_ = nh_.advertise<trajectory_msgs::MultiDOFJointTrajectory>(
         mgv_msgs::default_topics::COMMAND_TRAJECTORY, 1);
 
     // 创建了一个ROS服务客户端
+    // 创建了一个ROS服务客户端
     position_hold_client_ =
         nh_.serviceClient<std_srvs::Empty>("back_to_position_hold");
 
+    // 创建一个定时器，周期性触发函数planningTimerCallback_mgv
     // 创建一个定时器，周期性触发函数planningTimerCallback_mgv
     ros::TimerOptions timer_options(
         ros::Duration(replan_dt_),
@@ -43,12 +54,16 @@ namespace mgv_planning
         &planning_queue_);
 
     // 初始化空服务用户端
-    planning_timer_ = nh_.createTimer(timer_options);
+    planning_timer_mgv_ = nh_.createTimer(timer_options);
 
     // 启动异步线程
     command_publishing_spinner_.start(); // 发送控制
     planning_spinner_.start();           // 处理路径规划和规划器相关信息
+    command_publishing_spinner_.start(); // 发送控制
+    planning_spinner_.start();           // 处理路径规划和规划器相关信息
 
+    // 需要？
+    // 飞行设置
     // 需要？
     // 飞行设置
     yaw_policy_.setPhysicalConstraints(constraints_);                 // 设置物理约束策略
@@ -56,35 +71,44 @@ namespace mgv_planning
   }
 
   void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
+  void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
   {
     // 消息类型需要更改
     mgv_msgs::eigenOdometryFromMsg(msg, &odometryOFmgv_); // 将ros消息转换为eigen类型的变量
   }
 
   // 回调   接收新的的航点
+  // 回调   接收新的的航点
   void MgvLocalPlanner::waypointCallback_mgv(const geometry_msgs::PoseStamped &msg)
   {
+    // 1.清除原来的轨迹信息
     // 1.清除原来的轨迹信息
     clearTrajectory_mgv();
 
     // 消息类型需要更改
     mav_msgs::EigenTrajectoryPoint waypointsOFmgv;
+    mav_msgs::EigenTrajectoryPoint waypointsOFmgv;
     eigenTrajectoryPointFromPoseMsg(msg, &waypointsOFmgv);
 
+    // 3.清除原来航点信息，将新的航点加入
     // 3.清除原来航点信息，将新的航点加入
     waypointsOFmgv_.clear();
     waypointsOFmgv_.push_back(waypointsOFmgv);
 
     // 4.设置航点索引
+    // 4.设置航点索引
     current_waypointOFmgv_ = 0;
 
+    // 5.进行路径规划
     // 5.进行路径规划
     planningStep_mgv();
 
     // 6.发布飞行信息
+    // 6.发布飞行信息
     startPublishingCommands_mgv();
   }
 
+  // 回调  定时器执行飞行规划
   // 回调  定时器执行飞行规划
   void MgvLocalPlanner::planningTimerCallback_mgv(const ros::TimerEvent &event)
   {
@@ -97,12 +121,14 @@ namespace mgv_planning
     }
     // 执行一次飞行规划
     planningStep_mgv();
+    planningStep_mgv();
   }
 
   // 从目前位置到航点进行一次规划
   void MgvLocalPlanner::planningStep_mgv()
   {
     // 无人机类型需要修改的哦
+    // 1.判断航点列表是否为空并且索引是否超出范围
     // 1.判断航点列表是否为空并且索引是否超出范围
     if (current_waypointOFmgv_ < 0 ||
         static_cast<int>(waypointsOFmgv_.size()) <= current_waypointOFmgv_)
@@ -121,6 +147,10 @@ namespace mgv_planning
       mgv_msgs::EigenTrajectoryPointVector waypointsOFmgv;
       mgv_msgs::EigenTrajectoryPoint current_waypointOFmgv;
 
+      //
+      mgv_msgs::EigenTrajectoryPointVector waypointsOFmgv;
+      mgv_msgs::EigenTrajectoryPoint current_waypointOFmgv;
+
       current_waypointOFmgv.position_W = odometryOFmgv_.position_W; // odometry_ 目前无人机信息
       current_waypointOFmgv.orientation_W_B = odometryOFmgv_.orientation_W_B;
 
@@ -130,6 +160,7 @@ namespace mgv_planning
       }
       waypointsOFmgv.insert(waypointsOFmgv.end(), waypointsOFmgv_.begin(), waypointsOFmgv_.end());
 
+      mgv_msgs::EigenTrajectoryPointVector pathOFmgv;
       mgv_msgs::EigenTrajectoryPointVector pathOFmgv;
       if (planPathThroughWaypoints_mgv(waypointsOFmgv, &pathOFmgv))
       {
@@ -150,6 +181,7 @@ namespace mgv_planning
     }
   }
 
+  // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
   // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
   bool MgvLocalPlanner::planPathThroughWaypoints_mgv(
       const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
@@ -179,7 +211,7 @@ namespace mgv_planning
   void MgvLocalPlanner::replacePath_mgv(
       const mgv_msgs::EigenTrajectoryPointVector &pathOFmgv)
   {
-    // 1.上锁  // nm谁
+    // 1.上锁  // nm谁大多
     std::lock_guard<std::recursive_mutex> guard(path_mutexOFmgv_);
 
     // 2.清除原来路径点
@@ -272,6 +304,8 @@ namespace mgv_planning
 
       // 提取要发布的路径点
       mav_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
+      // 提取要发布的路径点
+      mav_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
           path_queueOFmgv_.begin() + starting_index;
       mgv_msgs::EigenTrajectoryPointVector::const_iterator last_sample =
           first_sample + number_to_publish_with_buffer;
@@ -295,6 +329,8 @@ namespace mgv_planning
           trajectory_to_publish.back().time_from_start_ns * 1.0e-9,
           trajectory_to_publish.back().position_W.x());
 
+      // 将 trajectory_to_publish 中的路径点转换为 ROS 的控制指令消息格式。
+      mav_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
       // 将 trajectory_to_publish 中的路径点转换为 ROS 的控制指令消息格式。
       mav_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
 
