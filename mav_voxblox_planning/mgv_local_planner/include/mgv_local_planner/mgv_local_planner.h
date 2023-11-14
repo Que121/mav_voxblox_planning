@@ -10,18 +10,18 @@
 #include <geometry_msgs/PoseStamped.h>
 
 // 无人机类型需要修改
-#include <mav_msgs/conversions.h>
-#include <mav_msgs/eigen_mav_msgs.h>
-#include <mav_path_smoothing/loco_smoother.h>
-#include <mav_path_smoothing/polynomial_smoother.h>
-#include <mav_path_smoothing/velocity_ramp_smoother.h>
-#include <mav_planning_common/color_utils.h>
-#include <mav_planning_common/path_utils.h>
-#include <mav_planning_common/path_visualization.h>
-#include <mav_planning_common/physical_constraints.h>
-#include <mav_planning_common/semaphore_mgv.h>
-#include <mav_planning_common/yaw_policy_mgv.h>
-#include <mav_planning_msgs/PolynomialTrajectory4D.h>
+#include <mgv_msgs/conversions.h>
+#include <mgv_msgs/eigen_mgv_msgs.h>
+#include <mgv_path_smoothing/loco_smoother.h>
+#include <mgv_path_smoothing/polynomial_smoother.h>
+#include <mgv_path_smoothing/velocity_ramp_smoother.h>
+#include <mgv_planning_common/color_utils.h>
+#include <mgv_planning_common/path_utils.h>
+#include <mgv_planning_common/path_visualization.h>
+#include <mgv_planning_common/physical_constraints.h>
+#include <mgv_planning_common/semaphore_mgv.h>
+#include <mgv_planning_common/yaw_policy_mgv.h>
+#include <mgv_planning_msgs/PolynomialTrajectory4D.h>
 
 namespace mgv_planning
 {
@@ -32,7 +32,7 @@ namespace mgv_planning
     MgvLocalPlanner(const ros::NodeHandle &nh, const ros::NodeHandle &nh_private);
 
     // 数据输入
-    void odometryCallback_mgv(const nav_msgs::Odometry &msg);         // 机器人位置信息
+    void odometryCallback_mgv(const ngv_msgs::Odometry &msg);         // 机器人位置信息
     void waypointCallback_mgv(const geometry_msgs::PoseStamped &msg); // 单个路径点信息
 
     // 停止path的pub, 并且清空现在所有的轨迹
@@ -58,12 +58,12 @@ namespace mgv_planning
     void finishWaypointsOFmgv();
 
     // 貌似是用在避障重规划路线里面的？
-    void replacePath_mgv(const mav_msgs::EigenTrajectoryPointVector &pathOFmgv);
+    void replacePath_mgv(const mgv_msgs::EigenTrajectoryPointVector &pathOFmgv);
 
     // 得到两点或多点的path 目前只用到两点
     bool planPathThroughWaypoints_mgv(
-        const mav_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
-        mav_msgs::EigenTrajectoryPointVector *pathOFmgv);
+        const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
+        mgv_msgs::EigenTrajectoryPointVector *pathOFmgv);
 
     // 获取地图信息 TBD
     double getMapDistance(const Eigen::Vector3d &position) const {}
@@ -72,7 +72,7 @@ namespace mgv_planning
 
     // 检测碰撞 TBD
     bool isPathCollisionFree(
-        const mav_msgs::EigenTrajectoryPointVector &path) const {}
+        const mgv_msgs::EigenTrajectoryPointVector &path) const {}
 
     // 其他的内部成员？？？ TBD
     void sendCurrentPose() {}
@@ -114,14 +114,14 @@ namespace mgv_planning
     std::string smoother_name_;
 
     // 定义--机器人位置  // 无人机类型需要修改
-    mav_msgs::EigenOdometry odometryOFmgv_;
+    mgv_msgs::EigenOdometry odometryOFmgv_;
 
     // 定义--目标点  // 无人机类型需要修改
-    mav_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
+    mgv_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
     int64_t current_waypointOFmgv_;
 
     // 定义--轨迹path  // 无人机类型需要修改
-    mav_msgs::EigenTrajectoryPointVector path_queueOFmgv_;
+    mgv_msgs::EigenTrajectoryPointVector path_queueOFmgv_;
     size_t path_indexOFmgv_;
 
     // 线程锁
