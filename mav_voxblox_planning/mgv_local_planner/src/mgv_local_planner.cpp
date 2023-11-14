@@ -1,5 +1,7 @@
 #include <mav_msgs/default_topics.h>
 #include <mav_trajectory_generation/trajectory_sampling.h>
+#include <mav_msgs/default_topics.h>
+#include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
 
@@ -21,6 +23,7 @@ namespace mgv_planning
         plan_to_startOFmgv_(1),
         path_indexOFmgv_(0)
   {
+    odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
     odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
                                   &MgvLocalPlanner::odometryCallback_mgv, this);
 
@@ -56,6 +59,7 @@ namespace mgv_planning
   }
 
   void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
+  void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
   {
     // 消息类型需要更改
     mgv_msgs::eigenOdometryFromMsg(msg, &odometryOFmgv_); // 将ros消息转换为eigen类型的变量
@@ -68,6 +72,7 @@ namespace mgv_planning
     clearTrajectory_mgv();
 
     // 消息类型需要更改
+    mav_msgs::EigenTrajectoryPoint waypointsOFmgv;
     mav_msgs::EigenTrajectoryPoint waypointsOFmgv;
     eigenTrajectoryPointFromPoseMsg(msg, &waypointsOFmgv);
 
@@ -154,6 +159,7 @@ namespace mgv_planning
     }
   }
 
+  // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
   // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
   bool MgvLocalPlanner::planPathThroughWaypoints_mgv(
       const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
@@ -276,6 +282,8 @@ namespace mgv_planning
 
       // 提取要发布的路径点
       mav_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
+      // 提取要发布的路径点
+      mav_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
           path_queueOFmgv_.begin() + starting_index;
       mgv_msgs::EigenTrajectoryPointVector::const_iterator last_sample =
           first_sample + number_to_publish_with_buffer;
@@ -299,6 +307,8 @@ namespace mgv_planning
           trajectory_to_publish.back().time_from_start_ns * 1.0e-9,
           trajectory_to_publish.back().position_W.x());
 
+      // 将 trajectory_to_publish 中的路径点转换为 ROS 的控制指令消息格式。
+      mav_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
       // 将 trajectory_to_publish 中的路径点转换为 ROS 的控制指令消息格式。
       mav_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
 

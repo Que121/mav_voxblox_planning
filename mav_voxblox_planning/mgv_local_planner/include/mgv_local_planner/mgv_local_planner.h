@@ -13,6 +13,18 @@
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <mgv_msgs/conversions.h>
+#include <mgv_msgs/eigen_mav_msgs.h>
+#include <mav_path_smoothing/loco_smoother.h>
+#include <mav_path_smoothing/polynomial_smoother.h>
+#include <mav_path_smoothing/velocity_ramp_smoother.h>
+#include <mav_planning_common/color_utils.h>
+#include <mav_planning_common/path_utils.h>
+#include <mav_planning_common/path_visualization.h>
+#include <mav_planning_common/physical_constraints_mgv.h  >
+#include <mav_planning_common/semaphore_mgv.h>
+#include <mav_planning_common/yaw_policy_mgv.h>
+#include <mav_planning_msgs/PolynomialTrajectory4D.h>
+
 #include <mgv_msgs/eigen_mgv_msgs.h>
 #include <mav_path_smoothing/loco_smoother_mgv.h>
 #include <mav_path_smoothing/polynomial_smoother.h>
@@ -31,6 +43,7 @@
 #include <voxblox_ros/esdf_server.h>
 
 namespace mgv_planning
+
 {
   class MgvLocalPlanner
   {
