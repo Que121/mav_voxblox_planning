@@ -13,14 +13,14 @@
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <mgv_msgs/conversions.h>
-#include <mgv_msgs/eigen_mav_msgs.h>
-#include <mav_path_smoothing/loco_smoother.h>
-#include <mav_path_smoothing/polynomial_smoother.h>
-#include <mav_path_smoothing/velocity_ramp_smoother.h>
+#include <mgv_msgs/eigen_mgv_msgs.h>
+#include <mav_path_smoothing/loco_smoother_mgv.h>
+#include <mav_path_smoothing/polynomial_smoother_mgv.h>
+#include <mav_path_smoothing/velocity_ramp_smoother_mgv.h>
 #include <mav_planning_common/color_utils.h>
-#include <mav_planning_common/path_utils.h>
+#include <mav_planning_common/path_utils_mgv.h>
 #include <mav_planning_common/path_visualization.h>
-#include <mav_planning_common/physical_constraints_mgv.h  >
+#include <mav_planning_common/physical_constraints_mgv.h>
 #include <mav_planning_common/semaphore_mgv.h>
 #include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
@@ -37,10 +37,11 @@
 #include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
 #include <mav_visualization/helpers.h>
-#include <minkindr_conversions/kindr_msg.h>
 #include <voxblox_loco_planner/goal_point_selector.h>
 #include <voxblox_loco_planner/voxblox_loco_planner_mgv.h>
 #include <voxblox_ros/esdf_server.h>
+#include <minkindr_conversions/kindr_msg.h>
+
 
 namespace mgv_planning
 
@@ -150,6 +151,9 @@ namespace mgv_planning
 
     // Settings -- constraints.
     PhysicalConstraints constraints_;
+
+    // Settings -- controller interface. 不需要
+    int mpc_prediction_horizonOFmgv_;
 
     // Map!  // 无Voxblox的包！！！
     voxblox::EsdfServer esdf_server_;
