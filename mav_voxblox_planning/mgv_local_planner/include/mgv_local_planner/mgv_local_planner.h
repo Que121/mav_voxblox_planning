@@ -56,6 +56,8 @@ namespace mgv_planning
     void waypointCallback_mgv(const geometry_msgs::PoseStamped &msg); // 单个路径点信息
 
     // 停止path的pub, 并且清空现在所有的轨迹
+    void clearTrajectvisualizePathory_mgv();
+
     void clearTrajectory_mgv();
 
     // 和上面功能相同，但是still发回现在的机器人位置
@@ -169,7 +171,6 @@ namespace mgv_planning
     // VelocityRampSmoother ramp_smoother_;
     // PolynomialSmoother poly_smoother_;
     LocoSmoother loco_smoother_;
-    
   };
 }
 

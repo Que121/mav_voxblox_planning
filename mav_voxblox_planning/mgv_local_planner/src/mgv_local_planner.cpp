@@ -55,7 +55,7 @@ namespace mgv_planning
     yaw_policy_.setYawPolicy(YawPolicy::PolicyType::kVelocityVector); // 设置偏航策略
   }
 
-  void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
+  void MgvLocalPlanner::odometryCallback_mgv(const mgv_msgs::Odometry &msg)
   {
     // 消息类型需要更改
     mgv_msgs::eigenOdometryFromMsg(msg, &odometryOFmgv_); // 将ros消息转换为eigen类型的变量
@@ -68,7 +68,7 @@ namespace mgv_planning
     clearTrajectory_mgv();
 
     // 消息类型需要更改
-    mav_msgs::EigenTrajectoryPoint waypointsOFmgv;
+    mgv_msgs::EigenTrajectoryPoint waypointsOFmgv;
     eigenTrajectoryPointFromPoseMsg(msg, &waypointsOFmgv);
 
     // 3.清除原来航点信息，将新的航点加入
@@ -142,7 +142,7 @@ namespace mgv_planning
       }
 
       // 输出规划完成，包括所花费的时间
-      ROS_INFO("[Mav Local Planner][Plan Step] Planning finished. Time taken: %f",
+      ROS_INFO("[Mgv Local Planner][Plan Step] Planning finished. Time taken: %f",
                timer.stop());
 
       // 可视化路径
@@ -155,21 +155,23 @@ namespace mgv_planning
       const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
       mgv_msgs::EigenTrajectoryPointVector *pathOFmgv)
   {
-    // 1. 确保传入的 'path' 不为空
+    // 确保传入的 'path' 不为空
     CHECK_NOTNULL(pathOFmgv);
-
-    // 2. 初始化success变量
+    // 初始化success变量
     bool success = false;
-
-    // 3.选择的算法为loco
     if (smoother_name_ == "loco")
+    // 选择的算法为loco
     {
-      // 4.判断航点数量
+      // 判断航点数量
       if (waypointsOFmgv.size() == 2)
       {
-        // 5.规划两点之间的路径
+        // 规划两点之间的路径
         success = loco_smoother_.getPathBetweenTwoPoints(waypointsOFmgv[0],
                                                          waypointsOFmgv[1], pathOFmgv);
+      }
+      else
+      {
+        ROS_INFO("[Mgv Local Planner][Plan Path Through Waypoints] it surpass twowaypoints!");
       }
     }
     return success;
@@ -203,7 +205,7 @@ namespace mgv_planning
   void MgvLocalPlanner::clearTrajectory_mgv()
   {
     std::lock_guard<std::recursive_mutex> guard(path_mutexOFmgv_);
-    command_publishing_timer_.stop();
+    command_publishing_timer_mgv_.stop();
     path_queueOFmgv_.clear();
     path_indexOFmgv_ = 0;
   }
@@ -232,7 +234,7 @@ namespace mgv_planning
         &command_publishing_queue_);
 
     // 4.创建定时器
-    command_publishing_timer_ = nh_.createTimer(timer_options);
+    command_publishing_timer_mgv_ = nh_.createTimer(timer_options);
   }
 
   // 定时器回调函数，用于在规划的路径上按照一定频率发布控制命令
