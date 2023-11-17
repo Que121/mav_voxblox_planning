@@ -37,6 +37,7 @@ const double kNumNanosecondsPerSecond = 1.e9;
 
 /// Magnitude of Earth's gravitational field at specific height [m] and latitude
 /// [rad] (from wikipedia).
+// 不同经纬度的重力
 inline double MagnitudeOfGravity(const double height,
                                  const double latitude_radians) {
   // gravity calculation constants
@@ -54,27 +55,31 @@ inline double MagnitudeOfGravity(const double height,
                        kGravity_c * height);
 }
 
+// 返回 Eigen类型速度
 inline Eigen::Vector3d vector3FromMsg(const geometry_msgs::Vector3& msg) {
   return Eigen::Vector3d(msg.x, msg.y, msg.z);
 }
 
+// 返回 Eigen类型位置
 inline Eigen::Vector3d vector3FromPointMsg(const geometry_msgs::Point& msg) {
   return Eigen::Vector3d(msg.x, msg.y, msg.z);
 }
 
+// 返回四元数表示旋转
 inline Eigen::Quaterniond quaternionFromMsg(
     const geometry_msgs::Quaternion& msg) {
   // Make sure this always returns a valid Quaternion, even if the message was
   // uninitialized or only approximately set.
-  Eigen::Quaterniond quaternion(msg.w, msg.x, msg.y, msg.z);
-  if (quaternion.norm() < std::numeric_limits<double>::epsilon()) {
-    quaternion.setIdentity();
+  Eigen::Quaterniond quaternion(msg.w, msg.x, msg.y, msg.z);              // 生成四元数
+  if (quaternion.norm() < std::numeric_limits<double>::epsilon()) {       // 判断是否存在旋转
+    quaternion.setIdentity();                                             
   } else {
     quaternion.normalize();
   }
   return quaternion;
 }
 
+// msg 赋值速度
 inline void vectorEigenToMsg(const Eigen::Vector3d& eigen,
                              geometry_msgs::Vector3* msg) {
   assert(msg != NULL);
@@ -83,6 +88,7 @@ inline void vectorEigenToMsg(const Eigen::Vector3d& eigen,
   msg->z = eigen.z();
 }
 
+// msg  赋值位置
 inline void pointEigenToMsg(const Eigen::Vector3d& eigen,
                             geometry_msgs::Point* msg) {
   assert(msg != NULL);
@@ -91,6 +97,7 @@ inline void pointEigenToMsg(const Eigen::Vector3d& eigen,
   msg->z = eigen.z();
 }
 
+// msg 赋值四元数
 inline void quaternionEigenToMsg(const Eigen::Quaterniond& eigen,
                                  geometry_msgs::Quaternion* msg) {
   assert(msg != NULL);
@@ -106,15 +113,18 @@ inline void quaternionEigenToMsg(const Eigen::Quaterniond& eigen,
  * RPY rotates about the fixed axes in the order x-y-z,
  * which is the same as euler angles in the order z-y'-x''.
  */
+// 从四元数中获取偏航角
 inline double yawFromQuaternion(const Eigen::Quaterniond& q) {
   return std::atan2(2.0 * (q.w() * q.z() + q.x() * q.y()),
                     1.0 - 2.0 * (q.y() * q.y() + q.z() * q.z()));
 }
 
+// 从偏航角创造一个四元数
 inline Eigen::Quaterniond quaternionFromYaw(double yaw) {
   return Eigen::Quaterniond(Eigen::AngleAxisd(yaw, Eigen::Vector3d::UnitZ()));
 }
 
+// 从偏航角创造一个四元数的msg
 inline void setQuaternionMsgFromYaw(double yaw,
                                     geometry_msgs::Quaternion* msg) {
   assert(msg != NULL);
@@ -125,6 +135,7 @@ inline void setQuaternionMsgFromYaw(double yaw,
   msg->w = q_yaw.w();
 }
 
+// 根据偏航角速率设定角速度的msg
 inline void setAngularVelocityMsgFromYawRate(double yaw_rate,
                                              geometry_msgs::Vector3* msg) {
   assert(msg != NULL);
@@ -133,6 +144,7 @@ inline void setAngularVelocityMsgFromYawRate(double yaw_rate,
   msg->z = yaw_rate;
 }
 
+// 从四元数计算出欧拉角
 inline void getEulerAnglesFromQuaternion(const Eigen::Quaternion<double>& q,
                                          Eigen::Vector3d* euler_angles) {
   {
@@ -146,6 +158,7 @@ inline void getEulerAnglesFromQuaternion(const Eigen::Quaternion<double>& q,
   }
 }
 
+// 从向量生成扭曲矩阵
 inline void skewMatrixFromVector(const Eigen::Vector3d& vec,
                                  Eigen::Matrix3d* vec_skew) {
   assert(vec_skew);
@@ -153,6 +166,7 @@ inline void skewMatrixFromVector(const Eigen::Vector3d& vec,
       0.0f;
 }
 
+// 从扭曲矩阵提取向量
 inline bool vectorFromSkewMatrix(const Eigen::Matrix3d& vec_skew,
                                  Eigen::Vector3d* vec) {
   assert(vec);
@@ -166,6 +180,7 @@ inline bool vectorFromSkewMatrix(const Eigen::Matrix3d& vec_skew,
   }
 }
 
+// 判断矩阵是否为旋转矩阵   R^T * R = I and det(R) = 1
 inline bool isRotationMatrix(const Eigen::Matrix3d& mat) {
   // Check that R^T * R = I
   if ((mat.transpose() * mat - Eigen::Matrix3d::Identity()).norm() >
@@ -188,6 +203,7 @@ inline bool isRotationMatrix(const Eigen::Matrix3d& mat) {
 // Rotation matrix from rotation vector as described in
 // "Computationally Efficient Trajectory Generation for Fully Actuated
 // Multirotor Vehicles" Brescianini 2018
+// 从向量得到旋转矩阵
 inline void matrixFromRotationVector(const Eigen::Vector3d& vec,
                                      Eigen::Matrix3d* mat) {
   // R = (I + sin||r|| / ||r||) [r] + ((1 - cos||r||)/||r||^2) [r]^2
@@ -206,6 +222,7 @@ inline void matrixFromRotationVector(const Eigen::Vector3d& vec,
 // Rotation vector from rotation matrix as described in
 // "Computationally Efficient Trajectory Generation for Fully Actuated
 // Multirotor Vehicles" Brescianini 2018
+// 从旋转矩阵得到向量
 inline bool vectorFromRotationMatrix(const Eigen::Matrix3d& mat,
                                      Eigen::Vector3d* vec) {
   // [r] = phi / 2sin(phi) * (R - R^T)
@@ -246,6 +263,7 @@ inline bool vectorFromRotationMatrix(const Eigen::Matrix3d& mat,
 // Calculates angular velocity (omega) from rotation vector derivative
 // based on formula derived in "Finite rotations and angular velocity" by Asher
 // Peres
+// 根据旋转向量计算角速度
 inline Eigen::Vector3d omegaFromRotationVector(
     const Eigen::Vector3d& rot_vec, const Eigen::Vector3d& rot_vec_vel) {
   double phi = rot_vec.norm();
@@ -273,6 +291,7 @@ inline Eigen::Vector3d omegaFromRotationVector(
 // Calculates angular acceleration (omegaDot) from rotation vector derivative
 // based on formula derived in "Finite rotations and angular velocity" by Asher
 // Peres
+// 根据旋转向量计算角加速度
 inline Eigen::Vector3d omegaDotFromRotationVector(
     const Eigen::Vector3d& rot_vec, const Eigen::Vector3d& rot_vec_vel,
     const Eigen::Vector3d& rot_vec_acc) {
@@ -336,6 +355,7 @@ inline Eigen::Vector3d omegaDotFromRotationVector(
 //
 // The inverse can be computed computationally efficient:
 // A^-1 \approx B^pseudo * K^-1
+// 计算角加速度、角速度、加速度
 inline void getSquaredRotorSpeedsFromAllocationAndState(
     const Eigen::MatrixXd& allocation_inv, const Eigen::Vector3d& inertia,
     double mass, const Eigen::Vector3d& angular_velocity_B,

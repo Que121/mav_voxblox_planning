@@ -24,6 +24,7 @@
 
 namespace mgv_planning_msgs {
 
+// 多项式轨迹段结构
 struct EigenPolynomialSegment {
   EigenPolynomialSegment() : segment_time_ns(0), num_coeffs(0) {};
 
@@ -38,6 +39,7 @@ struct EigenPolynomialSegment {
   int num_coeffs;
 };
 
+// 多项式轨迹
 typedef std::vector<EigenPolynomialSegment> EigenPolynomialTrajectory;
 
 }

@@ -33,12 +33,14 @@
 namespace mgv_planning_msgs {
 
 /// Converts a PolynomialSegment double array to an Eigen::VectorXd.
+// 将特征多项式段转变为向量
 inline void vectorFromMsgArray(const PolynomialSegment::_x_type& array,
                                Eigen::VectorXd* x) {
   *x = Eigen::Map<const Eigen::VectorXd>(&(array[0]), array.size());
 }
 
 /// Converts an Eigen::VectorXd to a PolynomialSegment double array.
+// 将向量转变为特征多项式段转
 inline void msgArrayFromVector(const Eigen::VectorXd& x,
                                PolynomialSegment::_x_type* array) {
   array->resize(x.size());
@@ -48,6 +50,7 @@ inline void msgArrayFromVector(const Eigen::VectorXd& x,
 }
 
 /// Converts a PolynomialSegment message to an EigenPolynomialSegment structure.
+// // 将多项式段msg转换为特征多项式段结构。
 inline void eigenPolynomialSegmentFromMsg(const PolynomialSegment& msg,
                                           EigenPolynomialSegment* segment) {
   assert(segment != NULL);
@@ -65,6 +68,7 @@ inline void eigenPolynomialSegmentFromMsg(const PolynomialSegment& msg,
 }
 
 /// Converts a PolynomialTrajectory message to a EigenPolynomialTrajectory
+// 将多项式轨迹msg转换为特征多项式轨迹
 inline void eigenPolynomialTrajectoryFromMsg(
     const PolynomialTrajectory& msg,
     EigenPolynomialTrajectory* eigen_trajectory) {
@@ -82,6 +86,7 @@ inline void eigenPolynomialTrajectoryFromMsg(
 
 /// Converts an EigenPolynomialSegment to a PolynomialSegment message. Does NOT
 /// set the header!
+// 将特征多项式段转换为多项式段msg
 inline void polynomialSegmentMsgFromEigen(const EigenPolynomialSegment& segment,
                                           PolynomialSegment* msg) {
   assert(msg != NULL);
@@ -99,6 +104,7 @@ inline void polynomialSegmentMsgFromEigen(const EigenPolynomialSegment& segment,
 
 /// Converts an EigenPolynomialTrajectory to a PolynomialTrajectory message.
 /// Does NOT set the header!
+// 将特征多项式轨迹转换为多项式轨迹msg。
 inline void polynomialTrajectoryMsgFromEigen(
     const EigenPolynomialTrajectory& eigen_trajectory,
     PolynomialTrajectory* msg) {

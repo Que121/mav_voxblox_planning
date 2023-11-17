@@ -38,6 +38,7 @@ inline void msgArrayFromVector(const Eigen::VectorXd& x,
                                PolynomialSegment4D::_x_type* array);
 
 /// Converts a PolynomialSegment message to an EigenPolynomialSegment structure.
+// 将多项式段msg转换为特征多项式段结构。
 inline void eigenPolynomialSegmentFromMsg(const PolynomialSegment4D& msg,
                                           EigenPolynomialSegment* segment) {
   assert(segment != NULL);
@@ -52,6 +53,7 @@ inline void eigenPolynomialSegmentFromMsg(const PolynomialSegment4D& msg,
 }
 
 /// Converts a PolynomialTrajectory message to a EigenPolynomialTrajectory
+// 将多项式轨迹msg转换为特征多项式轨迹
 inline void eigenPolynomialTrajectoryFromMsg(
     const PolynomialTrajectory4D& msg,
     EigenPolynomialTrajectory* eigen_trajectory) {
@@ -70,6 +72,7 @@ inline void eigenPolynomialTrajectoryFromMsg(
 
 /// Converts an EigenPolynomialSegment to a PolynomialSegment message. Does NOT
 /// set the header!
+// 将特征多项式段转换为多项式段msg
 inline void polynomialSegmentMsgFromEigen(const EigenPolynomialSegment& segment,
                                           PolynomialSegment4D* msg) {
   assert(msg != NULL);
@@ -84,6 +87,7 @@ inline void polynomialSegmentMsgFromEigen(const EigenPolynomialSegment& segment,
 
 /// Converts an EigenPolynomialTrajectory to a PolynomialTrajectory message.
 /// Does NOT set the header!
+// 将特征多项式轨迹转换为多项式轨迹msg。
 inline void polynomialTrajectoryMsgFromEigen(
     const EigenPolynomialTrajectory& eigen_trajectory,
     PolynomialTrajectory4D* msg) {

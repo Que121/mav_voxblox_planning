@@ -30,9 +30,8 @@
 namespace mgv_msgs {
 
 /// Actuated degrees of freedom.
-enum MavActuation { DOF4 = 4, DOF6 = 6 };  // 自由度
+enum MavActuation { DOF4 = 4, DOF6 = 6 };
 
-// 位姿、推力
 struct EigenAttitudeThrust {
   EigenAttitudeThrust()
       : attitude(Eigen::Quaterniond::Identity()),
@@ -48,7 +47,6 @@ struct EigenAttitudeThrust {
   Eigen::Vector3d thrust;
 };
 
-// Actuators，转角、旋转速度
 struct EigenActuators {
   // TODO(ffurrer): Find a proper way of initializing :)
 
@@ -62,7 +60,6 @@ struct EigenActuators {
   Eigen::VectorXd normalized;          // Everything else, normalized [-1 to 1].
 };
 
-// 角速度、推力 angular_rates、thrust
 struct EigenRateThrust {
   EigenRateThrust()
       : angular_rates(Eigen::Vector3d::Zero()),
@@ -77,7 +74,6 @@ struct EigenRateThrust {
   Eigen::Vector3d thrust;
 };
 
-// 扭矩、推力
 struct EigenTorqueThrust {
   EigenTorqueThrust()
       : torque(Eigen::Vector3d::Zero()), thrust(Eigen::Vector3d::Zero()) {}
@@ -91,7 +87,6 @@ struct EigenTorqueThrust {
   Eigen::Vector3d thrust;
 };
 
-// 滚转角、俯仰角、偏航角速度、推力
 struct EigenRollPitchYawrateThrust {
   EigenRollPitchYawrateThrust()
       : roll(0.0), pitch(0.0), yaw_rate(0.0), thrust(Eigen::Vector3d::Zero()) {}
@@ -106,7 +101,13 @@ struct EigenRollPitchYawrateThrust {
   Eigen::Vector3d thrust;
 };
 
-// 包含当前无人机位置、速度、加速度、角速度......信息
+/**
+ * \brief Container holding the state of a MAV: position, velocity, attitude and
+ * angular velocity.
+ *        In addition, holds the acceleration expressed in body coordinates,
+ * which is what the accelerometer
+ *        usually measures.
+ */
 class EigenMavState {
  public:
   typedef std::vector<EigenMavState, Eigen::aligned_allocator<EigenMavState>>
@@ -114,7 +115,6 @@ class EigenMavState {
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
   /// Initializes all members to zero / identity.
-  // 初始化
   EigenMavState()
       : position_W(Eigen::Vector3d::Zero()),
         velocity_W(Eigen::Vector3d::Zero()),
@@ -123,7 +123,6 @@ class EigenMavState {
         angular_velocity_B(Eigen::Vector3d::Zero()),
         angular_acceleration_B(Eigen::Vector3d::Zero()) {}
 
-  // 初始化成员变量
   EigenMavState(const Eigen::Vector3d& position_W,
                 const Eigen::Vector3d& velocity_W,
                 const Eigen::Vector3d& acceleration_B,
@@ -161,26 +160,23 @@ class EigenMavState {
   Eigen::Vector3d angular_acceleration_B;
 };
 
-// 轨迹点
 struct EigenTrajectoryPoint {
   typedef std::vector<EigenTrajectoryPoint,
                       Eigen::aligned_allocator<EigenTrajectoryPoint>>
       Vector;
-  // 初始化变量
   EigenTrajectoryPoint()
-      : timestamp_ns(-1),                                 // 时间戳
+      : timestamp_ns(-1),
         time_from_start_ns(0),
-        position_W(Eigen::Vector3d::Zero()),              // 位置
-        velocity_W(Eigen::Vector3d::Zero()),              // 速度
-        acceleration_W(Eigen::Vector3d::Zero()),          // 加速度
-        jerk_W(Eigen::Vector3d::Zero()),                  // ？
-        snap_W(Eigen::Vector3d::Zero()),                  // ？
-        orientation_W_B(Eigen::Quaterniond::Identity()),  // 旋转
-        angular_velocity_W(Eigen::Vector3d::Zero()),      // 角速度
-        angular_acceleration_W(Eigen::Vector3d::Zero()),  // 角速度上的加速度
-        degrees_of_freedom(MavActuation::DOF4) {}         // 自由度4
+        position_W(Eigen::Vector3d::Zero()),
+        velocity_W(Eigen::Vector3d::Zero()),
+        acceleration_W(Eigen::Vector3d::Zero()),
+        jerk_W(Eigen::Vector3d::Zero()),
+        snap_W(Eigen::Vector3d::Zero()),
+        orientation_W_B(Eigen::Quaterniond::Identity()),
+        angular_velocity_W(Eigen::Vector3d::Zero()),
+        angular_acceleration_W(Eigen::Vector3d::Zero()),
+        degrees_of_freedom(MavActuation::DOF4) {}
 
-  // 初始化成员变量
   EigenTrajectoryPoint(
       int64_t _time_from_start_ns, const Eigen::Vector3d& _position,
       const Eigen::Vector3d& _velocity, const Eigen::Vector3d& _acceleration,
@@ -200,7 +196,6 @@ struct EigenTrajectoryPoint {
         angular_acceleration_W(_angular_acceleration),
         degrees_of_freedom(_degrees_of_freedom) {}
 
-  // 调用上个EigenTrajectoryPoint初始化成员变量
   EigenTrajectoryPoint(
       int64_t _time_from_start_ns, const Eigen::Vector3d& _position,
       const Eigen::Vector3d& _velocity, const Eigen::Vector3d& _acceleration,
@@ -213,9 +208,7 @@ struct EigenTrajectoryPoint {
                              _angular_velocity, Eigen::Vector3d::Zero(),
                              _degrees_of_freedom) {}
 
-  // Eigen 库中的一个宏，作用就是为特定的类提供重载的 new 和 delete 操作符，以便使用 aligned 内存分配器进行内存分配
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
-  // 定义变量
   int64_t
       timestamp_ns;  // Time since epoch, negative value = invalid timestamp.
   int64_t time_from_start_ns;
@@ -230,11 +223,10 @@ struct EigenTrajectoryPoint {
   Eigen::Vector3d angular_acceleration_W;
   MavActuation degrees_of_freedom;
 
-  // 变量提取/初始化
   // Accessors for making dealing with orientation/angular velocity easier.
-  inline double getYaw() const { return yawFromQuaternion(orientation_W_B); }  // 获得偏航角
-  inline double getYawRate() const { return angular_velocity_W.z(); }          // z轴上角速度
-  inline double getYawAcc() const { return angular_acceleration_W.z(); }       // z轴加速度
+  inline double getYaw() const { return yawFromQuaternion(orientation_W_B); }
+  inline double getYawRate() const { return angular_velocity_W.z(); }
+  inline double getYawAcc() const { return angular_acceleration_W.z(); }
   // WARNING: sets roll and pitch to 0.
   inline void setFromYaw(double yaw) {
     orientation_W_B = quaternionFromYaw(yaw);
@@ -265,7 +257,6 @@ struct EigenTrajectoryPoint {
   }
 };
 
-// 对轨迹点进行仿射变换
 // Operator overload to transform Trajectory Points according to the Eigen
 // interfaces (uses operator* for this).
 // Has to be outside of class.
@@ -287,17 +278,14 @@ inline EigenTrajectoryPoint operator*(const Eigen::Affine3d& lhs,
   return transformed;
 }
 
-// VO数据
 struct EigenOdometry {
-  // 初始化
   EigenOdometry()
-      : timestamp_ns(-1),                                  // 时间戳
-        position_W(Eigen::Vector3d::Zero()),               // 位置
-        orientation_W_B(Eigen::Quaterniond::Identity()),   // 旋转
-        velocity_B(Eigen::Vector3d::Zero()),               // 速度
-        angular_velocity_B(Eigen::Vector3d::Zero()) {}     // 角速度
+      : timestamp_ns(-1),
+        position_W(Eigen::Vector3d::Zero()),
+        orientation_W_B(Eigen::Quaterniond::Identity()),
+        velocity_B(Eigen::Vector3d::Zero()),
+        angular_velocity_B(Eigen::Vector3d::Zero()) {}
 
-  // 初始化成员变量
   EigenOdometry(const Eigen::Vector3d& _position,
                 const Eigen::Quaterniond& _orientation,
                 const Eigen::Vector3d& _velocity_body,
@@ -307,7 +295,6 @@ struct EigenOdometry {
         velocity_B(_velocity_body),
         angular_velocity_B(_angular_velocity) {}
 
-  // 定义变量
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   int64_t
       timestamp_ns;  // Time since epoch, negative value = invalid timestamp.
@@ -318,7 +305,6 @@ struct EigenOdometry {
   Eigen::Matrix<double, 6, 6> pose_covariance_;
   Eigen::Matrix<double, 6, 6> twist_covariance_;
 
-  // 变量提取/初始化
   // Accessors for making dealing with orientation/angular velocity easier.
   inline double getYaw() const { return yawFromQuaternion(orientation_W_B); }
   inline void getEulerAngles(Eigen::Vector3d* euler_angles) const {
@@ -343,10 +329,9 @@ struct EigenOdometry {
   }
 };
 
-//创建针对Eigen类型数据对齐的一个容器
 // TODO(helenol): replaced with aligned allocator headers from Simon.
-#define MGV_MSGS_CONCATENATE(x, y) x##y                                    // 连接xy
-#define MGV_MSGS_CONCATENATE2(x, y) MGV_MSGS_CONCATENATE(x, y)             // 
+#define MGV_MSGS_CONCATENATE(x, y) x##y
+#define MGV_MSGS_CONCATENATE2(x, y) MGV_MSGS_CONCATENATE(x, y)
 #define MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EIGEN_TYPE)                    \
   typedef std::vector<EIGEN_TYPE, Eigen::aligned_allocator<EIGEN_TYPE>> \
       MGV_MSGS_CONCATENATE2(EIGEN_TYPE, Vector);                        \
