@@ -1,7 +1,7 @@
 #ifndef MAV_PLANNING_COMMON_YAW_POLICY_H_
 #define MAV_PLANNING_COMMON_YAW_POLICY_H_
 
-#include <mav_msgs/eigen_mav_msgs.h>
+#include <mgv_msgs/eigen_mgv_msgs.h>
 
 #include "mav_planning_common/physical_constraints_mgv.h"
 
@@ -38,9 +38,9 @@ namespace mgv_planning
 
     void deactivateMaxYawRate() { yaw_rate_max_ = -1; }
 
-    void applyPolicyInPlace(mav_msgs::EigenTrajectoryPointVector *path);
-    void applyPolicy(const mav_msgs::EigenTrajectoryPointVector &path_in,
-                     mav_msgs::EigenTrajectoryPointVector *path_out);
+    void applyPolicyInPlace(mgv_msgs::EigenTrajectoryPointVector *path);
+    void applyPolicy(const mgv_msgs::EigenTrajectoryPointVector &path_in,
+                     mgv_msgs::EigenTrajectoryPointVector *path_out);
 
     void setFacingPoint(const Eigen::Vector3d &point) { facing_point_ = point; }
     Eigen::Vector3d getFacingPoint() const { return facing_point_; }

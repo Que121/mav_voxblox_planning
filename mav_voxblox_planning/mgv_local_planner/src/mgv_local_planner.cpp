@@ -1,7 +1,8 @@
-#include <mav_msgs/default_topics.h>
+#include <mgv_msgs/default_topics.h>
 #include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
+#include "../../../install/mav_msgs/include/mav_msgs/conversions.h"// 消息类型需要更改
 
 namespace mgv_planning
 {
@@ -19,9 +20,11 @@ namespace mgv_planning
         smoother_name_("loco"),   // 路径平滑器的算法
         avoid_collisions_mgv_(0), // 0:不需要避障
         plan_to_startOFmgv_(1),
+        esdf_server_(nh_, nh_private_),
+        loco_planner_(nh_, nh_private_),
         path_indexOFmgv_(0)
   {
-    odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
+    odometry_sub_ = nh_.subscribe(mgv_msgs::default_topics::ODOMETRY, 1,
                                   &MgvLocalPlanner::odometryCallback_mgv, this);
 
     // 订阅单个航点信息
@@ -43,7 +46,7 @@ namespace mgv_planning
         &planning_queue_);
 
     // 初始化空服务用户端
-    planning_timer_ = nh_.createTimer(timer_options);
+    planning_timer_mgv_ = nh_.createTimer(timer_options);
 
     // 启动异步线程
     command_publishing_spinner_.start(); // 发送控制
@@ -68,6 +71,7 @@ namespace mgv_planning
     clearTrajectory_mgv();
 
     // 消息类型需要更改
+    mgv_msgs::EigenTrajectoryPoint waypointsOFmgv;
     mgv_msgs::EigenTrajectoryPoint waypointsOFmgv;
     eigenTrajectoryPointFromPoseMsg(msg, &waypointsOFmgv);
 
@@ -169,10 +173,6 @@ namespace mgv_planning
         success = loco_smoother_.getPathBetweenTwoPoints(waypointsOFmgv[0],
                                                          waypointsOFmgv[1], pathOFmgv);
       }
-      else
-      {
-        ROS_INFO("[Mgv Local Planner][Plan Path Through Waypoints] it surpass twowaypoints!");
-      }
     }
     return success;
   }
@@ -248,7 +248,7 @@ namespace mgv_planning
     if (path_indexOFmgv_ < path_queueOFmgv_.size())
     {
       // 锁定线程
-      std::lock_guard<std::recursive_mutex> guard(path_mutex_);
+      std::lock_guard<std::recursive_mutex> guard(path_mutexOFmgv_);
 
       // 3.计算发布的路径点数量
       //  取决于发布的时间间隔和剩余未到达的路径点数量
@@ -273,7 +273,7 @@ namespace mgv_planning
           path_queueOFmgv_.size() - starting_index);
 
       // 提取要发布的路径点
-      mav_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
+      mgv_msgs::EigenTrajectoryPointVector::const_iterator first_sample =
           path_queueOFmgv_.begin() + starting_index;
       mgv_msgs::EigenTrajectoryPointVector::const_iterator last_sample =
           first_sample + number_to_publish_with_buffer;
@@ -290,7 +290,7 @@ namespace mgv_planning
           "[Mav Local Planner][Command Publish] Publishing %zu samples of %zu. "
           "Start index: %zu Time: %f Start position: %f Start velocity: %f End "
           "time: %f End position: %f",
-          trajectory_to_publish.size(), path_queue_.size(), starting_index,
+          trajectory_to_publish.size(), path_queueOFmgv_.size(), starting_index,
           trajectory_to_publish.front().time_from_start_ns * 1.0e-9,
           trajectory_to_publish.front().position_W.x(),
           trajectory_to_publish.front().velocity_W.x(),
@@ -298,7 +298,7 @@ namespace mgv_planning
           trajectory_to_publish.back().position_W.x());
 
       // 将 trajectory_to_publish 中的路径点转换为 ROS 的控制指令消息格式。
-      mav_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
+      mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg);
 
       // 8.发布信息
       command_pub_.publish(msg);

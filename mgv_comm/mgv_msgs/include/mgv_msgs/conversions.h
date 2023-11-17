@@ -102,8 +102,9 @@ inline void eigenRollPitchYawrateThrustFromMsg(
   roll_pitch_yawrate_thrust->thrust = vector3FromMsg(msg.thrust);
 }
 
-inline void eigenOdometryFromMsg(const ngv_msgs::Odometry& msg,
+inline void eigenOdometryFromMsg(const nav_msgs::Odometry& msg,
                                  EigenOdometry* odometry) {
+// (ngv_msgs改成了nav_msg)
   assert(odometry != NULL);
   odometry->timestamp_ns = msg.header.stamp.toNSec();
   odometry->position_W = mgv_msgs::vector3FromPointMsg(msg.pose.pose.position);
