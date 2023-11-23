@@ -1,25 +1,3 @@
-/*
- * Copyright 2015 Fadri Furrer, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Michael Burri, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Markus Achtelik, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Helen Oleynikova, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Mina Kamel, ASL, ETH Zurich, Switzerland
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
-
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
-
-// Conversion functions between Eigen types and MAV ROS message types.
-
 #ifndef MGV_MSGS_CONVERSIONS_H
 #define MGV_MSGS_CONVERSIONS_H
 
@@ -58,8 +36,8 @@ inline void eigenActuatorsFromMsg(const Actuators& msg,
   assert(actuators != NULL);
 
   // Angle of the actuator in [rad].
-  actuators->angles.resize(msg.angles.size());
   for (unsigned int i = 0; i < msg.angles.size(); ++i) {
+    actuators->angles.resize(msg.angles.size());
     actuators->angles[i] = msg.angles[i];
   }
 
@@ -107,24 +85,26 @@ inline void eigenRollPitchYawrateThrustFromMsg(
   roll_pitch_yawrate_thrust->thrust = vector3FromMsg(msg.thrust);
 }
 
-// 将VO msg转换为eigen类型的变量
-inline void eigenOdometryFromMsg(const mgv_msgs::Odometry& msg,
+// 将msg转换为eigen类型的变量 // 可用于gv done
+inline void eigenOdometryFromMsg(const nav_msgs::Odometry& msg,
                                  EigenOdometry* odometry) {
-  assert(odometry != NULL);                                                      // 不为空指针
-  odometry->timestamp_ns = msg.header.stamp.toNSec();                            // 时间戳
-  odometry->position_W = mgv_msgs::vector3FromPointMsg(msg.pose.pose.position);  // 获取位置信息（x，y，z）
+  assert(odometry != NULL);                            // 不为空指针
+  odometry->timestamp_ns = msg.header.stamp.toNSec();  // 时间戳
+  odometry->position_W = mgv_msgs::vector3FromPointMsg(
+      msg.pose.pose.position);  // 获取位置信息（x，y，z）
   odometry->orientation_W_B =
-      mgv_msgs::quaternionFromMsg(msg.pose.pose.orientation);                    // 四元数表示方向
-  odometry->velocity_B = mgv_msgs::vector3FromMsg(msg.twist.twist.linear);       // (x,y,z)速度
+      mgv_msgs::quaternionFromMsg(msg.pose.pose.orientation);  // 四元数表示方向
+  odometry->velocity_B =
+      mgv_msgs::vector3FromMsg(msg.twist.twist.linear);  // (x,y,z)速度
   odometry->angular_velocity_B =
-      mgv_msgs::vector3FromMsg(msg.twist.twist.angular);                         // 角速度
-  odometry->pose_covariance_ =
-      Eigen::Map<const Eigen::Matrix<double, 6, 6>>(msg.pose.covariance.data()); // 位姿的协方差矩阵
+      mgv_msgs::vector3FromMsg(msg.twist.twist.angular);  // 角速度
+  odometry->pose_covariance_ = Eigen::Map<const Eigen::Matrix<double, 6, 6>>(
+      msg.pose.covariance.data());  // 位姿的协方差矩阵
   odometry->twist_covariance_ = Eigen::Map<const Eigen::Matrix<double, 6, 6>>(
-      msg.twist.covariance.data());                                              // twist？？的协方差矩阵
+      msg.twist.covariance.data());  // twis的协方差矩阵
 }
 
-// 将VO时间戳msg转换为eigen类型的变量
+// 将时间戳msg转换为eigen类型的变量
 inline void eigenTrajectoryPointFromTransformMsg(
     const geometry_msgs::TransformStamped& msg,
     EigenTrajectoryPoint* trajectory_point) {
@@ -143,31 +123,20 @@ inline void eigenTrajectoryPointFromTransformMsg(
   trajectory_point->snap_W.setZero();
 }
 
-// 从位姿msg生成轨迹点
-inline void eigenTrajectoryPointFromPoseMsg(
-    const geometry_msgs::Pose& msg, EigenTrajectoryPoint* trajectory_point) {
+// 用于mgv done
+inline void eigenTrajectoryPointFromPoseMSgMgv(
+    const geometry_msgs::PoseStamped& msg,
+    EigenTrajectoryPointMgv* trajectory_point) {
   assert(trajectory_point != NULL);
+  ros::Time timestamp = msg.header.stamp;
+  trajectory_point->timestamp_ns = timestamp.toNSec();
 
-  trajectory_point->position_W = vector3FromPointMsg(msg.position);        // 位置
-  trajectory_point->orientation_W_B = quaternionFromMsg(msg.orientation);  // 旋转
-  trajectory_point->velocity_W.setZero();                                  // 速度
-  trajectory_point->angular_velocity_W.setZero();                          // ......
+  trajectory_point->position_W = vector3FromPointMsg(msg.pose.position);
+  trajectory_point->orientation_W_B = quaternionFromMsg(msg.pose.orientation);
+  trajectory_point->velocity_W.setZero();
+  trajectory_point->angular_velocity_W.setZero();
   trajectory_point->acceleration_W.setZero();
   trajectory_point->angular_acceleration_W.setZero();
-  trajectory_point->jerk_W.setZero();
-  trajectory_point->snap_W.setZero();
-}
-4
-// 从位姿时间戳msg生成轨迹点
-inline void eigenTrajectoryPointFromPoseMsg(
-    const geometry_msgs::PoseStamped& msg,
-    EigenTrajectoryPoint* trajectory_point) {
-  assert(trajectory_point != NULL);
-
-  ros::Time timestamp = msg.header.stamp;
-
-  trajectory_point->timestamp_ns = timestamp.toNSec();
-  eigenTrajectoryPointFromPoseMsg(msg.pose, trajectory_point);
 }
 
 /**
@@ -182,15 +151,14 @@ inline void eigenTrajectoryPointFromPoseMsg(
  * \param[in] snap Snap of the MAV, expressed in world coordinates.
  * \param[in] yaw Yaw angle of the MAV, expressed in world coordinates.
  * \param[in] yaw_rate Yaw rate, expressed in world coordinates.
- * \param[in] yaw_acceleration Yaw acceleration, expressed in world coordinates.
- * \param[in] magnitude_of_gravity Magnitude of the gravity vector.
- * \param[out] orientation Quaternion representing the attitude of the MAV.
- * \param[out] acceleration_body Acceleration expressed in body coordinates,
- * i.e. the acceleration usually by the IMU.
- * \param[out] angular_velocity_body Angular velocity of the MAV, expressed in
- * body coordinates.
- * \param[out] angular_acceleration_body Angular acceleration of the MAV,
- * expressed in body coordinates.
+ * \param[in] yaw_acceleration Yaw acceleration, expressed in world
+ * coordinates. \param[in] magnitude_of_gravity Magnitude of the gravity
+ * vector. \param[out] orientation Quaternion representing the attitude of
+ * the MAV. \param[out] acceleration_body Acceleration expressed in body
+ * coordinates, i.e. the acceleration usually by the IMU. \param[out]
+ * angular_velocity_body Angular velocity of the MAV, expressed in body
+ * coordinates. \param[out] angular_acceleration_body Angular acceleration
+ * of the MAV, expressed in body coordinates.
  */
 void EigenMavStateFromEigenTrajectoryPoint(
     const Eigen::Vector3d& acceleration, const Eigen::Vector3d& jerk,
@@ -487,30 +455,6 @@ inline void msgPoseStampedFromEigenTrajectoryPoint(
                        &msg->pose.orientation);
 }
 
-// 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg
-inline void msgMultiDofJointTrajectoryPointFromEigen(
-    const EigenTrajectoryPoint& trajectory_point,
-    trajectory_msgs::MultiDOFJointTrajectoryPoint* msg) {
-  assert(msg != NULL);
-
-  msg->time_from_start.fromNSec(trajectory_point.time_from_start_ns);
-  msg->transforms.resize(1);
-  msg->velocities.resize(1);
-  msg->accelerations.resize(1);
-
-  vectorEigenToMsg(trajectory_point.position_W,
-                   &msg->transforms[0].translation);
-  quaternionEigenToMsg(trajectory_point.orientation_W_B,
-                       &msg->transforms[0].rotation);
-  vectorEigenToMsg(trajectory_point.velocity_W, &msg->velocities[0].linear);
-  vectorEigenToMsg(trajectory_point.angular_velocity_W,
-                   &msg->velocities[0].angular);
-  vectorEigenToMsg(trajectory_point.acceleration_W,
-                   &msg->accelerations[0].linear);
-  vectorEigenToMsg(trajectory_point.angular_acceleration_W,
-                   &msg->accelerations[0].angular);
-}
-
 // 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg， 多传递了一个string参数
 inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPoint& trajectory_point, const std::string& link_name,
@@ -548,35 +492,6 @@ inline void msgMultiDofJointTrajectoryFromPositionYaw(
 
 // 从轨迹信息生成 多个MultiDOFJointTrajectoryPoint msg
 inline void msgMultiDofJointTrajectoryFromEigen(
-    const EigenTrajectoryPointVector& trajectory, const std::string& link_name,
-    trajectory_msgs::MultiDOFJointTrajectory* msg) {
-  assert(msg != NULL);
-
-  if (trajectory.empty()) {
-    ROS_ERROR("EigenTrajectoryPointVector is empty.");
-    return;
-  }
-
-  msg->joint_names.clear();
-  msg->joint_names.push_back(link_name);
-  msg->points.clear();
-
-  for (const auto& trajectory_point : trajectory) {
-    trajectory_msgs::MultiDOFJointTrajectoryPoint point_msg;
-    msgMultiDofJointTrajectoryPointFromEigen(trajectory_point, &point_msg);
-    msg->points.push_back(point_msg);
-  }
-}
-
-// 调用上个函数
-inline void msgMultiDofJointTrajectoryFromEigen(
-    const EigenTrajectoryPointVector& trajectory,
-    trajectory_msgs::MultiDOFJointTrajectory* msg) {
-  msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
-}
-
-// 从轨迹信息生成 多个MultiDOFJointTrajectoryPoint msg
-inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPointDeque& trajectory, const std::string& link_name,
     trajectory_msgs::MultiDOFJointTrajectory* msg) {
   assert(msg != NULL);
@@ -604,6 +519,66 @@ inline void msgMultiDofJointTrajectoryFromEigen(
   msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
 }
 
+// 调用上个函数 // 11111111111111111111111
+inline void msgMultiDofJointTrajectoryFromEigen(
+    const EigenTrajectoryPointVector& trajectory,
+    trajectory_msgs::MultiDOFJointTrajectory* msg) {
+  // 为什么不直接传三个参数....
+  msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
+}
+
+// 222222222222222222222
+inline void msgMultiDofJointTrajectoryFromEigen(
+    const EigenTrajectoryPointVector& trajectory, const std::string& link_name,
+    trajectory_msgs::MultiDOFJointTrajectory* msg) {
+  assert(msg != NULL);  // assert检验msg是否为空
+
+  if (trajectory.empty()) {
+    ROS_ERROR("EigenTrajectoryPointVector is empty.");
+    return;
+  }  // 检验轨迹是否为空
+
+  msg->joint_names.clear();
+  msg->joint_names.push_back(link_name);
+  msg->points.clear();
+
+  for (const auto& trajectory_point : trajectory) {
+    trajectory_msgs::MultiDOFJointTrajectoryPoint point_msg;
+    msgMultiDofJointTrajectoryPointFromEigen(trajectory_point, &point_msg);
+    msg->points.push_back(point_msg);
+  }
+}
+
+// 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg
+// 3333333333333333333
+inline void msgMultiDofJointTrajectoryPointFromEigen(
+    const EigenTrajectoryPoint& trajectory_point,
+    trajectory_msgs::MultiDOFJointTrajectoryPoint* msg) {
+  assert(msg != NULL);
+
+  msg->time_from_start.fromNSec(trajectory_point.time_from_start_ns);
+  msg->transforms.resize(1);
+  msg->velocities.resize(1);
+  msg->accelerations.resize(1);
+
+  vectorEigenToMsg(trajectory_point.position_W,
+                   &msg->transforms[0].translation);
+  quaternionEigenToMsg(trajectory_point.orientation_W_B,
+                       &msg->transforms[0].rotation);
+  vectorEigenToMsg(trajectory_point.velocity_W, &msg->velocities[0].linear);
+  vectorEigenToMsg(trajectory_point.angular_velocity_W,
+                   &msg->velocities[0].angular);
+  vectorEigenToMsg(trajectory_point.acceleration_W,
+                   &msg->accelerations[0].linear);
+  vectorEigenToMsg(trajectory_point.angular_acceleration_W,
+                   &msg->accelerations[0].angular);
+}
+
+// mgv使用***************
+inline void msgMultiDofJointTrajectoryPointFromEigen_mgv(
+    const EigenTrajectoryPointVector& trajectory, const std::string& link_name,
+    trajectory_msgs::MultiDOFJointTrajectory* msg) {}
+
 }  // end namespace mgv_msgs
 
-#endif  // MAV_MSGS_CONVERSIONS_H
+#endif  // MGV_MSGS_CONVERSIONS_H

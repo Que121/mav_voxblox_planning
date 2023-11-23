@@ -61,32 +61,21 @@ namespace mgv_planning
   // 注意odometry为nav，此为自动生成的消息类型文件
   void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
   {
-    // 消息类型需要更改
+    // 消息类型需要更改 // 不改了 感觉gv可以用
     mgv_msgs::eigenOdometryFromMsg(msg, &odometryOFmgv_); // 将ros消息转换为eigen类型的变量
   }
 
-  // 回调   接收新的的航点
+  // 接收新的的航点 done
   void MgvLocalPlanner::waypointCallback_mgv(const geometry_msgs::PoseStamped &msg)
   {
-    // 1.清除原来的轨迹信息
     clearTrajectory_mgv();
-
-    // 消息类型需要更改
-    mgv_msgs::EigenTrajectoryPoint waypointsOFmgv;
-    mgv_msgs::EigenTrajectoryPoint waypointsOFmgv;
-    eigenTrajectoryPointFromPoseMsg(msg, &waypointsOFmgv);
-
-    // 3.清除原来航点信息，将新的航点加入
+    mgv_msgs::EigenTrajectoryPointMgv waypointsOFmgv;
+    mgv_msgs::eigenTrajectoryPointFromPoseMsgMgv(msg, &waypointsOFmgv);
     waypointsOFmgv_.clear();
     waypointsOFmgv_.push_back(waypointsOFmgv);
-
-    // 4.设置航点索引
     current_waypointOFmgv_ = 0;
 
-    // 5.进行路径规划
     planningStep_mgv();
-
-    // 6.发布飞行信息
     startPublishingCommands_mgv();
   }
 
@@ -269,11 +258,16 @@ namespace mgv_planning
       //     trajectory_to_publish.back().position_W.x());
       //=================================================================
       mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg); // 转换为ros消息发出
-      command_pub_.publish(msg);                                                  // 发布控制消息
-      path_indexOFmgv_ += number_to_publish;                                      // Update the path index and notify for replanning
+
+      command_pub_.publish(msg);             // 发布控制消息
+      path_indexOFmgv_ += number_to_publish; // Update the path index and notify for replanning
       should_replan_.notify();
     }
-    // Does there need to be an else????
+  }
+
+  void MgvLocalPlanner::ppUART_mgv(trajectory_msgs::MultiDOFJointTrajectory *msg)
+  {
+    std::string ppUART_mgv;
   }
 
   void MgvLocalPlanner::visualizePath() {} // TBD

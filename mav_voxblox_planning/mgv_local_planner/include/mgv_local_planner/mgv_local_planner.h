@@ -42,7 +42,6 @@
 #include <voxblox_ros/esdf_server.h>
 #include <minkindr_conversions/kindr_msg.h>
 
-
 namespace mgv_planning
 
 {
@@ -61,10 +60,10 @@ namespace mgv_planning
 
     void clearTrajectory_mgv();
 
-    // 和上面功能相同，但是still发回现在的机器人位置
+    // 和上面功能相同，但是still发回现在的机器人位置 TBD
     void abort();
 
-    // 将path展示在rviz
+    // 将path展示在rviz TBD
     void visualizePath();
 
   private:
@@ -77,8 +76,8 @@ namespace mgv_planning
     void planningStep_mgv();
 
     // 如果存在下一个目标点，可以执行
-    bool nextWaypoint();
-    void finishWaypointsOFmgv();
+    bool nextWaypoint();         // TBD
+    void finishWaypointsOFmgv(); // TBD
 
     // 貌似是用在避障重规划路线里面的？
     void replacePath_mgv(const mgv_msgs::EigenTrajectoryPointVector &pathOFmgv);
@@ -88,7 +87,10 @@ namespace mgv_planning
         const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
         mgv_msgs::EigenTrajectoryPointVector *pathOFmgv);
 
-    // 获取地图信息 TBD
+    // pp协议编码
+    void ppUART_mgv(trajectory_msgs::MultiDOFJointTrajectory *msg);
+
+    // 获取地图息 TBD
     double getMapDistance(const Eigen::Vector3d &position) const {}
     double getMapDistanceAndGradient(const Eigen::Vector3d &position,
                                      Eigen::Vector3d *gradient) const {}
@@ -140,11 +142,11 @@ namespace mgv_planning
     mgv_msgs::EigenOdometry odometryOFmgv_;
 
     // 定义--目标点  // 无人机类型需要修改
-    mgv_msgs::EigenTrajectoryPointVector waypointsOFmgv_;
     int64_t current_waypointOFmgv_;
+    mgv_msgs::EigenTrajectoryPointMgvVector waypointsOFmgv_;
 
     // 定义--轨迹path  // 无人机类型需要修改
-    mgv_msgs::EigenTrajectoryPointVector path_queueOFmgv_;
+    mgv_msgs::EigenTrajectoryPointMgvVector path_queueOFmgv_;
     size_t path_indexOFmgv_;
 
     // 线程锁
