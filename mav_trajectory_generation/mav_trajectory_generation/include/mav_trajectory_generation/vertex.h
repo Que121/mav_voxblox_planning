@@ -41,15 +41,15 @@ namespace mav_trajectory_generation {
 //   vertex             segment
 class Vertex {
  public:
-  typedef std::vector<Vertex> Vector;
-  typedef Eigen::VectorXd ConstraintValue;
-  typedef std::pair<int, ConstraintValue> Constraint;
-  typedef std::map<int, ConstraintValue> Constraints;
+  typedef std::vector<Vertex> Vector;                                  // 声明一个Vertex类的容器
+  typedef Eigen::VectorXd ConstraintValue;                             // 声明ConstraintValue 指向 Eigen::VectorXd
+  typedef std::pair<int, ConstraintValue> Constraint;                  // 声明Constraint 两个值组合成一个对
+  typedef std::map<int, ConstraintValue> Constraints;                  // 声明Constraints 将整数键映射到ConstraintValue值
 
   // Constructs an empty vertex and sets time_to_next and
   // derivative_to_optimize to zero.
-  Vertex(size_t dimension) : D_(dimension) {}
-
+  Vertex(size_t dimension) : D_(dimension) {}                          // 构造函数
+ 
   int D() const { return D_; }
 
   // Adds a constraint for the specified derivative order with the given
@@ -71,10 +71,12 @@ class Vertex {
   // (including) up_to_derivative to zero. Convenience method for
   // beginning / end vertices. up_to_derivative should be set to
   // getHighestDerivativeFromN(N), where N is the order of your polynomial.
+  // 设置约束
   void makeStartOrEnd(const Eigen::VectorXd& constraint, int up_to_derivative);
 
-  void makeStartOrEnd(double value, int up_to_derivative) {
-    makeStartOrEnd(Eigen::VectorXd::Constant(D_, value), up_to_derivative);
+  // 调用上个函数
+  void makeStartOrEnd(double value, int up_to_derivative) {                    // up_to_derivative 多项式阶数， value=0
+    makeStartOrEnd(Eigen::VectorXd::Constant(D_, value), up_to_derivative);    // Eigen::VectorXd::Constant(D_, value)创建一个维度D值为value的向量
   }
 
   // Returns whether the vertex has a constraint for the specified derivative
@@ -144,6 +146,7 @@ double computeTimeVelocityRamp(const Eigen::VectorXd& start,
                                const Eigen::VectorXd& goal, double v_max,
                                double a_max);
 
+//返回最高阶数
 inline int getHighestDerivativeFromN(int N) { return N / 2 - 1; }
 
 // Creates random vertices for position within minimum_position and

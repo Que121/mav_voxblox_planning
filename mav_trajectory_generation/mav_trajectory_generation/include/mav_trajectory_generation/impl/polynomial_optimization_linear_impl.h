@@ -53,6 +53,7 @@ PolynomialOptimization<_N>::PolynomialOptimization(size_t dimension)
   free_constraints_compact_.resize(dimension_);
 }
 
+// 多项式优化
 template <int _N>
 bool PolynomialOptimization<_N>::setupFromVertices(
     const Vertex::Vector& vertices, const std::vector<double>& times,
@@ -64,28 +65,32 @@ bool PolynomialOptimization<_N>::setupFromVertices(
       << "th order polynomial. This is not possible, you either need a higher "
          "order polynomial or a smaller derivative to optimize.";
 
-  derivative_to_optimize_ = derivative_to_optimize;
-  vertices_ = vertices;
-  segment_times_ = times;
+  derivative_to_optimize_ = derivative_to_optimize;   // 阶数
+  vertices_ = vertices;                               // 顶点
+  segment_times_ = times;                             // 线段长度
 
-  n_vertices_ = vertices.size();
-  n_segments_ = n_vertices_ - 1;
+  n_vertices_ = vertices.size();                      // 顶点数量
+  n_segments_ = n_vertices_ - 1;                      // 线段数量
 
-  segments_.resize(n_segments_, Segment(N, dimension_));
+  segments_.resize(n_segments_, Segment(N, dimension_));  // 调整segments_大小
 
+  // 判断顶点数量是否正确
   CHECK(n_vertices_ == times.size() + 1)
       << "Size of times must be one less than positions.";
 
+  // 初始化
   inverse_mapping_matrices_.resize(n_segments_);
   cost_matrices_.resize(n_segments_);
 
   // Iterate through all vertices and remove invalid constraints (order too
   // high).
+  // 遍历所有顶点， 判断是否合法
   for (size_t vertex_idx = 0; vertex_idx < n_vertices_; ++vertex_idx) {
     Vertex& vertex = vertices_[vertex_idx];
 
     // Check if we have valid constraints.
     bool vertex_valid = true;
+    // 临时容器
     Vertex vertex_tmp(dimension_);
     for (Vertex::Constraints::const_iterator it = vertex.cBegin();
          it != vertex.cEnd(); ++it) {
@@ -103,7 +108,9 @@ bool PolynomialOptimization<_N>::setupFromVertices(
       vertex = vertex_tmp;
     }
   }
+  // 优化多项式每段的时间
   updateSegmentTimes(times);
+  // 设置约束重排列矩阵的函数
   setupConstraintReorderingMatrix();
   return true;
 }
@@ -296,10 +303,13 @@ void PolynomialOptimization<_N>::updateSegmentTimes(
     const double segment_time = segment_times[i];
     CHECK_GT(segment_time, 0) << "Segment times need to be greater than zero";
 
+    // 根据给定的导数阶数和时间长度，计算二次代价函数的雅可比矩阵
     computeQuadraticCostJacobian(derivative_to_optimize_, segment_time,
                                  &cost_matrices_[i]);
-    SquareMatrix A;
+    SquareMatrix A;                                        // typedef Eigen::Matrix<double, N, N> SquareMatrix;
+    // 设置映射矩阵A，进行约束
     setupMappingMatrix(segment_time, &A);
+    // 计算A的逆矩阵
     invertMappingMatrix(A, &inverse_mapping_matrices_[i]);
   };
 }
@@ -564,6 +574,7 @@ void PolynomialOptimization<_N>::getMpinv(Eigen::MatrixXd* M_pinv) const {
   }
 }
 
+// 根据给定的导数阶数和时间长度，计算二次代价函数的雅可比矩阵
 template <int _N>
 void PolynomialOptimization<_N>::computeQuadraticCostJacobian(
     int derivative, double t, SquareMatrix* cost_jacobian) {

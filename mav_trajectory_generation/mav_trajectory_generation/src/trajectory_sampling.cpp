@@ -46,6 +46,7 @@ bool sampleTrajectoryInRange(const Trajectory& trajectory, double min_time,
                              double max_time, double sampling_interval,
                              mav_msgs::EigenTrajectoryPointVector* states) {
   CHECK_NOTNULL(states);
+  // 判断是否在范围内
   if (min_time < trajectory.getMinTime() ||
       max_time > trajectory.getMaxTime()) {
     LOG(ERROR) << "Sample time should be within [" << trajectory.getMinTime()
@@ -54,11 +55,13 @@ bool sampleTrajectoryInRange(const Trajectory& trajectory, double min_time,
     return false;
   }
 
+  // 自由度小于3，返回
   if (trajectory.D() < 3) {
     LOG(ERROR) << "Dimension has to be at least 3, but is " << trajectory.D();
     return false;
   }
 
+  // 后面需要改
   std::vector<Eigen::VectorXd> position, velocity, acceleration, jerk, snap,
       yaw, yaw_rate;
 
@@ -92,6 +95,8 @@ bool sampleTrajectoryInRange(const Trajectory& trajectory, double min_time,
       state.setFromYawRate(velocity[i](3));
       state.setFromYawAcc(acceleration[i](3));
     }
+
+    // 没有用上
     else if (trajectory.D() == 6) {
       // overactuated, write quaternion from interpolated rotation vector
       Eigen::Vector3d rot_vec, rot_vec_vel, rot_vec_acc;
@@ -116,12 +121,14 @@ bool sampleTrajectoryStartDuration(
                                  sampling_interval, states);
 }
 
+// 对轨迹进行采样
 bool sampleWholeTrajectory(const Trajectory& trajectory,
                            double sampling_interval,
                            mav_msgs::EigenTrajectoryPoint::Vector* states) {
   const double min_time = trajectory.getMinTime();
   const double max_time = trajectory.getMaxTime();
 
+  // 在范围内采样
   return sampleTrajectoryInRange(trajectory, min_time, max_time,
                                  sampling_interval, states);
 }

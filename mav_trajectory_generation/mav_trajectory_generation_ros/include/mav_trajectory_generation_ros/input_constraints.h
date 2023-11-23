@@ -44,6 +44,7 @@ class InputConstraints {
   InputConstraints() {}
 
   // Set a constraint given type and value.
+  // 设置约束
   void addConstraint(int constraint_type, double value);
 
   // Sets all constraints to reasonable default values.

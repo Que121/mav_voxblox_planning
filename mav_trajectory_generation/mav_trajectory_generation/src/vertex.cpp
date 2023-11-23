@@ -127,10 +127,13 @@ Vertex::Vector createRandomVertices1D(int maximum_derivative, size_t n_segments,
                               Eigen::VectorXd::Constant(1, pos_max), seed);
 }
 
+// 添加约束
 void Vertex::addConstraint(int derivative_order,
                            const Eigen::VectorXd& constraint) {
-  CHECK_EQ(constraint.rows(), static_cast<long>(D_));
-  constraints_[derivative_order] = constraint;
+  // 判断值是否相等
+  CHECK_EQ(constraint.rows(), static_cast<long>(D_));   
+  // 存储constraint，作为不同阶级的约束条件
+  constraints_[derivative_order] = constraint;                //Constraints constraints_;
 }
 
 bool Vertex::removeConstraint(int type) {
@@ -144,10 +147,13 @@ bool Vertex::removeConstraint(int type) {
   }
 }
 
+// 设置约束
 void Vertex::makeStartOrEnd(const Eigen::VectorXd& constraint,
                             int up_to_derivative) {
-  addConstraint(derivative_order::POSITION, constraint);
+  // 添加位置约束
+  addConstraint(derivative_order::POSITION, constraint);        // derivative_order::POSITION=3   
   for (int i = 1; i <= up_to_derivative; ++i) {
+    // 初始化0向量的约束
     constraints_[i] = ConstraintValue::Zero(static_cast<int>(D_));
   }
 }
@@ -271,21 +277,22 @@ std::vector<double> estimateSegmentTimesNfabian(const Vertex::Vector& vertices,
   return segment_times;
 }
 
+// 计算飞行时间
 double computeTimeVelocityRamp(const Eigen::VectorXd& start,
                                const Eigen::VectorXd& goal, double v_max,
                                double a_max) {
-  const double distance = (start - goal).norm();
+  const double distance = (start - goal).norm();                     // 计算距离
   // Time to accelerate or decelerate to or from maximum velocity:
-  const double acc_time = v_max / a_max;
-  // Distance covered during complete acceleration or decelerate:
-  const double acc_distance = 0.5 * v_max * acc_time;
+  const double acc_time = v_max / a_max;                             // 计算加速/减速到最大速度的时间    V=A*T
+  // Distance covered during complete acceleration or decelerate:    
+  const double acc_distance = 0.5 * v_max * acc_time;                // 计算加速/减速距离 
   // Compute total segment time:
-  if (distance < 2.0 * acc_distance) {
+  if (distance < 2.0 * acc_distance) {                                // 距离不足够完成加速和减速到最大速度的距离
     // Case 1: Distance too small to accelerate to maximum velocity.
-    return 2.0 * std::sqrt(distance / a_max);
+    return 2.0 * std::sqrt(distance / a_max);                         // 返回时间
   } else {
-    // Case 2: Distance long enough to accelerate to maximum velocity.
-    return 2.0 * acc_time + (distance - 2.0 * acc_distance) / v_max;
+    // Case 2: Distance long enough to accelerate to maximum velocity.  //距离足够完成加速、减速、匀速飞行
+    return 2.0 * acc_time + (distance - 2.0 * acc_distance) / v_max;   // 返回时间
   }
 }
 

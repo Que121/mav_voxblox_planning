@@ -28,8 +28,10 @@
 #include "mav_trajectory_generation_ros/input_constraints.h"
 
 namespace mav_trajectory_generation {
+//引用枚举
 typedef InputConstraintType ICT;
 
+// 设置约束
 void InputConstraints::addConstraint(int constraint_type, double value) {
   // Correct user input.
   value = std::abs(value);
