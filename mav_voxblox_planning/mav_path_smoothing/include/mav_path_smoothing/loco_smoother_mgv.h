@@ -1,5 +1,5 @@
-#ifndef mgv_PATH_SMOOTHING_LOCO_SMOOTHER_H_
-#define mgv_PATH_SMOOTHING_LOCO_SMOOTHER_H_
+#ifndef MAV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
+#define MAV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
 
 #include <loco_planner/loco.h>
 

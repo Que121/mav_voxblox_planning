@@ -32,14 +32,14 @@
 #include <ros/ros.h>
 #include <trajectory_msgs/MultiDOFJointTrajectory.h>
 
-#include "mgv_msgs/Actuators.h"
-#include "mgv_msgs/AttitudeThrust.h"
-#include "mgv_msgs/RateThrust.h"
-#include "mgv_msgs/RollPitchYawrateThrust.h"
-#include "mgv_msgs/TorqueThrust.h"
-#include "mgv_msgs/common.h"
-#include "mgv_msgs/default_values.h"
-#include "mgv_msgs/eigen_mav_msgs.h"
+#include "/home/patton/voxblox_ws/devel/include/mgv_msgs/Actuators.h"
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/AttitudeThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RateThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RollPitchYawrateThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/TorqueThrust.h>
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/common.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/default_values.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
 
 namespace mgv_msgs {
 
@@ -108,7 +108,7 @@ inline void eigenRollPitchYawrateThrustFromMsg(
 }
 
 // 将VO msg转换为eigen类型的变量
-inline void eigenOdometryFromMsg(const mgv_msgs::Odometry& msg,
+inline void eigenOdometryFromMsg(const nav_msgs::Odometry& msg,
                                  EigenOdometry* odometry) {
   assert(odometry != NULL);                                                      // 不为空指针
   odometry->timestamp_ns = msg.header.stamp.toNSec();                            // 时间戳
@@ -157,7 +157,7 @@ inline void eigenTrajectoryPointFromPoseMsg(
   trajectory_point->jerk_W.setZero();
   trajectory_point->snap_W.setZero();
 }
-4
+
 // 从位姿时间戳msg生成轨迹点
 inline void eigenTrajectoryPointFromPoseMsg(
     const geometry_msgs::PoseStamped& msg,

@@ -1,7 +1,7 @@
-#ifndef mgv_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
-#define mgv_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
+#ifndef MAV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
+#define MAV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
 
-#include <mgv_msgs/eigen_mgv_msgs.h>
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
 #include <ros/ros.h>
 
 #include <mav_planning_common/physical_constraints_mgv.h>

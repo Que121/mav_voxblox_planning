@@ -1,5 +1,5 @@
-#ifndef MGV_PLANNING_COMMON_SEMAPHORE_H_
-#define MGV_PLANNING_COMMON_SEMAPHORE_H_
+#ifndef MAV_PLANNING_COMMON_SEMAPHORE_H_
+#define MAV_PLANNING_COMMON_SEMAPHORE_H_
 
 #include <ros/ros.h>
 #include <condition_variable>

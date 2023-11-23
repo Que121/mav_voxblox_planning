@@ -1,4 +1,4 @@
-// #ifndef MAV_PLANNING_COMMON_PHYSICAL_CONSTRAINTS_H_
+#ifndef MAV_PLANNING_COMMON_PHYSICAL_CONSTRAINTS_H_
 #define MAV_PLANNING_COMMON_PHYSICAL_CONSTRAINTS_H_
 
 #include <ros/ros.h>
@@ -33,4 +33,4 @@ struct PhysicalConstraints {
 
 }  // namespace mav_planning
 
-// #endif  // MAV_PLANNING_COMMON_PHYSICAL_CONSTRAINTS_H_
+#endif  // MAV_PLANNING_COMMON_PHYSICAL_CONSTRAINTS_H_

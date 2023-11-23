@@ -1,5 +1,5 @@
-#ifndef MGV_LOCAL_PLANNER_MGV_LOCAL_PLANNER_H_
-#define MGV_LOCAL_PLANNER_MGV_LOCAL_PLANNER_H_
+#ifndef MAV_LOCAL_PLANNER_MGV_LOCAL_PLANNER_H_
+#define MAV_LOCAL_PLANNER_MGV_LOCAL_PLANNER_H_
 
 #include <ros/ros.h>
 #include <string>
@@ -12,8 +12,8 @@
 // 无人机类型需要修改
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
-#include <mgv_msgs/conversions.h>
-#include <mgv_msgs/eigen_mgv_msgs.h>
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/conversions.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
 #include <mav_path_smoothing/loco_smoother_mgv.h>
 #include <mav_path_smoothing/polynomial_smoother_mgv.h>
 #include <mav_path_smoothing/velocity_ramp_smoother_mgv.h>
@@ -24,8 +24,6 @@
 #include <mav_planning_common/semaphore_mgv.h>
 #include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
-
-#include <mgv_msgs/eigen_mgv_msgs.h>
 #include <mav_path_smoothing/loco_smoother_mgv.h>
 #include <mav_path_smoothing/polynomial_smoother.h>
 #include <mav_path_smoothing/velocity_ramp_smoother.h>
