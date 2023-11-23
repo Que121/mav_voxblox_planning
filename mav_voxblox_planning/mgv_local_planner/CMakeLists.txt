@@ -3,7 +3,7 @@ project(mgv_local_planner)
 
 set(CMAKE_CXX_STANDARD 14)
 
-find_package(PCL 1.7 REQUIRED COMPONENTS)
+# find_package(PCL 1.7 REQUIRED COMPONENTS)
 find_package(catkin_simple REQUIRED)
 catkin_simple(ALL_DEPS_REQUIRED)
 

@@ -10,14 +10,14 @@
 #include <ros/ros.h>
 #include <trajectory_msgs/MultiDOFJointTrajectory.h>
 
-#include "mgv_msgs/Actuators.h"
-#include "mgv_msgs/AttitudeThrust.h"
-#include "mgv_msgs/RateThrust.h"
-#include "mgv_msgs/RollPitchYawrateThrust.h"
-#include "mgv_msgs/TorqueThrust.h"
-#include "mgv_msgs/common.h"
-#include "mgv_msgs/default_values.h"
-#include "mgv_msgs/eigen_mav_msgs.h"
+#include "/home/patton/voxblox_ws/devel/include/mgv_msgs/Actuators.h"
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/AttitudeThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RateThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RollPitchYawrateThrust.h>
+#include </home/patton/voxblox_ws/devel/include/mgv_msgs/TorqueThrust.h>
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/common.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/default_values.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
 
 namespace mgv_msgs {
 

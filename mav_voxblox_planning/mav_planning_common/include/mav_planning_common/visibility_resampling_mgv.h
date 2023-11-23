@@ -1,7 +1,7 @@
-#ifndef mgv_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
-#define mgv_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
+#ifndef MAV_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
+#define MAV_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
 
-#include <mgv_msgs/eigen_mgv_msgs.h>
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
 
 #include "mav_planning_common/physical_constraints_mgv.h"
 

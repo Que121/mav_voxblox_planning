@@ -25,7 +25,7 @@
 #include <deque>
 #include <iostream>
 
-#include "mgv_msgs/common.h"
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/common.h"
 
 namespace mgv_msgs {
 

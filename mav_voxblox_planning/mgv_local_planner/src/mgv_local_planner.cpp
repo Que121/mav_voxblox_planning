@@ -1,8 +1,8 @@
-#include <mgv_msgs/default_topics.h>
+// #include <mgv_msgs/default_topics.h>
 #include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
-#include "../../../install/mav_msgs/include/mav_msgs/conversions.h" // 消息类型需要更改
+#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/conversions.h" // 消息类型需要更改
 
 namespace mgv_planning
 {
@@ -24,7 +24,7 @@ namespace mgv_planning
         loco_planner_(nh_, nh_private_),
         path_indexOFmgv_(0)
   {
-    odometry_sub_ = nh_.subscribe(mgv_msgs::default_topics::ODOMETRY, 1,
+    odometry_sub_ = nh_.subscribe("odometry", 1,
                                   &MgvLocalPlanner::odometryCallback_mgv, this);
 
     // 订阅单个航点信息
@@ -33,7 +33,7 @@ namespace mgv_planning
 
     // 发布完整轨迹信息
     command_pub_ = nh_.advertise<trajectory_msgs::MultiDOFJointTrajectory>(
-        mgv_msgs::default_topics::COMMAND_TRAJECTORY, 1);
+        "command/trajectory", 1);
 
     // 创建了一个ROS服务客户端
     position_hold_client_ =

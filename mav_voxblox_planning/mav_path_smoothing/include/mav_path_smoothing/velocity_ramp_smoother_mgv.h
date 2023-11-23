@@ -1,5 +1,5 @@
-#ifndef mav_PATH_SMOOTHING_VELOCITY_RAMP_SMOOTHER_H_
-#define mav_PATH_SMOOTHING_VELOCITY_RAMP_SMOOTHER_H_
+#ifndef MAV_PATH_SMOOTHING_VELOCITY_RAMP_SMOOTHER_H_
+#define MAV_PATH_SMOOTHING_VELOCITY_RAMP_SMOOTHER_H_
 
 #include "mav_path_smoothing/path_smoother_base_mgv.h"
 
