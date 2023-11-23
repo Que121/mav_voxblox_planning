@@ -29,16 +29,22 @@ void Loco<N>::setupFromPositions(const Eigen::VectorXd& start,
   setupFromVertices(total_time, &vertices);
 }
 
+// 从轨迹点开始优化
 template <int N>
 void Loco<N>::setupFromTrajectoryPoints(
     const mgv_msgs::EigenTrajectoryPoint& start_point,
-    const mgv_msgs::EigenTrajectoryPoint& goal_point, size_t num_segments,
+    const mgv_msgs::EigenTrajectoryPoint& goal_point,
+    size_t num_segments,
     double total_time) {
+  // 初始化顶点类的容器，数量 、维度
   mav_trajectory_generation::Vertex::Vector vertices(
-      num_segments + 1, mav_trajectory_generation::Vertex(K_));
+      num_segments + 1, mav_trajectory_generation::Vertex(K_));                 
 
+  // 从头添加顶点，初始化约束
   vertices.front().makeStartOrEnd(
       0, mav_trajectory_generation::getHighestDerivativeFromN(N));
+  
+  // 设置约束
   vertices.front().addConstraint(
       mav_trajectory_generation::derivative_order::POSITION,
       start_point.position_W);
@@ -48,6 +54,8 @@ void Loco<N>::setupFromTrajectoryPoints(
   vertices.front().addConstraint(
       mav_trajectory_generation::derivative_order::ACCELERATION,
       start_point.acceleration_W);
+
+  // 设置定点
   vertices.back().makeStartOrEnd(
       0, mav_trajectory_generation::getHighestDerivativeFromN(N));
   vertices.back().addConstraint(
@@ -67,18 +75,23 @@ void Loco<N>::setupFromTrajectoryPoints(
 template <int N>
 void Loco<N>::setupFromVertices(
     double total_time, mav_trajectory_generation::Vertex::Vector* vertices) {
+  // 开启定时器
   mav_trajectory_generation::timing::Timer timer_setup("loco/setup");
 
+  // 设置顶点间线段长度
   std::vector<double> times((vertices->size() - 1),
                             total_time / (vertices->size() - 1));
 
-  poly_opt_.setupFromVertices(*vertices, times, config_.derivative_to_optimize);
+  // 进行时间优化
+  poly_opt_.setupFromVertices(*vertices, times, config_.derivative_to_optimize);       //mav_trajectory_generation::PolynomialOptimization<N> poly_opt_;
 
   // Get the initial solution.
+  // 对约束进行求解
   poly_opt_.solveLinear();
 
   // If we're doing soft constraints, then get the current solution, remove the
   // constraint, and then feed it back as the initial condition.
+  // 软约束（没有用）
   if (config_.soft_goal_constraint) {
     vertices->back().getConstraint(
         mav_trajectory_generation::derivative_order::POSITION, &goal_pos_);
@@ -117,6 +130,7 @@ void Loco<N>::setupFromVertices(
 
   setupProblem();
 
+  // 关闭定时器
   timer_setup.Stop();
 }
 
