@@ -21,7 +21,7 @@
 #ifndef MGV_MSGS_DEFAULT_VALUES_H_
 #define MGV_MSGS_DEFAULT_VALUES_H_
 
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/common.h"
+#include "mgv_msgs/common.h"
 
 namespace mgv_msgs {
 

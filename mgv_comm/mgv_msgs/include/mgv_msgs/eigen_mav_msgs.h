@@ -160,6 +160,7 @@ class EigenMavState {
   Eigen::Vector3d angular_acceleration_B;
 };
 
+// 对于某一点的机器人状态信息
 struct EigenTrajectoryPoint {
   typedef std::vector<EigenTrajectoryPoint,
                       Eigen::aligned_allocator<EigenTrajectoryPoint>>
@@ -257,6 +258,59 @@ struct EigenTrajectoryPoint {
   }
 };
 
+// 用于mgv的机器人状态信息**************
+struct EigenTrajectoryPointMgv {
+  typedef std::vector<EigenTrajectoryPointMgv,
+                      Eigen::aligned_allocator<EigenTrajectoryPointMgv>>
+      Vector;
+  EigenTrajectoryPointMgv()
+      : timestamp_ns(-1),
+        time_from_start_ns(0),
+        position_W(Eigen::Vector3d::Zero()),
+        velocity_W(Eigen::Vector3d::Zero()),
+        acceleration_W(Eigen::Vector3d::Zero()),
+        orientation_W_B(Eigen::Quaterniond::Identity()),
+        angular_velocity_W(Eigen::Vector3d::Zero()),
+        angular_acceleration_W(Eigen::Vector3d::Zero()) {}
+
+  EigenTrajectoryPointMgv(
+      int64_t _time_from_start_ns, const Eigen::Vector3d& _position,
+      const Eigen::Vector3d& _velocity, const Eigen::Vector3d& _acceleration,
+      const Eigen::Quaterniond& _orientation,
+      const Eigen::Vector3d& _angular_velocity,
+      const Eigen::Vector3d& _angular_acceleration,
+      const MavActuation& _degrees_of_freedom = MavActuation::DOF4)
+      : time_from_start_ns(_time_from_start_ns),
+        position_W(_position),
+        velocity_W(_velocity),
+        acceleration_W(_acceleration),
+        orientation_W_B(_orientation),
+        angular_velocity_W(_angular_velocity),
+        angular_acceleration_W(_angular_acceleration) {}
+
+  EigenTrajectoryPointMgv(int64_t _time_from_start_ns,
+                          const Eigen::Vector3d& _position,
+                          const Eigen::Vector3d& _velocity,
+                          const Eigen::Vector3d& _acceleration,
+                          const Eigen::Quaterniond& _orientation,
+                          const Eigen::Vector3d& _angular_velocity)
+      : EigenTrajectoryPointMgv(_time_from_start_ns, _position, _velocity,
+                                _acceleration, _orientation, _angular_velocity,
+                                Eigen::Vector3d::Zero()) {}
+
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW  // 用于内存对齐的宏定义
+
+      int64_t timestamp_ns;  // Time since epoch, negative value = invalid //
+                             // timestamp.
+  int64_t time_from_start_ns;
+  Eigen::Vector3d position_W;
+  Eigen::Vector3d velocity_W;
+  Eigen::Vector3d acceleration_W;
+  Eigen::Quaterniond orientation_W_B;
+  Eigen::Vector3d angular_velocity_W;
+  Eigen::Vector3d angular_acceleration_W;
+};
+
 // Operator overload to transform Trajectory Points according to the Eigen
 // interfaces (uses operator* for this).
 // Has to be outside of class.
@@ -277,6 +331,7 @@ inline EigenTrajectoryPoint operator*(const Eigen::Affine3d& lhs,
       lhs.rotation() * rhs.angular_acceleration_W;
   return transformed;
 }
+// 用于mgv的机器人状态信息*************
 
 struct EigenOdometry {
   EigenOdometry()
@@ -344,7 +399,8 @@ MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EigenRateThrust)
 MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EigenTrajectoryPoint)
 MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EigenRollPitchYawrateThrust)
 MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EigenOdometry)
-}  // namespace mav_msgs
+MGV_MSGS_MAKE_ALIGNED_CONTAINERS(EigenTrajectoryPointMgv)
 
-#endif  // MAV_MSGS_EIGEN_MAV_MSGS_H  
-  
+}  // namespace mgv_msgs
+
+#endif  // MAV_MSGS_EIGEN_MAV_MSGS_H

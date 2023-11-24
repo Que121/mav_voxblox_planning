@@ -2,7 +2,7 @@
 #include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/conversions.h" // 消息类型需要更改
+// #include "../../../install/mav_msgs/include/mav_msgs/conversions.h" // 消息类型需要更改
 
 namespace mgv_planning
 {
@@ -58,14 +58,14 @@ namespace mgv_planning
     yaw_policy_.setYawPolicy(YawPolicy::PolicyType::kVelocityVector); // 设置偏航策略
   }
 
-  // 注意odometry为nav，此为自动生成的消息类型文件
+  // 注意odometry为nav，此为自动生成的消息类型文件  DONE?
   void MgvLocalPlanner::odometryCallback_mgv(const nav_msgs::Odometry &msg)
   {
     // 消息类型需要更改 // 不改了 感觉gv可以用
     mgv_msgs::eigenOdometryFromMsg(msg, &odometryOFmgv_); // 将ros消息转换为eigen类型的变量
   }
 
-  // 接收新的的航点 done
+  // 接收新的的航点 DONE
   void MgvLocalPlanner::waypointCallback_mgv(const geometry_msgs::PoseStamped &msg)
   {
     clearTrajectory_mgv();
@@ -79,7 +79,7 @@ namespace mgv_planning
     startPublishingCommands_mgv();
   }
 
-  // 回调  定时器执行飞行规划
+  // 回调  定时器执行飞行规划 DONE
   void MgvLocalPlanner::planningTimerCallback_mgv(const ros::TimerEvent &event)
   {
     // 等待发布器条件变量
@@ -93,11 +93,10 @@ namespace mgv_planning
     planningStep_mgv();
   }
 
-  // 从目前位置到航点进行一次规划
+  // 从目前位置到航点进行一次规划 DONE
   void MgvLocalPlanner::planningStep_mgv()
   {
-    // 无人机类型需要修改的哦
-    // 1.判断航点列表是否为空并且索引是否超出范围
+    // 判断航点列表是否为空并且索引是否超出范围
     if (current_waypointOFmgv_ < 0 ||
         static_cast<int>(waypointsOFmgv_.size()) <= current_waypointOFmgv_)
     {
@@ -107,47 +106,49 @@ namespace mgv_planning
         return;
       }
     }
-    mav_trajectory_generation::timing::MiniTimer timer; //
-    constexpr double kCloseToOdometry = 0.1;            // 需要具体修改
-    if (!avoid_collisions_mgv_)                         // avoid_collisions_ = 0; // 不需要避障
-    {
-      //
-      mgv_msgs::EigenTrajectoryPointVector waypointsOFmgv;
-      mgv_msgs::EigenTrajectoryPoint current_waypointOFmgv;
 
-      current_waypointOFmgv.position_W = odometryOFmgv_.position_W; // odometry_ 目前无人机信息
+    mav_trajectory_generation::timing::MiniTimer timer; // TBD
+
+    constexpr double kCloseToOdometry = 0.1; // 需要具体修改
+
+    if (!avoid_collisions_mgv_) // avoid_collisions_ = 0; // 不需要避障
+    {
+      mgv_msgs::EigenTrajectoryPointMgvVector waypointsOFmgv;
+      mgv_msgs::EigenTrajectoryPointMgv current_waypointOFmgv;
+
+      current_waypointOFmgv.position_W = odometryOFmgv_.position_W; // odometry_ 目前机器人息
       current_waypointOFmgv.orientation_W_B = odometryOFmgv_.orientation_W_B;
 
       if (plan_to_startOFmgv_)
       {
         waypointsOFmgv.push_back(current_waypointOFmgv);
       }
-      waypointsOFmgv.insert(waypointsOFmgv.end(), waypointsOFmgv_.begin(), waypointsOFmgv_.end());
 
-      mgv_msgs::EigenTrajectoryPointVector pathOFmgv;
+      waypointsOFmgv.insert(waypointsOFmgv.end(), waypointsOFmgv_.begin(), waypointsOFmgv_.end()); // TBD
+
+      mgv_msgs::EigenTrajectoryPointMgvVector pathOFmgv;
       if (planPathThroughWaypoints_mgv(waypointsOFmgv, &pathOFmgv))
       {
         replacePath_mgv(pathOFmgv);
-        current_waypointOFmgv_ = waypointsOFmgv_.size();
+        current_waypointOFmgv_ = waypointsOFmgv_.size(); // TBD
       }
       else
       {
         ROS_ERROR("[Mgv Local Planner] Waypoint planning failed!");
       }
-
       // 输出规划完成，包括所花费的时间
       ROS_INFO("[Mgv Local Planner][Plan Step] Planning finished. Time taken: %f",
                timer.stop());
 
       // 可视化路径
-      // visualizePath();
+      visualizePath(); // TBD
     }
   }
 
   // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
   bool MgvLocalPlanner::planPathThroughWaypoints_mgv(
-      const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
-      mgv_msgs::EigenTrajectoryPointVector *pathOFmgv)
+      const mgv_msgs::EigenTrajectoryPointMgvVector &waypointsOFmgv,
+      mgv_msgs::EigenTrajectoryPointMgvVector *pathOFmgv)
   {
     CHECK_NOTNULL(pathOFmgv);     // 确保path不为空
     bool success = false;         // 初始化success变量 为规划是否成功的flag
@@ -155,7 +156,7 @@ namespace mgv_planning
     {
       if (waypointsOFmgv.size() == 2) // 判断是否有两点用于规划
       {
-        // 规划两点之间的路径
+        // 规划两点之间的路径 
         success = loco_smoother_.getPathBetweenTwoPoints(waypointsOFmgv[0],
                                                          waypointsOFmgv[1], pathOFmgv);
       }
@@ -165,7 +166,7 @@ namespace mgv_planning
 
   // 获取新的path
   void MgvLocalPlanner::replacePath_mgv(
-      const mgv_msgs::EigenTrajectoryPointVector &pathOFmgv)
+      const mgv_msgs::EigenTrajectoryPointMgvVector &pathOFmgv)
   {
     std::lock_guard<std::recursive_mutex> guard(path_mutexOFmgv_);             // 上锁
     path_queueOFmgv_.clear();                                                  // 清除原来路径点

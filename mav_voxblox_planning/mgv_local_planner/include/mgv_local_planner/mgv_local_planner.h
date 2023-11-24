@@ -12,8 +12,8 @@
 // 无人机类型需要修改
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/conversions.h"
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
+#include <mgv_msgs/conversions.h>
+#include <mgv_msgs/eigen_mgv_msgs.h>
 #include <mav_path_smoothing/loco_smoother_mgv.h>
 #include <mav_path_smoothing/polynomial_smoother_mgv.h>
 #include <mav_path_smoothing/velocity_ramp_smoother_mgv.h>
@@ -24,6 +24,8 @@
 #include <mav_planning_common/semaphore_mgv.h>
 #include <mav_planning_common/yaw_policy_mgv.h>
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
+
+#include <mgv_msgs/eigen_mgv_msgs.h>
 #include <mav_path_smoothing/loco_smoother_mgv.h>
 #include <mav_path_smoothing/polynomial_smoother.h>
 #include <mav_path_smoothing/velocity_ramp_smoother.h>
@@ -78,12 +80,12 @@ namespace mgv_planning
     void finishWaypointsOFmgv(); // TBD
 
     // 貌似是用在避障重规划路线里面的？
-    void replacePath_mgv(const mgv_msgs::EigenTrajectoryPointVector &pathOFmgv);
+    void replacePath_mgv(const mgv_msgs::EigenTrajectoryPointMgvVector &pathOFmgv);
 
     // 得到两点或多点的path 目前只用到两点
     bool planPathThroughWaypoints_mgv(
-        const mgv_msgs::EigenTrajectoryPointVector &waypointsOFmgv,
-        mgv_msgs::EigenTrajectoryPointVector *pathOFmgv);
+        const mgv_msgs::EigenTrajectoryPointMgvVector &waypointsOFmgv,
+        mgv_msgs::EigenTrajectoryPointMgvVector *pathOFmgv);
 
     // pp协议编码
     void ppUART_mgv(trajectory_msgs::MultiDOFJointTrajectory *msg);

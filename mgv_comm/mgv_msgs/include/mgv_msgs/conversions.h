@@ -10,14 +10,14 @@
 #include <ros/ros.h>
 #include <trajectory_msgs/MultiDOFJointTrajectory.h>
 
-#include "/home/patton/voxblox_ws/devel/include/mgv_msgs/Actuators.h"
-#include </home/patton/voxblox_ws/devel/include/mgv_msgs/AttitudeThrust.h>
-#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RateThrust.h>
-#include </home/patton/voxblox_ws/devel/include/mgv_msgs/RollPitchYawrateThrust.h>
-#include </home/patton/voxblox_ws/devel/include/mgv_msgs/TorqueThrust.h>
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/common.h"
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/default_values.h"
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
+#include "mgv_msgs/Actuators.h"
+#include "mgv_msgs/AttitudeThrust.h"
+#include "mgv_msgs/RateThrust.h"
+#include "mgv_msgs/RollPitchYawrateThrust.h"
+#include "mgv_msgs/TorqueThrust.h"
+#include "mgv_msgs/common.h"
+#include "mgv_msgs/default_values.h"
+#include "mgv_msgs/eigen_mgv_msgs.h"
 
 namespace mgv_msgs {
 
@@ -124,42 +124,7 @@ inline void eigenTrajectoryPointFromTransformMsg(
 }
 
 // 用于mgv done
-inline void eigenTrajectoryPointFromPoseMSgMgv(
-    const geometry_msgs::PoseStamped& msg,
-    EigenTrajectoryPointMgv* trajectory_point) {
-  assert(trajectory_point != NULL);
-  ros::Time timestamp = msg.header.stamp;
-  trajectory_point->timestamp_ns = timestamp.toNSec();
 
-  trajectory_point->position_W = vector3FromPointMsg(msg.pose.position);
-  trajectory_point->orientation_W_B = quaternionFromMsg(msg.pose.orientation);
-  trajectory_point->velocity_W.setZero();
-  trajectory_point->angular_velocity_W.setZero();
-  trajectory_point->acceleration_W.setZero();
-  trajectory_point->angular_acceleration_W.setZero();
-}
-
-/**
- * \brief Computes the MAV state (position, velocity, attitude, angular
- * velocity, angular acceleration) from the flat state.
- * Additionally, computes the acceleration expressed in body coordinates,
- * i.e. the acceleration measured by the IMU. No air-drag is assumed here.
- *
- * \param[in] acceleration Acceleration of the MAV, expressed in world
- * coordinates.
- * \param[in] jerk Jerk of the MAV, expressed in world coordinates.
- * \param[in] snap Snap of the MAV, expressed in world coordinates.
- * \param[in] yaw Yaw angle of the MAV, expressed in world coordinates.
- * \param[in] yaw_rate Yaw rate, expressed in world coordinates.
- * \param[in] yaw_acceleration Yaw acceleration, expressed in world
- * coordinates. \param[in] magnitude_of_gravity Magnitude of the gravity
- * vector. \param[out] orientation Quaternion representing the attitude of
- * the MAV. \param[out] acceleration_body Acceleration expressed in body
- * coordinates, i.e. the acceleration usually by the IMU. \param[out]
- * angular_velocity_body Angular velocity of the MAV, expressed in body
- * coordinates. \param[out] angular_acceleration_body Angular acceleration
- * of the MAV, expressed in body coordinates.
- */
 void EigenMavStateFromEigenTrajectoryPoint(
     const Eigen::Vector3d& acceleration, const Eigen::Vector3d& jerk,
     const Eigen::Vector3d& snap, double yaw, double yaw_rate,
@@ -517,6 +482,23 @@ inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPointDeque& trajectory,
     trajectory_msgs::MultiDOFJointTrajectory* msg) {
   msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
+}
+
+// =========================================================================================
+
+inline void eigenTrajectoryPointFromPoseMSgMgv(
+    const geometry_msgs::PoseStamped& msg,
+    EigenTrajectoryPointMgv* trajectory_point) {
+  assert(trajectory_point != NULL);
+  ros::Time timestamp = msg.header.stamp;
+  trajectory_point->timestamp_ns = timestamp.toNSec();
+
+  trajectory_point->position_W = vector3FromPointMsg(msg.pose.position);
+  trajectory_point->orientation_W_B = quaternionFromMsg(msg.pose.orientation);
+  trajectory_point->velocity_W.setZero();
+  trajectory_point->angular_velocity_W.setZero();
+  trajectory_point->acceleration_W.setZero();
+  trajectory_point->angular_acceleration_W.setZero();
 }
 
 // 调用上个函数 // 11111111111111111111111

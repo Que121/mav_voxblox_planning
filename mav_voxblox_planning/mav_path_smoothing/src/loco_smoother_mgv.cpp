@@ -131,10 +131,32 @@ namespace mgv_planning
     return true;
   }
 
+  // ============================================================================
+
+  // 1111111111111111111111111111
+  bool LocoSmoother::getPathBetweenTwoPoints(
+      const mgv_msgs::EigenTrajectoryPointMgv &start,
+      const mgv_msgs::EigenTrajectoryPointMgv &goal,
+      mgv_msgs::EigenTrajectoryPointMgvVector *path) const
+  {
+    CHECK_NOTNULL(path);                                                    // 确保传入指针不为空
+    mgv_trajectory_generation::Trajectory trajectory;                       // TBD // 存储两点之间的轨迹
+    bool success = getTrajectoryBetweenTwoPoints(start, goal, &trajectory); // TBD // 生成两个点之间的轨迹， 并存储在trajectory
+    if (success)
+    {
+      // 将'trajectory'采样为一系列的路径点，保存在path里
+      mgv_trajectory_generation::sampleWholeTrajectory(
+          trajectory, constraints_.sampling_dt, path); // TBD
+      return true;
+    }
+    return false;
+  }
+
+  // 222222222222222222222222222
   bool LocoSmoother::getTrajectoryBetweenTwoPoints(
-      const mgv_msgs::EigenTrajectoryPoint &start,
-      const mgv_msgs::EigenTrajectoryPoint &goal,
-      mav_trajectory_generation::Trajectory *trajectory) const // 生成两个点之间的轨迹
+      const mgv_msgs::EigenTrajectoryPointMgv &start,
+      const mgv_msgs::EigenTrajectoryPointMgv &goal,
+      mgv_trajectory_generation::Trajectory *trajectory) const // 生成两个点之间的轨迹 // TBD
   {
 
     // 创建计时器记录执行时间
@@ -196,27 +218,7 @@ namespace mgv_planning
     return true;
   }
 
-  bool LocoSmoother::getPathBetweenTwoPoints(
-      const mgv_msgs::EigenTrajectoryPoint &start,
-      const mgv_msgs::EigenTrajectoryPoint &goal,
-      mgv_msgs::EigenTrajectoryPoint::Vector *path) const
-  {
-    // 确保传入指针不为空
-    CHECK_NOTNULL(path);
-
-    // 存储两点之间的轨迹
-    mav_trajectory_generation::Trajectory trajectory;
-    bool success = getTrajectoryBetweenTwoPoints(start, goal, &trajectory); // 生成两个点之间的轨迹， 并存储在trajectory
-    if (success)
-    {
-      // 将'trajectory'采样为一系列的路径点，保存在path里
-      mav_trajectory_generation::sampleWholeTrajectory(
-          trajectory, constraints_.sampling_dt, path);// 要改
-      return true;
-    }
-    return false;
-  }
-
+  // 333333333333333333333333333
   double LocoSmoother::getMapDistanceAndGradient(
       const Eigen::VectorXd &position, Eigen::VectorXd *gradient) const
   {
