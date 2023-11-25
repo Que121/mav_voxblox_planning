@@ -7,8 +7,8 @@
 #include <map>
 #include <vector>
 
-#include "mgv_trajectory_generation/motion_defines_mgv.h"
-#include "mgv_trajectory_generation/polynomial_mgv.h"
+#include "mav_trajectory_generation/motion_defines_mgv.h"
+#include "mav_trajectory_generation/polynomial_mgv.h"
 
 namespace mgv_trajectory_generation
 {
@@ -30,6 +30,7 @@ namespace mgv_trajectory_generation
 
     // Constructs an empty vertex and sets time_to_next and
     // derivative_to_optimize to zero.
+    // 构建一个空的vertex，time_to_next和derivative_to_optimize都设置为0
     Vertex(size_t dimension) : D_(dimension) {}
 
     int D() const { return D_; }
@@ -37,6 +38,7 @@ namespace mgv_trajectory_generation
     // Adds a constraint for the specified derivative order with the given
     // value. If this is a multi-dimensional vertex, all dimensions are
     // set to the same value.
+    // 添加一个对应derivative_order的约束,值为value
     inline void addConstraint(int derivative_order, double value)
     {
       constraints_[derivative_order] = ConstraintValue::Constant(D_, value);
@@ -130,8 +132,6 @@ namespace mgv_trajectory_generation
                                  const Eigen::VectorXd &goal, double v_max,
                                  double a_max);
 
-  inline int getHighestDerivativeFromN(int N) { return N / 2 - 1; }
-
   // Creates random vertices for position within minimum_position and
   // maximum_position.
   // Vertices at the beginning and end have only fixed constraints with their
@@ -158,6 +158,10 @@ namespace mgv_trajectory_generation
   Vertex::Vector createRandomVertices1D(int maximum_derivative, size_t n_segments,
                                         double minimum_position,
                                         double maximum_position, size_t seed = 0);
-} // namespace mav_trajectory_generation
 
-#endif // MAV_TRAJECTORY_GENERATION_VERTEX_H_
+  // ===========================================================================
+  inline int getHighestDerivativeFromN(int N) { return N / 2 - 1; }
+
+} // namespace mgv_trajectory_generation
+
+#endif // MGV_TRAJECTORY_GENERATION_VERTEX_H_

@@ -1,9 +1,9 @@
 #ifndef MGV_TRAJECTORY_GENERATION_TRAJECTORY_H_
 #define MGV_TRAJECTORY_GENERATION_TRAJECTORY_H_
 
-#include "mgv_trajectory_generation/extremum_mgv.h"
-#include "mgv_trajectory_generation/segment_mgv.h"
-#include "mgv_trajectory_generation/vertex_mgv.h"
+#include "mav_trajectory_generation/extremum_mgv.h"
+#include "mav_trajectory_generation/segment_mgv.h"
+#include "mav_trajectory_generation/vertex_mgv.h"
 
 namespace mgv_trajectory_generation
 {

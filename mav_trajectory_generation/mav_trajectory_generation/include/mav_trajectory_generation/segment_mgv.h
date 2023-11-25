@@ -8,9 +8,9 @@
 #include <map>
 #include <vector>
 
-#include "mgv_trajectory_generation/extremum_mgv.h"
-#include "mgv_trajectory_generation/motion_defines_mgv.h"
-#include "mgv_trajectory_generation/polynomial_mgv.h"
+#include "mav_trajectory_generation/extremum_mgv.h"
+#include "mav_trajectory_generation/motion_defines_mgv.h"
+#include "mav_trajectory_generation/polynomial_mgv.h"
 
 namespace mgv_trajectory_generation
 {

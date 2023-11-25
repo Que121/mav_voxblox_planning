@@ -1,4 +1,4 @@
-#include "mgv_trajectory_generation/trajectory.h"
+#include "mav_trajectory_generation/trajectory_mgv.h"
 #include <limits>
 
 // fixes error due to std::iota (has been introduced in c++ standard lately
