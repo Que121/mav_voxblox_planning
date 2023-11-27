@@ -2,7 +2,6 @@
 #define MGV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
 
 #include <loco_planner/loco.h>
-
 #include "mav_path_smoothing/polynomial_smoother_mgv.h"
 
 namespace mgv_planning

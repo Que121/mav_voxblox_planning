@@ -176,15 +176,14 @@ inline void eigenTrajectoryPointFromPoseMsg(
  * \param[in] snap Snap of the MAV, expressed in world coordinates.
  * \param[in] yaw Yaw angle of the MAV, expressed in world coordinates.
  * \param[in] yaw_rate Yaw rate, expressed in world coordinates.
- * \param[in] yaw_acceleration Yaw acceleration, expressed in world coordinates.
- * \param[in] magnitude_of_gravity Magnitude of the gravity vector.
- * \param[out] orientation Quaternion representing the attitude of the MAV.
- * \param[out] acceleration_body Acceleration expressed in body coordinates,
- * i.e. the acceleration usually by the IMU.
- * \param[out] angular_velocity_body Angular velocity of the MAV, expressed in
- * body coordinates.
- * \param[out] angular_acceleration_body Angular acceleration of the MAV,
- * expressed in body coordinates.
+ * \param[in] yaw_acceleration Yaw acceleration, expressed in world
+ * coordinates. \param[in] magnitude_of_gravity Magnitude of the gravity
+ * vector. \param[out] orientation Quaternion representing the attitude of the
+ * MAV. \param[out] acceleration_body Acceleration expressed in body
+ * coordinates, i.e. the acceleration usually by the IMU. \param[out]
+ * angular_velocity_body Angular velocity of the MAV, expressed in body
+ * coordinates. \param[out] angular_acceleration_body Angular acceleration of
+ * the MAV, expressed in body coordinates.
  */
 void EigenMavStateFromEigenTrajectoryPoint(
     const Eigen::Vector3d& acceleration, const Eigen::Vector3d& jerk,
@@ -208,8 +207,8 @@ inline void EigenMavStateFromEigenTrajectoryPoint(
       angular_acceleration_body);
 }
 
-/// Convenience function with EigenTrajectoryPoint as input and EigenMavState as
-/// output.
+/// Convenience function with EigenTrajectoryPoint as input and EigenMavState
+/// as output.
 inline void EigenMavStateFromEigenTrajectoryPoint(
     const EigenTrajectoryPoint& trajectory_point, double magnitude_of_gravity,
     EigenMavState* mav_state) {

@@ -381,10 +381,10 @@ namespace mgv_trajectory_generation
     Extremum v_min_traj, v_max_traj, a_min_traj, a_max_traj;
 
     bool success = computeMinMaxMagnitude(
-        mav_trajectory_generation::derivative_order::VELOCITY, dimensions,
+        mgv_trajectory_generation::derivative_order::VELOCITY, dimensions,
         &v_min_traj, &v_max_traj);
     success &= computeMinMaxMagnitude(
-        mav_trajectory_generation::derivative_order::ACCELERATION, dimensions,
+        mgv_trajectory_generation::derivative_order::ACCELERATION, dimensions,
         &a_min_traj, &a_max_traj);
 
     *v_max = v_max_traj.value;

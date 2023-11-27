@@ -56,8 +56,11 @@ namespace mgv_trajectory_generation
     // (including) up_to_derivative to zero. Convenience method for
     // beginning / end vertices. up_to_derivative should be set to
     // getHighestDerivativeFromN(N), where N is the order of your polynomial.
+
+    // 2222
     void makeStartOrEnd(const Eigen::VectorXd &constraint, int up_to_derivative);
 
+    // 1111 
     void makeStartOrEnd(double value, int up_to_derivative)
     {
       makeStartOrEnd(Eigen::VectorXd::Constant(D_, value), up_to_derivative);

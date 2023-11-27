@@ -1,18 +1,18 @@
 #ifndef MAV_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
 #define MAV_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
 
-#include "/home/patton/voxblox_ws/src/mav_voxblox_planning/mgv_comm/mgv_msgs/include/mgv_msgs/eigen_mgv_msgs.h"
+#include "mgv_msgs/eigen_mgv_msgs.h"
 
 #include "mav_planning_common/physical_constraints_mgv.h"
 
+namespace mgv_planning
+{
 
-namespace mgv_planning {
+  void resampleWaypointsFromVisibilityGraph(
+      int num_segments, const PhysicalConstraints &constraints,
+      const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
+      mgv_msgs::EigenTrajectoryPoint::Vector *waypoints_out);
 
-void resampleWaypointsFromVisibilityGraph(
-    int num_segments, const PhysicalConstraints& constraints,
-    const mgv_msgs::EigenTrajectoryPoint::Vector& waypoints,
-    mgv_msgs::EigenTrajectoryPoint::Vector* waypoints_out);
+} // namespace mgv_planning
 
-}  // namespace mgv_planning
-
-#endif  // mgv_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_
+#endif // mgv_PLANNING_COMMON_VISIBILITY_RESAMPLING_H_

@@ -32,7 +32,6 @@ namespace mav_planning
   class MavLocalPlanner
   {
   public:
-    
     MavLocalPlanner(const ros::NodeHandle &nh, const ros::NodeHandle &nh_private);
 
     // Input data.

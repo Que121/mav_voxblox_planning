@@ -1,8 +1,9 @@
-#include <loco_planner/loco_mgv.h>
+#include "loco_planner/impl/loco_impl_mgv.h"
 #include <mav_planning_common/visibility_resampling_mgv.h>
 #include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mav_path_smoothing/loco_smoother_mgv.h"
+#include "trajectory_sampling_mgv.h"
 
 namespace mgv_planning
 {
@@ -159,10 +160,10 @@ namespace mgv_planning
       mgv_trajectory_generation::Trajectory *trajectory) const // 生成两个点之间的轨迹 // TBD
   {
 
-    // 创建计时器记录执行时间
-    mav_trajectory_generation::timing::Timer loco_timer("smoothing/poly_loco");
+    // 创建计时器记录执行时间 DONE
+    mgv_trajectory_generation::timing::Timer loco_timer("smoothing/poly_loco");
 
-    // 确保“trajectory”不为空
+    // 确保“trajectory”不为空 DONE
     CHECK_NOTNULL(trajectory);
 
     // 定义多项式阶数和维度
@@ -195,12 +196,13 @@ namespace mgv_planning
     }
 
     // 计算两个点之间的轨迹所需总时间，基于速度梯形规划算法
-    double total_time = mav_trajectory_generation::computeTimeVelocityRamp(
+    double total_time = mgv_trajectory_generation::computeTimeVelocityRamp(
         start.position_W, goal.position_W, constraints_.v_max,
         constraints_.a_max);
 
-    // 设置优化问题，指定起始点、目标点、轨迹段数和总时间
+    // 设置优化问题*********************
     loco.setupFromTrajectoryPoints(start, goal, num_segments_, total_time);
+    // 设置优化问题*********************
 
     // 求解多项式优化问题，生成平滑轨迹
     loco.solveProblem();
@@ -224,12 +226,16 @@ namespace mgv_planning
   {
     CHECK(distance_and_gradient_function_);
     CHECK_EQ(position.size(), 3);
+
     if (gradient == nullptr)
     {
       return distance_and_gradient_function_(position, nullptr);
     }
+
     Eigen::Vector3d gradient_3d;
+
     double distance = distance_and_gradient_function_(position, &gradient_3d);
+
     *gradient = gradient_3d;
     return distance;
   }
