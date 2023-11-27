@@ -24,13 +24,12 @@ endif()
 #############
 cs_add_library(${PROJECT_NAME}
   src/motion_defines.cpp
-  src/polynomial.cpp
-  src/segment.cpp
-  src/timing.cpp
-  src/trajectory.cpp
+  src/polynomial_mgv.cpp
+  src/segment_mgv.cpp
+  src/timing_mgv.cpp
   src/trajectory_mgv.cpp
   src/trajectory_sampling.cpp
-  src/vertex.cpp
+  src/vertex_mgv.cpp
   src/io.cpp
   src/rpoly/rpoly_ak1.cpp
 )
