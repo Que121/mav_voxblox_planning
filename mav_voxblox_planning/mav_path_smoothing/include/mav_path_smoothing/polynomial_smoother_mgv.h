@@ -17,17 +17,17 @@ namespace mgv_planning
     virtual void setParametersFromRos(const ros::NodeHandle &nh);
 
     virtual bool getTrajectoryBetweenWaypoints(
-        const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
-        mav_trajectory_generation::Trajectory *trajectory) const;
+        const mgv_msgs::EigenTrajectoryPointMgv::Vector &waypoints,
+        mgv_trajectory_generation::Trajectory *trajectory) const;
 
     virtual bool getPathBetweenWaypoints(
-        const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
-        mgv_msgs::EigenTrajectoryPoint::Vector *path) const;
+        const mgv_msgs::EigenTrajectoryPointMgv::Vector &waypoints,
+        mgv_msgs::EigenTrajectoryPointMgv::Vector *path) const;
 
     virtual bool getPathBetweenTwoPoints(
-        const mgv_msgs::EigenTrajectoryPoint &start,
-        const mgv_msgs::EigenTrajectoryPoint &goal,
-        mgv_msgs::EigenTrajectoryPoint::Vector *path) const;
+        const mgv_msgs::EigenTrajectoryPointMgv &start,
+        const mgv_msgs::EigenTrajectoryPointMgv &goal,
+        mgv_msgs::EigenTrajectoryPointMgv::Vector *path) const;
 
     // Below are methods that are only needed if doing collision checking.
     typedef std::function<double(const Eigen::Vector3d &position)>
@@ -52,7 +52,7 @@ namespace mgv_planning
     // Try to do the minimum number of lookups in the map based on
     // min_col_check_resolution. Returns time of collision in t, if not null.
     virtual bool isPathInCollision(
-        const mgv_msgs::EigenTrajectoryPoint::Vector &path, double *t) const;
+        const mgv_msgs::EigenTrajectoryPointMgv::Vector &path, double *t) const;
 
     // Parameters.
     bool getOptimizeTime() const { return optimize_time_; }
@@ -74,8 +74,8 @@ namespace mgv_planning
   protected:
     // Add intermediate vertex for splitting.
     bool addVertex(double t,
-                   const mav_trajectory_generation::Trajectory &trajectory,
-                   mav_trajectory_generation::Vertex::Vector *vertices,
+                   const mgv_trajectory_generation::Trajectory &trajectory,
+                   mgv_trajectory_generation::Vertex::Vector *vertices,
                    std::vector<double> *segment_times) const;
 
     // Figure out what kind of polynomial smoothing to do...

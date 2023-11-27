@@ -1,8 +1,7 @@
 #include <mav_trajectory_generation/polynomial_optimization_nonlinear.h>
-#include <mav_trajectory_generation/timing.h>
-#include <mav_trajectory_generation/trajectory_sampling.h>
+#include <mav_trajectory_generation/timing_mgv.h>
+#include <mav_trajectory_generation/trajectory_sampling_mgv.h>
 #include <mav_trajectory_generation_ros/feasibility_analytic.h>
-
 #include "mav_path_smoothing/polynomial_smoother_mgv.h"
 
 namespace mgv_planning
@@ -25,8 +24,8 @@ namespace mgv_planning
 
 
   bool PolynomialSmoother::getTrajectoryBetweenWaypoints(
-      const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
-      mav_trajectory_generation::Trajectory *trajectory) const
+      const mgv_msgs::EigenTrajectoryPointMgv::Vector &waypoints,
+      mgv_trajectory_generation::Trajectory *trajectory) const
   {
     // 路径点小于2，没有足够的路径点用于平滑轨迹
     if (waypoints.size() < 2)
@@ -36,25 +35,25 @@ namespace mgv_planning
 
     // I guess this is only if method is linear.
     // 创建计时器，用于记录执行时间
-    mav_trajectory_generation::timing::Timer linear_timer(
+    mgv_trajectory_generation::timing::Timer linear_timer(
         "smoothing/poly_linear");
 
     constexpr int N = 10; // 设置多项式阶数为10
     constexpr int D = 3;  // 设置维度，这里为3， 即为三维空间
 
     // 创建多项式优化器的实例 N为阶数 D为维度
-    mav_trajectory_generation::PolynomialOptimization<N> poly_opt(D);
+    mgv_trajectory_generation::PolynomialOptimization<N> poly_opt(D);
 
     // 获取路径点的数量
     int num_vertices = waypoints.size();
 
     // 选择优化的导数阶数，此处为JERK（三次导，加加速度）
     int derivative_to_optimize =
-        mav_trajectory_generation::derivative_order::JERK;
+        mgv_trajectory_generation::derivative_order::JERK;
 
     // 创建顶点向量，存储路径点
-    mav_trajectory_generation::Vertex::Vector vertices(
-        num_vertices, mav_trajectory_generation::Vertex(D));
+    mgv_trajectory_generation::Vertex::Vector vertices(
+        num_vertices, mgv_trajectory_generation::Vertex(D));
 
     // Add the first and last.
     // 起点和终点的位置约束被添加到了多项式优化问题中，
@@ -62,11 +61,11 @@ namespace mgv_planning
     // 接下来的步骤将会进一步优化多项式系数，以生成平滑的轨迹。
     vertices.front().makeStartOrEnd(0, derivative_to_optimize);
     vertices.front().addConstraint(
-        mav_trajectory_generation::derivative_order::POSITION,
+        mgv_trajectory_generation::derivative_order::POSITION,
         waypoints.front().position_W);
     vertices.back().makeStartOrEnd(0, derivative_to_optimize);
     vertices.back().addConstraint(
-        mav_trajectory_generation::derivative_order::POSITION,
+        mgv_trajectory_generation::derivative_order::POSITION,
         waypoints.back().position_W);
 
     // Now do the middle bits.
@@ -77,13 +76,13 @@ namespace mgv_planning
     for (size_t i = 1; i < waypoints.size() - 1; i += 1)
     {
       vertices[j].addConstraint(
-          mav_trajectory_generation::derivative_order::POSITION,
+          mgv_trajectory_generation::derivative_order::POSITION,
           waypoints[i].position_W);
       j++;
     }
 
     std::vector<double> segment_times =
-        mav_trajectory_generation::estimateSegmentTimesVelocityRamp(
+        mgv_trajectory_generation::estimateSegmentTimesVelocityRamp(
             vertices, constraints_.v_max, constraints_.a_max, 1.2);
 
     poly_opt.setupFromVertices(vertices, segment_times, derivative_to_optimize);
@@ -99,21 +98,21 @@ namespace mgv_planning
 
     if (optimize_time_)
     {
-      mav_trajectory_generation::timing::Timer time_opt_timer(
+      mgv_trajectory_generation::timing::Timer time_opt_timer(
           "smoothing/poly_time_opt");
-      mav_trajectory_generation::NonlinearOptimizationParameters nlopt_parameters;
+      mgv_trajectory_generation::NonlinearOptimizationParameters nlopt_parameters;
       nlopt_parameters.algorithm = nlopt::LD_LBFGS;
-      nlopt_parameters.time_alloc_method = mav_trajectory_generation::
+      nlopt_parameters.time_alloc_method = mgv_trajectory_generation::
           NonlinearOptimizationParameters::kMellingerOuterLoop;
       nlopt_parameters.print_debug_info_time_allocation = true;
-      mav_trajectory_generation::PolynomialOptimizationNonLinear<N> nlopt(
+      mgv_trajectory_generation::PolynomialOptimizationNonLinear<N> nlopt(
           D, nlopt_parameters);
       nlopt.setupFromVertices(vertices, segment_times, derivative_to_optimize);
       nlopt.addMaximumMagnitudeConstraint(
-          mav_trajectory_generation::derivative_order::VELOCITY,
+          mgv_trajectory_generation::derivative_order::VELOCITY,
           constraints_.v_max);
       nlopt.addMaximumMagnitudeConstraint(
-          mav_trajectory_generation::derivative_order::ACCELERATION,
+          mgv_trajectory_generation::derivative_order::ACCELERATION,
           constraints_.a_max);
       nlopt.optimize();
       nlopt.getTrajectory(trajectory);
@@ -122,14 +121,14 @@ namespace mgv_planning
     // Ok now do more stuff, if the method requires.
     if (split_at_collisions_)
     {
-      mav_trajectory_generation::timing::Timer split_timer(
+      mgv_trajectory_generation::timing::Timer split_timer(
           "smoothing/poly_split");
 
       mgv_msgs::EigenTrajectoryPoint::Vector path;
 
       // Sample it!
       double dt = constraints_.sampling_dt;
-      mav_trajectory_generation::sampleWholeTrajectory(*trajectory, dt, &path);// 改
+      mgv_trajectory_generation::sampleWholeTrajectory(*trajectory, dt, &path);// 改
 
       // Check if it's in collision.
       double t = 0.0;
@@ -148,7 +147,7 @@ namespace mgv_planning
                                    derivative_to_optimize);
         poly_opt.solveLinear();
         poly_opt.getTrajectory(trajectory);
-        mav_trajectory_generation::sampleWholeTrajectory(*trajectory, dt, &path);// 改
+        mgv_trajectory_generation::sampleWholeTrajectory(*trajectory, dt, &path);// 改
         path_in_collision = isPathInCollision(path, &t);
         num_added++;
         if (num_added > kMaxNumberOfAdditionalVertices)
@@ -180,11 +179,11 @@ namespace mgv_planning
       const mgv_msgs::EigenTrajectoryPointVector &waypoints,
       mgv_msgs::EigenTrajectoryPoint::Vector *path) const
   {
-    mav_trajectory_generation::Trajectory trajectory;
+    mgv_trajectory_generation::Trajectory trajectory;
     bool success = getTrajectoryBetweenWaypoints(waypoints, &trajectory);
     if (success)
     {
-      mav_trajectory_generation::sampleWholeTrajectory(
+      mgv_trajectory_generation::sampleWholeTrajectory(
           trajectory, constraints_.sampling_dt, path);//改
       return true;
     }
@@ -204,13 +203,13 @@ namespace mgv_planning
   }
 
   bool PolynomialSmoother::addVertex(
-      double t, const mav_trajectory_generation::Trajectory &trajectory,
-      mav_trajectory_generation::Vertex::Vector *vertices,
+      double t, const mgv_trajectory_generation::Trajectory &trajectory,
+      mgv_trajectory_generation::Vertex::Vector *vertices,
       std::vector<double> *segment_times) const
   {
     // First, go through the trajectory segments and figure out between which two
     // segments the new vertex will lie.
-    const mav_trajectory_generation::Segment::Vector &segments =
+    const mgv_trajectory_generation::Segment::Vector &segments =
         trajectory.segments();
 
     double time_so_far = 0.0;
@@ -254,9 +253,9 @@ namespace mgv_planning
     rel_time_sec = std::max(rel_time_scaled * seg_max_time, kMinTimeSec);
 
     // Add the vertex with the correct constraints.
-    mav_trajectory_generation::Vertex new_vertex = (*vertices)[seg_ind];
+    mgv_trajectory_generation::Vertex new_vertex = (*vertices)[seg_ind];
     new_vertex.addConstraint(
-        mav_trajectory_generation::derivative_order::POSITION, new_pos);
+        mgv_trajectory_generation::derivative_order::POSITION, new_pos);
     vertices->insert(vertices->begin() + seg_ind + 1, new_vertex);
 
     // Add the segment time in.

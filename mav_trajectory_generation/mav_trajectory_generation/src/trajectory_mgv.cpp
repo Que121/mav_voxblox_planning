@@ -161,40 +161,40 @@ namespace mgv_trajectory_generation
     return traj;
   }
 
-  bool Trajectory::getTrajectoryWithAppendedDimension(
-      const Trajectory &trajectory_to_append, Trajectory *new_trajectory) const
-  {
-    // Handle the case of one of the trajectories being empty.
-    if (N_ == 0 || D_ == 0)
-    {
-      *new_trajectory = trajectory_to_append;
-      return true;
-    }
-    if (trajectory_to_append.N() == 0 || trajectory_to_append.D() == 0)
-    {
-      *new_trajectory = *this;
-      return true;
-    }
-    CHECK_EQ(static_cast<int>(segments_.size()), trajectory_to_append.K());
+  // bool Trajectory::getTrajectoryWithAppendedDimension(
+  //     const Trajectory &trajectory_to_append, Trajectory *new_trajectory) const
+  // {
+  //   // Handle the case of one of the trajectories being empty.
+  //   if (N_ == 0 || D_ == 0)
+  //   {
+  //     *new_trajectory = trajectory_to_append;
+  //     return true;
+  //   }
+  //   if (trajectory_to_append.N() == 0 || trajectory_to_append.D() == 0)
+  //   {
+  //     *new_trajectory = *this;
+  //     return true;
+  //   }
+  //   CHECK_EQ(static_cast<int>(segments_.size()), trajectory_to_append.K());
 
-    // Create a new set of segments with all of the dimensions.
-    Segment::Vector segments;
-    segments.reserve(segments_.size());
+  //   // Create a new set of segments with all of the dimensions.
+  //   Segment::Vector segments;
+  //   segments.reserve(segments_.size());
 
-    for (size_t k = 0; k < segments_.size(); ++k)
-    {
-      Segment new_segment(0, 0);
-      if (!segments_[k].getSegmentWithAppendedDimension(
-              trajectory_to_append.segments()[k], &new_segment))
-      {
-        return false;
-      }
-      segments.push_back(new_segment);
-    }
+  //   for (size_t k = 0; k < segments_.size(); ++k)
+  //   {
+  //     Segment new_segment(0, 0);
+  //     if (!segments_[k].getSegmentWithAppendedDimension(
+  //             trajectory_to_append.segments()[k], &new_segment))
+  //     {
+  //       return false;
+  //     }
+  //     segments.push_back(new_segment);
+  //   }
 
-    new_trajectory->setSegments(segments);
-    return true;
-  }
+  //   new_trajectory->setSegments(segments);
+  //   return true;
+  // }
 
   bool Trajectory::computeMinMaxMagnitude(int derivative,
                                           const std::vector<int> &dimensions,

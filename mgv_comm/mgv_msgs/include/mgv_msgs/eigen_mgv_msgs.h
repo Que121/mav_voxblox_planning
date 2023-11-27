@@ -1,22 +1,3 @@
-/*
- * Copyright 2015 Fadri Furrer, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Michael Burri, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Markus Achtelik, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Helen Oleynikova, ASL, ETH Zurich, Switzerland
- * Copyright 2015 Mina Kamel, ASL, ETH Zurich, Switzerland
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
-
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 #ifndef MGV_MSGS_EIGEN_MGV_MSGS_H
 #define MGV_MSGS_EIGEN_MGV_MSGS_H
@@ -277,60 +258,96 @@ struct EigenTrajectoryPointMgv {
   typedef std::vector<EigenTrajectoryPointMgv,
                       Eigen::aligned_allocator<EigenTrajectoryPointMgv>>
       Vector;
-  // 初始化变量
+   // 初始化变量
   EigenTrajectoryPointMgv()
       : timestamp_ns(-1),  // 时间戳
         time_from_start_ns(0),
-        position_W(Eigen::Vector3d::Zero()),  // 位置
-        velocity_W(Eigen::Vector3d::Zero()),  // 速度
-        acceleration_W(
-            Eigen::Vector3d::Zero()),  // 加速度                 // ？
-        orientation_W_B(Eigen::Quaterniond::Identity()),    // 旋转
-        angular_velocity_W(Eigen::Vector3d::Zero()),        // 角速度
-        angular_acceleration_W(Eigen::Vector3d::Zero()) {}  // 自由度4
+        position_W(Eigen::Vector3d::Zero()),              // 位置
+        velocity_W(Eigen::Vector3d::Zero()),              // 速度
+        acceleration_W(Eigen::Vector3d::Zero()),          // 加速度
+        jerk_W(Eigen::Vector3d::Zero()),                  // ？
+        snap_W(Eigen::Vector3d::Zero()),                  // ？
+        orientation_W_B(Eigen::Quaterniond::Identity()),  // 旋转
+        angular_velocity_W(Eigen::Vector3d::Zero()),      // 角速度
+        angular_acceleration_W(Eigen::Vector3d::Zero()),  // 角速度上的加速度
+        degrees_of_freedom(MavActuation::DOF4) {}         // 自由度4
 
   // 初始化成员变量
-  EigenTrajectoryPointMgv(int64_t _time_from_start_ns,
-                          const Eigen::Vector3d& _position,
-                          const Eigen::Vector3d& _velocity,
-                          const Eigen::Vector3d& _acceleration,
-                          const Eigen::Quaterniond& _orientation,
-                          const Eigen::Vector3d& _angular_velocity,
-                          const Eigen::Vector3d& _angular_acceleration)
+  EigenTrajectoryPointMgv(
+      int64_t _time_from_start_ns, const Eigen::Vector3d& _position,
+      const Eigen::Vector3d& _velocity, const Eigen::Vector3d& _acceleration,
+      const Eigen::Vector3d& _jerk, const Eigen::Vector3d& _snap,
+      const Eigen::Quaterniond& _orientation,
+      const Eigen::Vector3d& _angular_velocity,
+      const Eigen::Vector3d& _angular_acceleration,
+      const MavActuation& _degrees_of_freedom = MavActuation::DOF4)
       : time_from_start_ns(_time_from_start_ns),
         position_W(_position),
         velocity_W(_velocity),
         acceleration_W(_acceleration),
+        jerk_W(_jerk),
+        snap_W(_snap),
         orientation_W_B(_orientation),
         angular_velocity_W(_angular_velocity),
-        angular_acceleration_W(_angular_acceleration) {}
+        angular_acceleration_W(_angular_acceleration),
+        degrees_of_freedom(_degrees_of_freedom) {}
 
   // 调用上个EigenTrajectoryPoint初始化成员变量
-  EigenTrajectoryPointMgv(int64_t _time_from_start_ns,
-                          const Eigen::Vector3d& _position,
-                          const Eigen::Vector3d& _velocity,
-                          const Eigen::Vector3d& _acceleration,
-                          const Eigen::Quaterniond& _orientation,
-                          const Eigen::Vector3d& _angular_velocity)
+  EigenTrajectoryPointMgv(
+      int64_t _time_from_start_ns, const Eigen::Vector3d& _position,
+      const Eigen::Vector3d& _velocity, const Eigen::Vector3d& _acceleration,
+      const Eigen::Vector3d& _jerk, const Eigen::Vector3d& _snap,
+      const Eigen::Quaterniond& _orientation,
+      const Eigen::Vector3d& _angular_velocity,
+      const MavActuation& _degrees_of_freedom = MavActuation::DOF4)
       : EigenTrajectoryPointMgv(_time_from_start_ns, _position, _velocity,
-                                _acceleration, _orientation, _angular_velocity,
-                                Eigen::Vector3d::Zero()) {}
+                             _acceleration, _jerk, _snap, _orientation,
+                             _angular_velocity, Eigen::Vector3d::Zero(),
+                             _degrees_of_freedom) {}
 
   // Eigen 库中的一个宏，作用就是为特定的类提供重载的 new 和 delete
   // 操作符，以便使用 aligned 内存分配器进行内存分配
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   // 定义变量
-
   int64_t
       timestamp_ns;  // Time since epoch, negative value = invalid timestamp.
   int64_t time_from_start_ns;
   Eigen::Vector3d position_W;
   Eigen::Vector3d velocity_W;
   Eigen::Vector3d acceleration_W;
+  Eigen::Vector3d jerk_W;
+  Eigen::Vector3d snap_W;
 
   Eigen::Quaterniond orientation_W_B;
   Eigen::Vector3d angular_velocity_W;
   Eigen::Vector3d angular_acceleration_W;
+  MavActuation degrees_of_freedom;
+
+  // 变量提取/初始化
+  // Accessors for making dealing with orientation/angular velocity easier.
+  inline double getYaw() const {
+    return yawFromQuaternion(orientation_W_B);
+  }  // 获得偏航角
+  inline double getYawRate() const {
+    return angular_velocity_W.z();
+  }  // z轴上角速度
+  inline double getYawAcc() const {
+    return angular_acceleration_W.z();
+  }  // z轴加速度
+  // WARNING: sets roll and pitch to 0.
+  inline void setFromYaw(double yaw) {
+    orientation_W_B = quaternionFromYaw(yaw);
+  }
+  inline void setFromYawRate(double yaw_rate) {
+    angular_velocity_W.x() = 0.0;
+    angular_velocity_W.y() = 0.0;
+    angular_velocity_W.z() = yaw_rate;
+  }
+  inline void setFromYawAcc(double yaw_acc) {
+    angular_acceleration_W.x() = 0.0;
+    angular_acceleration_W.y() = 0.0;
+    angular_acceleration_W.z() = yaw_acc;
+  }
 };
 
 // 对轨迹点进行仿射变换

@@ -420,6 +420,29 @@ inline void msgPoseStampedFromEigenTrajectoryPoint(
                        &msg->pose.orientation);
 }
 
+inline void msgMultiDofJointTrajectoryPointFromEigen(
+    const EigenTrajectoryPoint& trajectory_point,
+    trajectory_msgs::MultiDOFJointTrajectoryPoint* msg) {
+  assert(msg != NULL);
+
+  msg->time_from_start.fromNSec(trajectory_point.time_from_start_ns);
+  msg->transforms.resize(1);
+  msg->velocities.resize(1);
+  msg->accelerations.resize(1);
+
+  vectorEigenToMsg(trajectory_point.position_W,
+                   &msg->transforms[0].translation);
+  quaternionEigenToMsg(trajectory_point.orientation_W_B,
+                       &msg->transforms[0].rotation);
+  vectorEigenToMsg(trajectory_point.velocity_W, &msg->velocities[0].linear);
+  vectorEigenToMsg(trajectory_point.angular_velocity_W,
+                   &msg->velocities[0].angular);
+  vectorEigenToMsg(trajectory_point.acceleration_W,
+                   &msg->accelerations[0].linear);
+  vectorEigenToMsg(trajectory_point.angular_acceleration_W,
+                   &msg->accelerations[0].angular);
+}
+
 // 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg， 多传递了一个string参数
 inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPoint& trajectory_point, const std::string& link_name,
@@ -486,7 +509,7 @@ inline void msgMultiDofJointTrajectoryFromEigen(
 
 // =========================================================================================
 
-inline void eigenTrajectoryPointFromPoseMSgMgv(
+inline void eigenTrajectoryPointFromPoseMsgMgv(
     const geometry_msgs::PoseStamped& msg,
     EigenTrajectoryPointMgv* trajectory_point) {
   assert(trajectory_point != NULL);
@@ -501,15 +524,6 @@ inline void eigenTrajectoryPointFromPoseMSgMgv(
   trajectory_point->angular_acceleration_W.setZero();
 }
 
-// 调用上个函数 // 11111111111111111111111
-inline void msgMultiDofJointTrajectoryFromEigen(
-    const EigenTrajectoryPointVector& trajectory,
-    trajectory_msgs::MultiDOFJointTrajectory* msg) {
-  // 为什么不直接传三个参数....
-  msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
-}
-
-// 222222222222222222222
 inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPointVector& trajectory, const std::string& link_name,
     trajectory_msgs::MultiDOFJointTrajectory* msg) {
@@ -531,30 +545,19 @@ inline void msgMultiDofJointTrajectoryFromEigen(
   }
 }
 
+// 调用上个函数 // 11111111111111111111111
+inline void msgMultiDofJointTrajectoryFromEigen(
+    const EigenTrajectoryPointVector& trajectory,
+    trajectory_msgs::MultiDOFJointTrajectory* msg) {
+  // 为什么不直接传三个参数....
+  msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
+}
+
+// 222222222222222222222
+
+
 // 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg
 // 3333333333333333333
-inline void msgMultiDofJointTrajectoryPointFromEigen(
-    const EigenTrajectoryPoint& trajectory_point,
-    trajectory_msgs::MultiDOFJointTrajectoryPoint* msg) {
-  assert(msg != NULL);
-
-  msg->time_from_start.fromNSec(trajectory_point.time_from_start_ns);
-  msg->transforms.resize(1);
-  msg->velocities.resize(1);
-  msg->accelerations.resize(1);
-
-  vectorEigenToMsg(trajectory_point.position_W,
-                   &msg->transforms[0].translation);
-  quaternionEigenToMsg(trajectory_point.orientation_W_B,
-                       &msg->transforms[0].rotation);
-  vectorEigenToMsg(trajectory_point.velocity_W, &msg->velocities[0].linear);
-  vectorEigenToMsg(trajectory_point.angular_velocity_W,
-                   &msg->velocities[0].angular);
-  vectorEigenToMsg(trajectory_point.acceleration_W,
-                   &msg->accelerations[0].linear);
-  vectorEigenToMsg(trajectory_point.angular_acceleration_W,
-                   &msg->accelerations[0].angular);
-}
 
 // mgv使用***************
 inline void msgMultiDofJointTrajectoryPointFromEigen_mgv(
