@@ -1,9 +1,8 @@
 #include "loco_planner/impl/loco_impl_mgv.h"
 #include <mav_planning_common/visibility_resampling_mgv.h>
-#include <mav_trajectory_generation/trajectory_sampling.h>
 
 #include "mav_path_smoothing/loco_smoother_mgv.h"
-#include "trajectory_sampling_mgv.h"
+#include "mav_trajectory_generation/trajectory_sampling_mgv.h"
 
 namespace mgv_planning
 {
@@ -35,7 +34,7 @@ namespace mgv_planning
   // 更根据给定的点生成平滑的轨迹，可选择是否在可视化图上进行重新采样，以及是否将路径点添加到规划里
   bool LocoSmoother::getTrajectoryBetweenWaypoints(
       const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
-      mav_trajectory_generation::Trajectory *trajectory) const
+      mgv_trajectory_generation::Trajectory *trajectory) const
   {
     // If there's less than 3 waypoints, there are no free variables for loco.
     // 无足够的点生成平滑轨迹
@@ -52,11 +51,11 @@ namespace mgv_planning
     }
 
     // 创建计时器，record the time of operation in LOCO
-    mav_trajectory_generation::timing::Timer loco_timer("smoothing/poly_loco");
+    mgv_trajectory_generation::timing::Timer loco_timer("smoothing/poly_loco");
 
     // Create a loco object! So Loco!
     // 创建用于存储初始轨迹的变量
-    mav_trajectory_generation::Trajectory traj_initial;
+    mgv_trajectory_generation::Trajectory traj_initial;
 
     // 如果需要可视化图上重新采样路径点，将给定的路径点均匀地划分到图上
     // ？？？？

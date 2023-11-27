@@ -2,6 +2,7 @@
 
 #include <mav_planning_common/yaw_policy_mgv.h>
 
+
 namespace mgv_planning
 {
 
@@ -32,7 +33,7 @@ namespace mgv_planning
   }
   
   // ***可能需要更改
-  void YawPolicy::applyPolicyInPlace(mgv_msgs::EigenTrajectoryPointVector *path)
+  void YawPolicy::applyPolicyInPlace(mgv_msgs::EigenTrajectoryPointMgvVector *path)
   {
     if (path->empty())
     {
@@ -56,7 +57,7 @@ namespace mgv_planning
       for (size_t i = 0; i < path->size(); ++i)
       {
         // Non-const ref that gets modified below.
-        mgv_msgs::EigenTrajectoryPoint &point = (*path)[i];
+        mgv_msgs::EigenTrajectoryPointMgv &point = (*path)[i];
 
         // Case 1: non-zero velocity at current point (ignoring vertical
         // component).
@@ -112,7 +113,7 @@ namespace mgv_planning
       for (size_t i = path->size(); i > 0; --i)
       {
         // Non-const ref that gets modified below.
-        mgv_msgs::EigenTrajectoryPoint &point = (*path)[i - 1];
+        mgv_msgs::EigenTrajectoryPointMgv &point = (*path)[i - 1];
         const double kMinVelocityNorm = 0.1;
 
         // Case 1: non-zero velocity at current point (ignoring vertical
@@ -165,7 +166,7 @@ namespace mgv_planning
       for (size_t i = 0; i < path->size(); ++i)
       {
         // Non-const ref that gets modified below.
-        mgv_msgs::EigenTrajectoryPoint &point = (*path)[i];
+        mgv_msgs::EigenTrajectoryPointMgv &point = (*path)[i];
         double desired_yaw = point.getYaw();
         double yaw = getFeasibleYaw(last_yaw, desired_yaw);
         point.setFromYaw(yaw);
@@ -178,7 +179,7 @@ namespace mgv_planning
       for (size_t i = 0; i < path->size(); ++i)
       {
         // Non-const ref that gets modified below.
-        mgv_msgs::EigenTrajectoryPoint &point = (*path)[i];
+        mgv_msgs::EigenTrajectoryPointMgv &point = (*path)[i];
         Eigen::Vector3d facing_direction = facing_point_ - point.position_W;
 
         // Catch the case of both inputs being 0... When we pass directly over
@@ -206,7 +207,7 @@ namespace mgv_planning
       for (size_t i = 0; i < path->size(); ++i)
       {
         // Non-const ref that gets modified below.
-        mgv_msgs::EigenTrajectoryPoint &point = (*path)[i];
+        mgv_msgs::EigenTrajectoryPointMgv &point = (*path)[i];
         double yaw = getFeasibleYaw(last_yaw, constant_yaw_);
         point.setFromYaw(yaw);
         last_yaw = yaw;

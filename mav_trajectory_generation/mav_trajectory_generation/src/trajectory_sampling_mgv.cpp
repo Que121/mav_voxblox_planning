@@ -68,7 +68,7 @@ namespace mgv_trajectory_generation
     states->resize(n_samples);
     for (size_t i = 0; i < n_samples; ++i)
     {
-      mgv_msgs::EigenTrajectoryPoint &state = (*states)[i];
+      mgv_msgs::EigenTrajectoryPointMgv &state = (*states)[i];
 
       state.degrees_of_freedom = mgv_msgs::MavActuation::DOF4;
       state.position_W = position[i].head<3>();

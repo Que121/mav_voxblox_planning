@@ -238,8 +238,8 @@ namespace mgv_planning
       //=================================================================
 
       // 直接从头到尾
-      mgv_msgs::EigenTrajectoryPointVector trajectory_to_publish(path_queueOFmgv_.begin() + starting_index,
-                                                                 path_queueOFmgv_.end());
+      // mgv_msgs::EigenTrajectoryPointMgvVector trajectory_to_publish(path_queueOFmgv_.begin() + starting_index,
+      //                                                           path_queueOFmgv_.end());
       trajectory_msgs::MultiDOFJointTrajectory msg; // 创建一个多自由度关节轨迹消息，用于存储控制指令
 
       msg.header.frame_id = local_frame_id_; // 将ROS消息（msg）中header的frame_id字段设置为存储在变量local_frame_id_中的值
@@ -258,7 +258,7 @@ namespace mgv_planning
       //     trajectory_to_publish.back().time_from_start_ns * 1.0e-9,
       //     trajectory_to_publish.back().position_W.x());
       //=================================================================
-      mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg); // 转换为ros消息发出
+      // mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg); // 转换为ros消息发出
 
       command_pub_.publish(msg);             // 发布控制消息
       path_indexOFmgv_ += number_to_publish; // Update the path index and notify for replanning

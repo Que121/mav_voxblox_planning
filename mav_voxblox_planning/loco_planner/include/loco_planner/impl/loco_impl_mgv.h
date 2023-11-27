@@ -187,17 +187,19 @@ namespace loco_planner
     waypoints_ = waypoints;
   }
 
-  template <int N>
-  void Loco<N>::setWaypointsFromTrajectory(
-      const mgv_trajectory_generation::Trajectory &trajectory)
-  {
-    waypoints_.clear();
-    std::vector<double> times = trajectory.getSerti for (size_t i = 0; i < times.size() - 1; ++i)
-    {
-      time_so_far += times[i];
-      waypoints_[time_so_far] = trajectory.evaluate(time_so_far);
-    }
+template <int N>
+void Loco<N>::setWaypointsFromTrajectory(
+    const mgv_trajectory_generation::Trajectory& trajectory) {
+  waypoints_.clear();
+  std::vector<double> times = trajectory.getSegmentTimes();
+  // Skip the first one, obviously doesn't make any sense since start is fixed.
+  // Same with the goal, soft goal cost is separate.
+  double time_so_far = 0.0;
+  for (size_t i = 0; i < times.size() - 1; ++i) {
+    time_so_far += times[i];
+    waypoints_[time_so_far] = trajectory.evaluate(time_so_far);
   }
+}
 
   template <int N>
   void Loco<N>::solveProblem()

@@ -15,7 +15,9 @@ cs_add_library(${PROJECT_NAME}
   src/color_utils.cpp
   src/path_visualization.cpp
   src/yaw_policy.cpp
+  src/yaw_policy_mgv.cpp
   src/visibility_resampling.cpp
+  src/visibility_resampling_mgv.cpp
 )
 
 ##########

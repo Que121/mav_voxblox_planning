@@ -38,7 +38,7 @@ namespace mgv_planning
 
     void deactivateMaxYawRate() { yaw_rate_max_ = -1; }
 
-    void applyPolicyInPlace(mgv_msgs::EigenTrajectoryPointVector *path);
+    void applyPolicyInPlace(mgv_msgs::EigenTrajectoryPointMgvVector *path);
     void applyPolicy(const mgv_msgs::EigenTrajectoryPointVector &path_in,
                      mgv_msgs::EigenTrajectoryPointVector *path_out);
 

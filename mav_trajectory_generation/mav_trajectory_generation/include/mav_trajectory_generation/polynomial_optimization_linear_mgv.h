@@ -303,6 +303,6 @@ namespace mgv_trajectory_generation
 
 } // namespace mav_trajectory_generation
 
-#include "mav_trajectory_generation/impl/polynomial_optimization_linear_impl.h"
+// #include "mav_trajectory_generation/impl/polynomial_optimization_linear_impl.h"
 
 #endif // MAV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_LINEAR_H_

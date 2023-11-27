@@ -13,8 +13,11 @@ add_definitions(-std=c++11)
 #############
 cs_add_library(${PROJECT_NAME}
   src/loco_smoother.cpp
+  src/loco_smoother_mgv.cpp
   src/path_smoother_base.cpp
+  src/path_smoother_base_mgv.cpp
   src/polynomial_smoother.cpp
+  src/polynomial_smoother_mgv.cpp
   src/velocity_ramp_smoother.cpp
 )
 target_link_libraries(${PROJECT_NAME})
