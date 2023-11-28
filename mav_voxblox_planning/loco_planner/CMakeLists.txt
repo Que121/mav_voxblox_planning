@@ -10,7 +10,7 @@ add_definitions(-std=c++11)
 # BINARIES #
 ############
 cs_add_executable(loco_main
-  src/loco_main.cpp
+  src/loco_main_mgv.cpp
 )
 
 #########

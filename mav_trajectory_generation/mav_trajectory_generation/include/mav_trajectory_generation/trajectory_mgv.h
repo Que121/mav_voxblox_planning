@@ -21,7 +21,7 @@ namespace mgv_trajectory_generation
       return !operator==(rhs);
     }
 
-    int D() const { return D_; }
+    int D() const { return D_; } // 返回维度
     int N() const { return N_; }
     int K() const { return segments_.size(); }
 
@@ -105,6 +105,7 @@ namespace mgv_trajectory_generation
     // Evaluates the trajectory in a specified range and derivative.
     // Outputs are a vector of the sampled values (size of VectorXd is D) by
     // time and optionally the actual sampling times.
+    // 
     void evaluateRange(double t_start, double t_end, double dt,
                        int derivative_order, std::vector<Eigen::VectorXd> *result,
                        std::vector<double> *sampling_times = nullptr) const;

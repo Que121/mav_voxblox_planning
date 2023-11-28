@@ -70,6 +70,12 @@ namespace mgv_trajectory_generation
     return segments_[i].evaluate(t - accumulated_time, derivative_order);
   }
 
+  // t_start ----> min_time ----> getMinTime()
+  // t_end ----> max_time ----> getMaxTime()
+  // constraints_.sampling_dt ----> sampling_interval ----> dt
+  // derivative_order ----> derivative_order
+  
+
   void Trajectory::evaluateRange(double t_start, double t_end, double dt,
                                  int derivative_order,
                                  std::vector<Eigen::VectorXd> *result,
@@ -129,6 +135,7 @@ namespace mgv_trajectory_generation
         continue;
       }
 
+      //**************************
       result->push_back(segments_[i].evaluate(time_in_segment, derivative_order));
 
       if (sampling_times != nullptr)
@@ -160,41 +167,6 @@ namespace mgv_trajectory_generation
     traj.setSegments(segments);
     return traj;
   }
-
-  // bool Trajectory::getTrajectoryWithAppendedDimension(
-  //     const Trajectory &trajectory_to_append, Trajectory *new_trajectory) const
-  // {
-  //   // Handle the case of one of the trajectories being empty.
-  //   if (N_ == 0 || D_ == 0)
-  //   {
-  //     *new_trajectory = trajectory_to_append;
-  //     return true;
-  //   }
-  //   if (trajectory_to_append.N() == 0 || trajectory_to_append.D() == 0)
-  //   {
-  //     *new_trajectory = *this;
-  //     return true;
-  //   }
-  //   CHECK_EQ(static_cast<int>(segments_.size()), trajectory_to_append.K());
-
-  //   // Create a new set of segments with all of the dimensions.
-  //   Segment::Vector segments;
-  //   segments.reserve(segments_.size());
-
-  //   for (size_t k = 0; k < segments_.size(); ++k)
-  //   {
-  //     Segment new_segment(0, 0);
-  //     if (!segments_[k].getSegmentWithAppendedDimension(
-  //             trajectory_to_append.segments()[k], &new_segment))
-  //     {
-  //       return false;
-  //     }
-  //     segments.push_back(new_segment);
-  //   }
-
-  //   new_trajectory->setSegments(segments);
-  //   return true;
-  // }
 
   bool Trajectory::computeMinMaxMagnitude(int derivative,
                                           const std::vector<int> &dimensions,

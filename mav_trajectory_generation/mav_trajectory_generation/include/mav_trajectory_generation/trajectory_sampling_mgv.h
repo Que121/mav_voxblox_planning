@@ -18,7 +18,7 @@ namespace mgv_trajectory_generation
 
   bool sampleTrajectoryInRange(const Trajectory &trajectory, double min_time,
                                double max_time, double sampling_interval,
-                               mgv_msgs::EigenTrajectoryPointVector *states);
+                               mgv_msgs::EigenTrajectoryPointMgvVector *states);
 
   bool sampleTrajectoryStartDuration(
       const Trajectory &trajectory, double start_time, double duration,
@@ -26,7 +26,7 @@ namespace mgv_trajectory_generation
 
   bool sampleWholeTrajectory(const Trajectory &trajectory,
                              double sampling_interval,
-                             mgv_msgs::EigenTrajectoryPoint::Vector *states);
+                             mgv_msgs::EigenTrajectoryPointMgvVector *states);
 
   bool sampleSegmentAtTime(const Segment &segment, double sample_time,
                            mgv_msgs::EigenTrajectoryPoint *state);

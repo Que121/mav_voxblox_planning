@@ -1,4 +1,4 @@
-#include "loco_planner/loco.h"
+#include "loco_planner/loco_mgv.h"
 
 int main(int argc, char** argv) {
   google::InitGoogleLogging(argv[0]);

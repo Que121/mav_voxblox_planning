@@ -254,19 +254,20 @@ struct EigenTrajectoryPoint {
 };
 
 // 用于mgv的轨迹点
+// TBD 去除MavActuation:DOF4 此為四軸無人機
 struct EigenTrajectoryPointMgv {
   typedef std::vector<EigenTrajectoryPointMgv,
                       Eigen::aligned_allocator<EigenTrajectoryPointMgv>>
       Vector;
-   // 初始化变量
+  // 初始化变量
   EigenTrajectoryPointMgv()
       : timestamp_ns(-1),  // 时间戳
         time_from_start_ns(0),
         position_W(Eigen::Vector3d::Zero()),              // 位置
         velocity_W(Eigen::Vector3d::Zero()),              // 速度
         acceleration_W(Eigen::Vector3d::Zero()),          // 加速度
-        jerk_W(Eigen::Vector3d::Zero()),                  // ？
-        snap_W(Eigen::Vector3d::Zero()),                  // ？
+        jerk_W(Eigen::Vector3d::Zero()),                  // 加加速度
+        snap_W(Eigen::Vector3d::Zero()),                  // 加加加速度
         orientation_W_B(Eigen::Quaterniond::Identity()),  // 旋转
         angular_velocity_W(Eigen::Vector3d::Zero()),      // 角速度
         angular_acceleration_W(Eigen::Vector3d::Zero()),  // 角速度上的加速度
@@ -301,9 +302,9 @@ struct EigenTrajectoryPointMgv {
       const Eigen::Vector3d& _angular_velocity,
       const MavActuation& _degrees_of_freedom = MavActuation::DOF4)
       : EigenTrajectoryPointMgv(_time_from_start_ns, _position, _velocity,
-                             _acceleration, _jerk, _snap, _orientation,
-                             _angular_velocity, Eigen::Vector3d::Zero(),
-                             _degrees_of_freedom) {}
+                                _acceleration, _jerk, _snap, _orientation,
+                                _angular_velocity, Eigen::Vector3d::Zero(),
+                                _degrees_of_freedom) {}
 
   // Eigen 库中的一个宏，作用就是为特定的类提供重载的 new 和 delete
   // 操作符，以便使用 aligned 内存分配器进行内存分配

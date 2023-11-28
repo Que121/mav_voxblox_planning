@@ -1,5 +1,5 @@
-#ifndef MAV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
-#define MAV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
+#ifndef MGV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
+#define MGV_PATH_SMOOTHING_PATH_SMOOTHER_BASE_H_
 
 #include "mgv_msgs/eigen_mgv_msgs.h"
 #include <ros/ros.h>

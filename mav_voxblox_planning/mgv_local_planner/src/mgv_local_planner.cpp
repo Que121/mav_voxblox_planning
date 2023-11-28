@@ -1,5 +1,5 @@
 // #include <mgv_msgs/default_topics.h>
-#include <mav_trajectory_generation/trajectory_sampling.h>
+#include <mav_trajectory_generation/trajectory_sampling_mgv.h>
 
 #include "mgv_local_planner/mgv_local_planner.h"
 // #include "../../../install/mav_msgs/include/mav_msgs/conversions.h" // 消息类型需要更改
@@ -107,7 +107,7 @@ namespace mgv_planning
       }
     }
 
-    mav_trajectory_generation::timing::MiniTimer timer; // TBD
+    mgv_trajectory_generation::timing::MiniTimer timer; 
 
     constexpr double kCloseToOdometry = 0.1; // 需要具体修改
 
@@ -141,11 +141,11 @@ namespace mgv_planning
                timer.stop());
 
       // 可视化路径
-      visualizePath(); // TBD
+      // visualizePath(); // TBD
     }
   }
 
-  // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径
+  // 根据给定的路径点waypoints使用不同的路平滑算法规划一条平滑的路径 DONE temporary
   bool MgvLocalPlanner::planPathThroughWaypoints_mgv(
       const mgv_msgs::EigenTrajectoryPointMgvVector &waypointsOFmgv,
       mgv_msgs::EigenTrajectoryPointMgvVector *pathOFmgv)
@@ -156,7 +156,7 @@ namespace mgv_planning
     {
       if (waypointsOFmgv.size() == 2) // 判断是否有两点用于规划
       {
-        // 规划两点之间的路径 
+        // 规划两点之间的路径
         success = loco_smoother_.getPathBetweenTwoPoints(waypointsOFmgv[0],
                                                          waypointsOFmgv[1], pathOFmgv);
       }
@@ -172,8 +172,8 @@ namespace mgv_planning
     path_queueOFmgv_.clear();                                                  // 清除原来路径点
     path_queueOFmgv_ = pathOFmgv;                                              // 获取新的path
     path_queueOFmgv_.front().orientation_W_B = odometryOFmgv_.orientation_W_B; // 设置起始的姿态
-    // ***可能需要更改***
-    yaw_policy_.applyPolicyInPlace(&path_queueOFmgv_); // 应用姿态策略 人话：设置起始的yaw轴
+    // ***可能需要更改*** 不用設置yaw軸
+    // yaw_policy_.applyPolicyInPlace(&path_queueOFmgv_); // 应用姿态策略 人话：设置起始的yaw轴
     path_indexOFmgv_ = 0;                              // 重置索引
   }
 
@@ -202,7 +202,7 @@ namespace mgv_planning
     command_publishing_timer_mgv_ = nh_.createTimer(timer_options); // 创建定时器
   }
 
-  // 定时器回调函数，用于在规划的路径上按照一定频率发布控制命令
+  // 定时器回调函数，用于在规划的路径上按照一定频率发布控制命令*********
   void MgvLocalPlanner::commandPublishTimerCallback_mgv(
       const ros::TimerEvent &event)
   {
@@ -238,8 +238,8 @@ namespace mgv_planning
       //=================================================================
 
       // 直接从头到尾
-      // mgv_msgs::EigenTrajectoryPointMgvVector trajectory_to_publish(path_queueOFmgv_.begin() + starting_index,
-      //                                                           path_queueOFmgv_.end());
+      mgv_msgs::EigenTrajectoryPointMgvVector trajectory_to_publish(path_queueOFmgv_.begin() + starting_index,
+                                                                    path_queueOFmgv_.end());
       trajectory_msgs::MultiDOFJointTrajectory msg; // 创建一个多自由度关节轨迹消息，用于存储控制指令
 
       msg.header.frame_id = local_frame_id_; // 将ROS消息（msg）中header的frame_id字段设置为存储在变量local_frame_id_中的值
@@ -258,7 +258,8 @@ namespace mgv_planning
       //     trajectory_to_publish.back().time_from_start_ns * 1.0e-9,
       //     trajectory_to_publish.back().position_W.x());
       //=================================================================
-      // mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg); // 转换为ros消息发出
+
+      mgv_msgs::msgMultiDofJointTrajectoryFromEigen(trajectory_to_publish, &msg); // 转换为ros消息发出
 
       command_pub_.publish(msg);             // 发布控制消息
       path_indexOFmgv_ += number_to_publish; // Update the path index and notify for replanning

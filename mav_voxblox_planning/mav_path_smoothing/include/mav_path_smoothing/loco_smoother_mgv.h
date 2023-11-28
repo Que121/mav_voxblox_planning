@@ -1,7 +1,7 @@
 #ifndef MGV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
 #define MGV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
 
-#include <loco_planner/loco.h>
+#include <loco_planner/loco_mgv.h>
 #include "mav_path_smoothing/polynomial_smoother_mgv.h"
 
 namespace mgv_planning
@@ -21,7 +21,7 @@ namespace mgv_planning
 
     virtual bool getTrajectoryBetweenWaypoints(
         const mgv_msgs::EigenTrajectoryPoint::Vector &waypoints,
-        mav_trajectory_generation::Trajectory *trajectory) const;
+        mgv_trajectory_generation::Trajectory *trajectory) const;
 
     // Special case for num_waypoints = 2 (splits trajectory into num_segments).
     // Done
@@ -75,4 +75,4 @@ namespace mgv_planning
 
 } // namespace mgv_planning
 
-#endif // mgv_PATH_SMOOTHING_LOCO_SMOOTHER_H_
+#endif // MGV_PATH_SMOOTHING_LOCO_SMOOTHER_H_
