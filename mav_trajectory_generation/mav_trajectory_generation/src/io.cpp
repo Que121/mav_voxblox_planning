@@ -19,7 +19,7 @@
  */
 
 #include "mav_trajectory_generation/io.h"
-#include "mav_trajectory_generation/trajectory_sampling.h"
+#include "mav_trajectory_generation/trajectory_sampling_mgv.h"
 
 #include <yaml-cpp/yaml.h>
 #include <fstream>
@@ -30,7 +30,7 @@ const std::string kDimKey = "D";
 const std::string kSegmentTimeKey = "time";
 const std::string kCoefficientsKey = "coefficients";
 
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 YAML::Node coefficientsToYaml(const Eigen::VectorXd& coefficients) {
   YAML::Node node(YAML::NodeType::Sequence);
@@ -55,7 +55,7 @@ YAML::Node segmentToYaml(const Segment& segment) {
 
 YAML::Node segmentsToYaml(const Segment::Vector& segments) {
   YAML::Node node;
-  for (const mav_trajectory_generation::Segment& segment : segments)
+  for (const mgv_trajectory_generation::Segment& segment : segments)
     node[kSegmentsKey].push_back(segmentToYaml(segment));
 
   return node;
@@ -125,12 +125,12 @@ bool trajectoryFromYaml(const YAML::Node& node, Trajectory* trajectory) {
 
 bool segmentsToFile(
     const std::string& filename,
-    const mav_trajectory_generation::Segment::Vector& segments) {
+    const mgv_trajectory_generation::Segment::Vector& segments) {
   YAML::Emitter out;
   out << YAML::BeginMap;
   out << YAML::Key << kSegmentsKey;
   out << YAML::BeginSeq;
-  for (const mav_trajectory_generation::Segment& segment : segments) {
+  for (const mgv_trajectory_generation::Segment& segment : segments) {
     out << YAML::BeginMap;
     // Header.
     out << YAML::Key << kNumCoefficientsKey << YAML::Value << segment.N();
@@ -167,7 +167,7 @@ bool segmentsToFile(
 }
 
 bool segmentsFromFile(const std::string& filename,
-                      mav_trajectory_generation::Segment::Vector* segments) {
+                      mgv_trajectory_generation::Segment::Vector* segments) {
   CHECK_NOTNULL(segments);
 
   // Check file exists and is readable.
@@ -189,7 +189,7 @@ bool segmentsFromFile(const std::string& filename,
         // Header.
         int N = segments_yaml[i][kNumCoefficientsKey].as<int>();
         int D = segments_yaml[i][kDimKey].as<int>();
-        mav_trajectory_generation::Segment segment(N, D);
+        mgv_trajectory_generation::Segment segment(N, D);
         uint64_t t = segments_yaml[i][kSegmentTimeKey].as<uint64_t>();
         segment.setTimeNSec(t);
         // Coefficients.
@@ -222,7 +222,7 @@ bool sampledTrajectoryStatesToFile(const std::string& filename,
                                    const Trajectory& trajectory) {
   // Print to file for matlab
   const double sampling_time = 0.01;
-  mav_msgs::EigenTrajectoryPoint::Vector trajectory_points;
+  mgv_msgs::EigenTrajectoryPointMgv::Vector trajectory_points;
   bool success =
       sampleWholeTrajectory(trajectory, sampling_time, &trajectory_points);
   if (!success) {
@@ -235,7 +235,7 @@ bool sampledTrajectoryStatesToFile(const std::string& filename,
   Eigen::MatrixXd output(trajectory_points.size(), 8 * dim + 3);
   output.setZero();
   for (int i = 0; i < trajectory_points.size(); ++i) {
-    const mav_msgs::EigenTrajectoryPoint state = trajectory_points[i];
+    const mgv_msgs::EigenTrajectoryPointMgv state = trajectory_points[i];
 
     if (trajectory.D() == 4) {
       double yaw = state.getYaw();
@@ -259,7 +259,7 @@ bool sampledTrajectoryStatesToFile(const std::string& filename,
   }
 
   // Set the segment times
-  mav_trajectory_generation::Segment::Vector segments;
+  mgv_trajectory_generation::Segment::Vector segments;
   trajectory.getSegments(&segments);
   double current_segment_time = 0.0;
   for (int j = 0; j < segments.size(); ++j) {

@@ -24,9 +24,9 @@
 #include <random>
 #include <Eigen/Eigen>
 
-#include "mav_trajectory_generation/trajectory.h"
+#include "mav_trajectory_generation/trajectory_mgv.h"
 
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 inline double createRandomDouble(double min, double max) {
   return (max - min) * (static_cast<double>(std::rand()) /

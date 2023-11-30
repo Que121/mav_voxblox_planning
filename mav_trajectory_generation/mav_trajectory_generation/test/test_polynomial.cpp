@@ -26,12 +26,12 @@
 #include <eigen-checks/glog.h>
 #include <eigen-checks/gtest.h>
 
-#include "mav_trajectory_generation/motion_defines.h"
-#include "mav_trajectory_generation/polynomial.h"
+#include "mav_trajectory_generation/motion_defines_mgv.h"
+#include "mav_trajectory_generation/polynomial_mgv.h"
 #include "mav_trajectory_generation/test_utils.h"
-#include "mav_trajectory_generation/timing.h"
+#include "mav_trajectory_generation/timing_mgv.h"
 
-using namespace mav_trajectory_generation;
+using namespace mgv_trajectory_generation;
 
 const double kSamplingInterval = 1.0e-3;
 const double kEqualityResolution = 1.0e-2;

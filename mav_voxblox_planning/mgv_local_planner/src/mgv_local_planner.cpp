@@ -21,7 +21,6 @@ namespace mgv_planning
         avoid_collisions_mgv_(0), // 0:不需要避障
         plan_to_startOFmgv_(1),
         esdf_server_(nh_, nh_private_),
-        loco_planner_(nh_, nh_private_),
         path_indexOFmgv_(0)
   {
     odometry_sub_ = nh_.subscribe("odometry", 1,

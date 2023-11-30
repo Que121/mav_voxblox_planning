@@ -1,6 +1,6 @@
 #include <numeric>
 
-#include <mav_trajectory_generation/vertex.h>
+#include <mav_trajectory_generation/vertex_mgv.h>
 
 #include "mav_planning_common/visibility_resampling.h"
 
@@ -20,7 +20,7 @@ void resampleWaypointsFromVisibilityGraph(
   segment_times.reserve(waypoints.size() - 1);
 
   for (size_t i = 1; i < waypoints.size(); i++) {
-    segment_times.push_back(mav_trajectory_generation::computeTimeVelocityRamp(
+    segment_times.push_back(mgv_trajectory_generation::computeTimeVelocityRamp(
         waypoints[i - 1].position_W, waypoints[i].position_W, constraints.v_max,
         constraints.a_max));
   }

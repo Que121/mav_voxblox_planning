@@ -1,7 +1,7 @@
-#include <mav_trajectory_generation/polynomial_optimization_nonlinear.h>
+#include <mav_trajectory_generation/polynomial_optimization_linear_mgv.h>
 #include <mav_trajectory_generation/timing_mgv.h>
 #include <mav_trajectory_generation/trajectory_sampling_mgv.h>
-#include <mav_trajectory_generation_ros/feasibility_analytic.h>
+// #include <mav_trajectory_generation_ros/feasibility_analytic.h>
 #include "mav_path_smoothing/polynomial_smoother_mgv.h"
 
 namespace mgv_planning
@@ -95,36 +95,13 @@ namespace mgv_planning
       return false;
     }
     linear_timer.Stop();
-
-    if (optimize_time_)
-    {
-      mgv_trajectory_generation::timing::Timer time_opt_timer(
-          "smoothing/poly_time_opt");
-      mgv_trajectory_generation::NonlinearOptimizationParameters nlopt_parameters;
-      nlopt_parameters.algorithm = nlopt::LD_LBFGS;
-      nlopt_parameters.time_alloc_method = mgv_trajectory_generation::
-          NonlinearOptimizationParameters::kMellingerOuterLoop;
-      nlopt_parameters.print_debug_info_time_allocation = true;
-      mgv_trajectory_generation::PolynomialOptimizationNonLinear<N> nlopt(
-          D, nlopt_parameters);
-      nlopt.setupFromVertices(vertices, segment_times, derivative_to_optimize);
-      nlopt.addMaximumMagnitudeConstraint(
-          mgv_trajectory_generation::derivative_order::VELOCITY,
-          constraints_.v_max);
-      nlopt.addMaximumMagnitudeConstraint(
-          mgv_trajectory_generation::derivative_order::ACCELERATION,
-          constraints_.a_max);
-      nlopt.optimize();
-      nlopt.getTrajectory(trajectory);
-    }
-
     // Ok now do more stuff, if the method requires.
     if (split_at_collisions_)
     {
       mgv_trajectory_generation::timing::Timer split_timer(
           "smoothing/poly_split");
 
-      mgv_msgs::EigenTrajectoryPoint::Vector path;
+      mgv_msgs::EigenTrajectoryPointMgv::Vector path;
 
       // Sample it!
       double dt = constraints_.sampling_dt;
@@ -176,8 +153,8 @@ namespace mgv_planning
   }
 
   bool PolynomialSmoother::getPathBetweenWaypoints(
-      const mgv_msgs::EigenTrajectoryPointVector &waypoints,
-      mgv_msgs::EigenTrajectoryPoint::Vector *path) const
+      const mgv_msgs::EigenTrajectoryPointMgvVector &waypoints,
+      mgv_msgs::EigenTrajectoryPointMgv::Vector *path) const
   {
     mgv_trajectory_generation::Trajectory trajectory;
     bool success = getTrajectoryBetweenWaypoints(waypoints, &trajectory);
@@ -191,11 +168,11 @@ namespace mgv_planning
   }
 
   bool PolynomialSmoother::getPathBetweenTwoPoints(
-      const mgv_msgs::EigenTrajectoryPoint &start,
-      const mgv_msgs::EigenTrajectoryPoint &goal,
-      mgv_msgs::EigenTrajectoryPoint::Vector *path) const
+      const mgv_msgs::EigenTrajectoryPointMgv &start,
+      const mgv_msgs::EigenTrajectoryPointMgv &goal,
+      mgv_msgs::EigenTrajectoryPointMgv::Vector *path) const
   {
-    mgv_msgs::EigenTrajectoryPoint::Vector waypoints;
+    mgv_msgs::EigenTrajectoryPointMgv::Vector waypoints;
     waypoints.push_back(start);
     waypoints.push_back(goal);
 
@@ -282,7 +259,7 @@ namespace mgv_planning
   }
 
   bool PolynomialSmoother::isPathInCollision(
-      const mgv_msgs::EigenTrajectoryPoint::Vector &path, double *t) const
+      const mgv_msgs::EigenTrajectoryPointMgv::Vector &path, double *t) const
   {
     if (path.size() < 1)
     {
@@ -291,7 +268,7 @@ namespace mgv_planning
     double distance_since_last_check = 0.0;
     Eigen::Vector3d last_pos = path[0].position_W;
 
-    for (const mgv_msgs::EigenTrajectoryPoint &point : path)
+    for (const mgv_msgs::EigenTrajectoryPointMgv &point : path)
     {
       distance_since_last_check += (point.position_W - last_pos).norm();
       if (distance_since_last_check > min_col_check_resolution_)

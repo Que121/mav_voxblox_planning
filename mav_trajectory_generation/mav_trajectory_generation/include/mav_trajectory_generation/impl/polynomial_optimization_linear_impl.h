@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-#ifndef MAV_TRAJECTORY_GENERATION_IMPL_POLYNOMIAL_OPTIMIZATION_LINEAR_IMPL_H_
-#define MAV_TRAJECTORY_GENERATION_IMPL_POLYNOMIAL_OPTIMIZATION_LINEAR_IMPL_H_
+#ifndef MGV_TRAJECTORY_GENERATION_IMPL_POLYNOMIAL_OPTIMIZATION_LINEAR_IMPL_H_
+#define MGV_TRAJECTORY_GENERATION_IMPL_POLYNOMIAL_OPTIMIZATION_LINEAR_IMPL_H_
 
 #include <glog/logging.h>
 #include <Eigen/Sparse>
@@ -35,10 +35,10 @@
 #endif
 
 #include "mav_trajectory_generation/convolution.h"
+#include "polynomial_optimization_linear_mgv.h"
 
 
-
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 template <int _N>
 PolynomialOptimization<_N>::PolynomialOptimization(size_t dimension)

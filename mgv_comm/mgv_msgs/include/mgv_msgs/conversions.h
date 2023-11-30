@@ -21,6 +21,12 @@
 
 namespace mgv_msgs {
 
+
+inline void msgMultiDofJointTrajectoryPointFromEigen(
+    const EigenTrajectoryPointMgv& trajectory_point,
+    trajectory_msgs::MultiDOFJointTrajectoryPoint* msg);
+
+
 // 从msg获取eigen类型的变量 位姿、推力
 inline void eigenAttitudeThrustFromMsg(const AttitudeThrust& msg,
                                        EigenAttitudeThrust* attitude_thrust) {
@@ -420,6 +426,9 @@ inline void msgPoseStampedFromEigenTrajectoryPoint(
                        &msg->pose.orientation);
 }
 
+
+
+
 // 从轨迹点信息生成MultiDOFJointTrajectoryPoint msg， 多传递了一个string参数
 inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPointMgv& trajectory_point,
@@ -441,11 +450,25 @@ inline void msgMultiDofJointTrajectoryFromEigen(
     trajectory_msgs::MultiDOFJointTrajectory* msg) {
   msgMultiDofJointTrajectoryFromEigen(trajectory_point, "base_link", msg);
 }
-
+/*
 inline void msgMultiDofJointTrajectoryFromEigen(
     const EigenTrajectoryPointMgvDeque& trajectory,
     trajectory_msgs::MultiDOFJointTrajectory* msg) {
   msgMultiDofJointTrajectoryFromEigen(trajectory, "base_link", msg);
+}
+*/
+inline void eigenTrajectoryPointFromPoseMsgMgv(
+    const geometry_msgs::PoseStamped& msg, EigenTrajectoryPointMgv* trajectory_point) {
+  assert(trajectory_point != NULL);
+
+  trajectory_point->position_W = vector3FromPointMsg(msg.pose.position);
+  trajectory_point->orientation_W_B = quaternionFromMsg(msg.pose.orientation);
+  trajectory_point->velocity_W.setZero();
+  trajectory_point->angular_velocity_W.setZero();
+  trajectory_point->acceleration_W.setZero();
+  trajectory_point->angular_acceleration_W.setZero();
+  trajectory_point->jerk_W.setZero();
+  trajectory_point->snap_W.setZero();
 }
 
 // Convenience method to quickly create a trajectory from a single waypoint.
@@ -487,20 +510,6 @@ inline void msgMultiDofJointTrajectoryFromEigen(
 
 // =========================================================================================
 
-inline void eigenTrajectoryPointFromPoseMsgMgv(
-    const geometry_msgs::PoseStamped& msg,
-    EigenTrajectoryPointMgv* trajectory_point) {
-  assert(trajectory_point != NULL);
-  ros::Time timestamp = msg.header.stamp;
-  trajectory_point->timestamp_ns = timestamp.toNSec();
-
-  trajectory_point->position_W = vector3FromPointMsg(msg.pose.position);
-  trajectory_point->orientation_W_B = quaternionFromMsg(msg.pose.orientation);
-  trajectory_point->velocity_W.setZero();
-  trajectory_point->angular_velocity_W.setZero();
-  trajectory_point->acceleration_W.setZero();
-  trajectory_point->angular_acceleration_W.setZero();
-}
 
 // 3333333333333
 inline void msgMultiDofJointTrajectoryPointFromEigen(

@@ -1,9 +1,9 @@
 #include <eigen-checks/gtest.h>
-#include <mav_trajectory_generation/trajectory_sampling.h>
+#include <mav_trajectory_generation/trajectory_sampling_mgv.h>
 
-#include "loco_planner/loco.h"
+#include "loco_planner/loco_mgv.h"
 
-using namespace mav_trajectory_generation;
+using namespace mgv_trajectory_generation;
 
 namespace loco_planner {
 class LocoTest : public ::testing::Test {
@@ -223,7 +223,7 @@ TEST_F(LocoTest, TestCeres) {
   std::cout << "Cost c: " << cost_c << " Cost d: " << cost_d
             << " Total cost: " << cost << std::endl;
 
-  mav_trajectory_generation::Trajectory trajectory;
+  mgv_trajectory_generation::Trajectory trajectory;
   loco_.getTrajectory(&trajectory);
   EXPECT_TRUE(inCollision(trajectory));
 
@@ -246,7 +246,7 @@ TEST_F(LocoTest, TestTrajectoryInitialization) {
   loco_.setupFromPositions(start_, goal_, num_segments_, total_time_);
   //loco_.setVerbose(true);
 
-  mav_trajectory_generation::Trajectory trajectory;
+  mgv_trajectory_generation::Trajectory trajectory;
   Eigen::VectorXd params_solve1, params_before, params_after;
   int num_params = loco_.getNumParams();
 

@@ -1,4 +1,4 @@
-#include <mav_trajectory_generation/timing.h>
+#include <mav_trajectory_generation/timing_mgv.h>
 #include <voxblox/integrator/integrator_utils.h>
 
 #include "voxblox_planning_common/gain_evaluator.h"
@@ -39,7 +39,7 @@ double GainEvaluator::evaluateExplorationGainVoxelCount(
     const mav_msgs::EigenTrajectoryPoint& pose, int modulus) {
   CHECK_NOTNULL(tsdf_layer_);
 
-  mav_trajectory_generation::timing::Timer timer_gain("exploration/exp_gain");
+  mgv_trajectory_generation::timing::Timer timer_gain("exploration/exp_gain");
 
   cam_model_.setBodyPose(voxblox::Transformation(
       pose.orientation_W_B.cast<float>(), pose.position_W.cast<float>()));
@@ -101,7 +101,7 @@ double GainEvaluator::evaluateExplorationGainWithRaycasting(
     const mav_msgs::EigenTrajectoryPoint& pose, int modulus) {
   CHECK_NOTNULL(tsdf_layer_);
 
-  mav_trajectory_generation::timing::Timer timer_gain(
+  mgv_trajectory_generation::timing::Timer timer_gain(
       "exploration/exp_gain_raycast");
 
   cam_model_.setBodyPose(voxblox::Transformation(
@@ -276,7 +276,7 @@ double GainEvaluator::evaluateExplorationGainWithRaycasting(
 
 double GainEvaluator::evaluateExplorationGainBircher(
     const mav_msgs::EigenTrajectoryPoint& pose, int modulus) {
-  mav_trajectory_generation::timing::Timer timer_gain(
+  mgv_trajectory_generation::timing::Timer timer_gain(
       "exploration/exp_gain_bircher");
 
   cam_model_.setBodyPose(voxblox::Transformation(

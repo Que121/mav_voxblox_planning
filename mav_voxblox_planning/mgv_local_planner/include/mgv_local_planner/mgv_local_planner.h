@@ -35,9 +35,9 @@
 
 #include <mav_planning_msgs/PolynomialTrajectory4D.h>
 
-#include <mav_visualization/helpers.h>
-#include <voxblox_loco_planner/goal_point_selector.h>
-#include <voxblox_loco_planner/voxblox_loco_planner_mgv.h>
+// #include <mav_visualization/helpers.h>
+// #include <voxblox_loco_planner/goal_point_selector.h>
+// #include <voxblox_loco_planner/voxblox_loco_planner_mgv.h>
 #include <voxblox_ros/esdf_server.h>
 #include <minkindr_conversions/kindr_msg.h>
 
@@ -170,7 +170,7 @@ namespace mgv_planning
     RosSemaphore should_replan_;
 
     // 规划器--本地loco规划
-    VoxbloxLocoPlanner loco_planner_;
+    // VoxbloxLocoPlanner loco_planner_;
 
     // 规划器--path平滑.三种方式
     // VelocityRampSmoother ramp_smoother_;

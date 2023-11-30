@@ -14,7 +14,7 @@ namespace mgv_trajectory_generation
   // If no yaw is set, then it is simply left at its current value (0 by default).
 
   bool sampleTrajectoryAtTime(const Trajectory &trajectory, double sample_time,
-                              mgv_msgs::EigenTrajectoryPoint *state);
+                              mgv_msgs::EigenTrajectoryPointMgv *state);
 
   bool sampleTrajectoryInRange(const Trajectory &trajectory, double min_time,
                                double max_time, double sampling_interval,
@@ -22,18 +22,18 @@ namespace mgv_trajectory_generation
 
   bool sampleTrajectoryStartDuration(
       const Trajectory &trajectory, double start_time, double duration,
-      double sampling_interval, mgv_msgs::EigenTrajectoryPointVector *states);
+      double sampling_interval, mgv_msgs::EigenTrajectoryPointMgvVector *states);
 
   bool sampleWholeTrajectory(const Trajectory &trajectory,
                              double sampling_interval,
                              mgv_msgs::EigenTrajectoryPointMgvVector *states);
 
   bool sampleSegmentAtTime(const Segment &segment, double sample_time,
-                           mgv_msgs::EigenTrajectoryPoint *state);
+                           mgv_msgs::EigenTrajectoryPointMgv *state);
 
   template <class T>
   bool sampleFlatStateAtTime(const T &type, double sample_time,
-                             mgv_msgs::EigenTrajectoryPoint *state);
+                             mgv_msgs::EigenTrajectoryPointMgv *state);
 
 } // namespace mgv_trajectory_generation
 

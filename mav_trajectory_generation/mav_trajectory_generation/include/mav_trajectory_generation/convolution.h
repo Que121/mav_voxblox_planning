@@ -21,7 +21,7 @@
 #ifndef MAV_TRAJECTORY_GENERATION_CONVOLUTION_H_
 #define MAV_TRAJECTORY_GENERATION_CONVOLUTION_H_
 
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 template <int D, int K>
 struct ConvolutionDimension {

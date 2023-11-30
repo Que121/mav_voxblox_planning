@@ -28,10 +28,11 @@ cs_add_library(${PROJECT_NAME}
   src/segment_mgv.cpp
   src/timing_mgv.cpp
   src/trajectory_mgv.cpp
-  src/trajectory_sampling.cpp
+  src/trajectory_sampling_mgv.cpp
   src/vertex_mgv.cpp
   src/io.cpp
   src/rpoly/rpoly_ak1_mgv.cpp
+  # src/polynomial_timing_evaluation.cpp
 )
 # Link against yaml-cpp.
 target_link_libraries(${PROJECT_NAME} ${YamlCpp_LIBRARIES})

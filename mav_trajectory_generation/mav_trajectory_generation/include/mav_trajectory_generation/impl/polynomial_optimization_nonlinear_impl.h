@@ -21,10 +21,10 @@
 #include <chrono>
 #include <numeric>
 
-#include "mav_trajectory_generation/polynomial_optimization_linear.h"
-#include "mav_trajectory_generation/timing.h"
+#include "mav_trajectory_generation/polynomial_optimization_linear_mgv.h"
+#include "mav_trajectory_generation/timing_mgv.h"
 
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 inline std::ostream& operator<<(std::ostream& stream,
                                 const OptimizationInfo& val) {

@@ -15,7 +15,7 @@ cs_add_library(${PROJECT_NAME}
   src/loco_smoother_mgv.cpp
   src/path_smoother_base_mgv.cpp
   src/polynomial_smoother_mgv.cpp
-  src/velocity_ramp_smoother.cpp
+  src/velocity_ramp_smoother_mgv.cpp
 )
 target_link_libraries(${PROJECT_NAME})
 

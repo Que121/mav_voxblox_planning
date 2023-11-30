@@ -85,7 +85,7 @@ namespace mgv_trajectory_generation
   }
 
   //==============================================================================================
-
+/*
   bool sampleTrajectoryAtTime(const Trajectory &trajectory, double sample_time,
                               mgv_msgs::EigenTrajectoryPoint *state)
   {
@@ -143,7 +143,7 @@ namespace mgv_trajectory_generation
     Eigen::VectorXd velocity = type.evaluate(sample_time, derivative_order::VELOCITY);
     Eigen::VectorXd acceleration = type.evaluate(sample_time, derivative_order::ACCELERATION);
 
-    state->degrees_of_freedom = mgv_msgs::mgvActuation::DOF4;
+    state->degrees_of_freedom = 4;
     state->position_W = position.head(3);
     state->velocity_W = velocity.head(3);
     state->acceleration_W = acceleration.head(3);
@@ -168,12 +168,12 @@ namespace mgv_trajectory_generation
       state->orientation_W_B = Eigen::Quaterniond(rot_matrix);
       state->angular_velocity_W = mgv_msgs::omegaFromRotationVector(rot_vec, rot_vec_vel);
       state->angular_acceleration_W = mgv_msgs::omegaDotFromRotationVector(rot_vec, rot_vec_vel, rot_vec_acc);
-      state->degrees_of_freedom = mgv_msgs::mgvActuation::DOF6;
+      state->degrees_of_freedom = 6;
     }
 
     state->time_from_start_ns =
         static_cast<int64_t>(sample_time * kNumNanosecondsPerSecond);
     return true;
   }
-
+*/
 } // namespace mgv_trajectory_generation

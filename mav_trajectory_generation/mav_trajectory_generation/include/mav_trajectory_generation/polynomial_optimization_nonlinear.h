@@ -24,9 +24,9 @@
 #include <memory>
 #include <nlopt.hpp>
 
-#include "mav_trajectory_generation/polynomial_optimization_linear.h"
+#include "mav_trajectory_generation/polynomial_optimization_linear_mgv.h"
 
-namespace mav_trajectory_generation {
+namespace mgv_trajectory_generation {
 
 constexpr double kOptimizationTimeLowerBound = 0.1;
 
@@ -314,4 +314,3 @@ std::string returnValueToString(int return_value);
 
 #endif  // MAV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_NONLINEAR_H_
 
-#include "mav_trajectory_generation/impl/polynomial_optimization_nonlinear_impl.h"

@@ -1,5 +1,5 @@
-#ifndef MGV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_LINEAR_H_
-#define MGV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_LINEAR_H_
+#ifndef MGV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_LINEAR_MGV_H_
+#define MGV_TRAJECTORY_GENERATION_POLYNOMIAL_OPTIMIZATION_LINEAR_MGV_H_
 
 #include <glog/logging.h>
 #include <Eigen/Sparse>
@@ -11,6 +11,7 @@
 #include "mav_trajectory_generation/segment_mgv.h"
 #include "mav_trajectory_generation/trajectory_mgv.h"
 #include "mav_trajectory_generation/vertex_mgv.h"
+
 
 namespace mgv_trajectory_generation
 {

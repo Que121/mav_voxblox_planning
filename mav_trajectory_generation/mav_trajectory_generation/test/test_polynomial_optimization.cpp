@@ -26,12 +26,12 @@
 #include <eigen-checks/glog.h>
 #include <eigen-checks/gtest.h>
 
-#include "mav_trajectory_generation/polynomial_optimization_linear.h"
+#include "mav_trajectory_generation/polynomial_optimization_linear_mgv.h"
 #include "mav_trajectory_generation/polynomial_optimization_nonlinear.h"
 #include "mav_trajectory_generation/test_utils.h"
-#include "mav_trajectory_generation/timing.h"
+#include "mav_trajectory_generation/timing_mgv.h"
 
-using namespace mav_trajectory_generation;
+using namespace mgv_trajectory_generation;
 
 Eigen::IOFormat matlab_format(Eigen::FullPrecision, 0, ", ", ";\n", "", "", "[",
                               "]");
@@ -201,14 +201,14 @@ void PolynomialOptimizationTests::getMaxVelocityAndAccelerationAnalytical(
   std::vector<int> dimensions(D);  // Evaluate in whatever dimensions we have.
   std::iota(dimensions.begin(), dimensions.end(), 0);
 
-  mav_trajectory_generation::Extremum v_min_traj, v_max_traj, a_min_traj,
+  mgv_trajectory_generation::Extremum v_min_traj, v_max_traj, a_min_traj,
       a_max_traj;
 
   trajectory.computeMinMaxMagnitude(
-      mav_trajectory_generation::derivative_order::VELOCITY, dimensions,
+      mgv_trajectory_generation::derivative_order::VELOCITY, dimensions,
       &v_min_traj, &v_max_traj);
   trajectory.computeMinMaxMagnitude(
-      mav_trajectory_generation::derivative_order::ACCELERATION, dimensions,
+      mgv_trajectory_generation::derivative_order::ACCELERATION, dimensions,
       &a_min_traj, &a_max_traj);
 
   *v_max = v_max_traj.value;
@@ -218,9 +218,9 @@ void PolynomialOptimizationTests::getMaxVelocityAndAccelerationAnalytical(
 void PolynomialOptimizationTests::getMaxVelocityAndAccelerationNumerical(
     const Trajectory& trajectory, double* v_max, double* a_max) const {
   *v_max = getMaximumMagnitude(
-      trajectory, mav_trajectory_generation::derivative_order::VELOCITY);
+      trajectory, mgv_trajectory_generation::derivative_order::VELOCITY);
   *a_max = getMaximumMagnitude(
-      trajectory, mav_trajectory_generation::derivative_order::ACCELERATION);
+      trajectory, mgv_trajectory_generation::derivative_order::ACCELERATION);
 }
 
 bool PolynomialOptimizationTests::checkExtrema(
@@ -616,20 +616,20 @@ TEST_P(PolynomialOptimizationTests, TimeScaling) {
   EXPECT_EQ(segment_times.size(), params_.num_segments);
 
   // Now re-scale the times, using various non-linear optimization techniques.
-  mav_trajectory_generation::NonlinearOptimizationParameters nlopt_parameters;
+  mgv_trajectory_generation::NonlinearOptimizationParameters nlopt_parameters;
   nlopt_parameters.algorithm = nlopt::LD_LBFGS;
-  nlopt_parameters.time_alloc_method = mav_trajectory_generation::
+  nlopt_parameters.time_alloc_method = mgv_trajectory_generation::
       NonlinearOptimizationParameters::kMellingerOuterLoop;
   nlopt_parameters.print_debug_info_time_allocation = false;
   nlopt_parameters.random_seed = 12345678;
-  mav_trajectory_generation::PolynomialOptimizationNonLinear<N> nlopt(
+  mgv_trajectory_generation::PolynomialOptimizationNonLinear<N> nlopt(
       D, nlopt_parameters);
 
   nlopt.setupFromVertices(vertices_, segment_times, max_derivative);
   nlopt.addMaximumMagnitudeConstraint(
-      mav_trajectory_generation::derivative_order::VELOCITY, v_max);
+      mgv_trajectory_generation::derivative_order::VELOCITY, v_max);
   nlopt.addMaximumMagnitudeConstraint(
-      mav_trajectory_generation::derivative_order::ACCELERATION, a_max);
+      mgv_trajectory_generation::derivative_order::ACCELERATION, a_max);
   nlopt.solveLinear();
 
   Trajectory trajectory;
